@@ -91,6 +91,7 @@ header.on .menu ul.inner.on {
    left: 55%;
    /* transform: translateX(-50%); */
    width: 900px;
+   overflow: visible;
 }
 .menu >li {
    float: left;
