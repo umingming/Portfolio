@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 /* reset */
 * { margin: 0; padding: 0; }
@@ -13,6 +13,7 @@ a:hover { text-decoration: none; color: inherit; }
 body {
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 14px;
+   height: 5000px;
 }
 .wrap {
    width: 100%;
@@ -134,17 +135,29 @@ header.on .menu ul.inner.on {
 }
 .main .slide li .txt {
    position: absolute;
-   left: 11%;
-   top: 65%;
+   left: 9%;
+   top: 55%;
    color: #fff;
    font-size: 3vh;
    transform: translateY(-50%);
    font-weight: 700;
    text-transform: uppercase;
+   transition: all 0.3s;
 }
 .main .slide li .txt h2 {
-   font-size: 8vh;
+   font-weight: 500;
+   font-size: 15vh;
    margin: 5px 0;
+   font-family: 'Nanum Pen Script', cursive;
+   letter-spacing: 5%;
+}
+.main .slide li .txt h2 span {
+   transition: all 0.3s;
+}
+.main .slide li .txt h2 span:hover,
+.main .slide li .txt h2 span:focus {
+   transition: all 0.3s;
+   color: #1abc9c;
 }
 
 /* slick */
@@ -205,3 +218,156 @@ header.on .menu ul.inner.on {
    0% { width: 0%; }
    100% { width: 100%; }
 } 
+
+/* main 애니메이션 */
+.slick-active .txt p {
+   animation-name: txt1;
+   animation-duration: 0.8s;
+}
+@keyframes txt1 {
+   0% {opacity: 0; transform: rotateX(180deg) translateY(-150px);}
+   20% {opacity: 0; transform: rotateX(180deg) translateY(-150px);}
+   100% {opacity: 1; transform: rotateX(0deg) translateY(0px);}
+}
+
+.slick-active .txt a {
+   animation-name: txt2;
+   animation-duration: 0.8s;
+}
+@keyframes txt2 {
+   0% {opacity: 0; transform: rotateX(180deg) translateY(+150px);}
+   20% {opacity: 0; transform: rotateX(180deg) translateY(+150px);}
+   100% {opacity: 1; transform: rotateX(0deg) translateY(0px);}
+}
+.slick-active .txt h2 {
+   animation-name: txt3;
+   animation-duration: 0.8s;
+}
+@keyframes txt3 {
+   0% {transform: translateX(0); }
+   20% {transform:translateX(-50px);}
+   100% {transform: translateX(0); }
+}
+.slick-active img {
+   animation-name: img;
+   animation-duration: 2s;
+}
+@keyframes img {
+   0% {opacity: 0; transform: translateX(150px);}
+   20% {opacity: 0; transform: translateX(150px);}
+   100% {opacity: 1; transform: translateX(0px);}
+}
+
+/* section */
+section .title {
+   padding-top: 80px;
+   color: #000;
+   text-align: center;
+}
+section .title h2 {
+   /* font-family: 'Nanum Pen Script', cursive; */
+   font-size: 50px;
+   margin: 30px auto;
+   /* margin-bottom: 5px; */
+   font-weight: 700;
+}
+section .title h2 span {
+   color: #1abc9c
+}
+section .title p {
+   color: #555;
+   font-size: 18px;
+}
+
+/* project */
+section.project {
+   /* margin-bottom: 150px; */
+   margin: 5% auto;
+}
+.project ul {
+   width: 80%;
+   margin: 5% 10%;
+   overflow: hidden;
+}
+.project ul li {
+   float: left;
+   width: 31%;
+   margin-right: 3%;
+}
+.project ul li:last-child {
+   margin-right: 0;
+}
+.project ul li a {
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+.project ul li a p.img {
+   width: 100%;
+   overflow: hidden;
+   position: relative;
+}
+.project ul li a p.img img {
+   height: 251px;
+   width: 100%;
+}
+.project ul li a p.img:before {
+   content: '';
+   width: 0%;
+   background: #1abc9cd2;
+   height: 251px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transition: all 0.5s;
+}
+.project ul li a:hover p.img:before,
+.project ul li a:focus p.img:before {
+   width: 100%;
+   transition: all 0.6s;
+}
+.project ul li a p.img:after {
+   content: 'MORE';
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   font-size: 15px;
+   color: #fff;
+   border: 1px solid #fff;
+   border-radius: 40px;
+   padding: 5px 30px;
+   opacity: 0;
+   transition: all 0.5s;
+}
+.project ul li a:hover p.img:after,
+.project ul li a:focus p.img:after {
+   opacity: 1;
+   transition: all 0.5s;
+}
+.project ul li a .content {
+   width: 100%;
+   padding: 20px 0 20px 10px;
+   box-sizing: border-box;
+}
+.project ul li a .content p {
+   font-size: 25px;
+   font-weight: 700;
+}
+.project ul li a .content p.color {
+   color: #1abc9c;
+   font-size: 21px;
+   font-weight: 700;
+}
+.project ul li a .content p.date {
+   color: #999;
+   font-size: 15px;
+   font-weight: normal;
+   padding-left: 5px;
+   position: relative;
+   margin-top: 30px;
+}
+.project ul li a .content p.date span {
+   font-size: 20px;
+   margin-right: 2%;
+}

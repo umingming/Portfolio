@@ -10,7 +10,7 @@ $(window).on('scroll resize', function () {
 });
 
 function fixHeader() {
-   if(scrollTop > 150) {
+   if(scrollTop > 650) {
        $('header').addClass('on');
    } else {
        $('header').removeClass('on');
@@ -23,7 +23,7 @@ $(function() {
         arrows: true,   
         dots: false,    
         fade: true,    
-        autoplay: true,  
+        autoplay: false,  
         autoplaySpeed: 7000, 
         pauseOnHover: false,
         pauseOnFocus: false
