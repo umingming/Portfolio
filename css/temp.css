@@ -115,24 +115,35 @@ header.on .menu ul.inner.on {
    color: #1abc9c;
    transition: all 0.3s;
 }
-/* main */
-.main .slide li {
+
+/* section.visual */
+.visual .slide li { 
    width: 100%;
-   height: 98vh;
+   /* height: 870px; */
+   height: 100vh;
    position: relative;
    background: #febadf;
 }
-.main .slide li:nth-child(2){
-   background: #ffc6e6;
+.visual .slide li:before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22%;
+    background: url(../img/symbol.png) no-repeat center/cover;
+    z-index: 1;
 }
-.main .slide li img {
+
+.visual .slide li img {
    position: absolute;
-   left: -1%;
+   right: 0;
    bottom: 0;
-   width: 101%;
+   width: 100%;
    height: auto;
-}
-.main .slide li .txt {
+} 
+.visual .slide li .txt {
    position: absolute;
    left: 11%;
    top: 65%;
@@ -140,68 +151,124 @@ header.on .menu ul.inner.on {
    font-size: 3vh;
    transform: translateY(-50%);
    font-weight: 700;
-   text-transform: uppercase;
 }
-.main .slide li .txt h2 {
+.visual .slide li .txt h2 {
    font-size: 8vh;
    margin: 5px 0;
 }
 
-/* slick */
+
+
 .slick-arrow {
-   position: absolute;
-   top:50%;
-   z-index: 1;
-   width: 60px;
-   height: 60px;
-   line-height: 60px;
-   border: none;
-   text-indent: -9999px;
-   background: none;
-}
-.slick-arrow:after {
-   content: '<';
-   font-family: 'Bebas Neue', cursive;
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   color: #fff;
-   font-size: 90px;
-   left: 0;
-   top: 0;
-   text-indent: 0px;
-   font-weight: 300;
-   transition: all 0.3s;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: none;
+    width: 110px;
+    height: 52px;
+    border: none;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
 }
 .slick-next {
-   right: 1px;
-   text-align: left;
+    right: 0;
+    text-align: left;
+}
+.slick-arrow:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55%;
+    height: 2px;
+    background: #fff;
 }
 .slick-next:after {
-   content: '>';
-   left: 10px;
+    left: 45%;
+}
+.slick-arrow:before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+    z-index: -1;
+}
+.slick-next:before {
+    right: 0;
+}
+.slick-prev:before {
+    left: 0;
 }
 
 /* 화살표 hover */
+.slick-arrow:hover {
+    color: #000;
+    transition: all 0.3s;
+    cursor: pointer;
+}
 .slick-arrow:hover:after {
-   transition: all 0.3s;
-   color: #1abc9c;
+    background: #f8b922;
+}
+.slick-arrow:hover:before {
+    width: 112%;
 }
 
-/* 게이지 */
-.main .slick-active:after {
-   content: '';
-   width: 100%;
-   height: 5px;
-   background: #1abc9c;
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   animation-name: bar;
-   animation-duration: 7s;
+/* 인디케이터 */
+.visual .slide .slick-dots {
+    z-index: 20;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.visual .slide .slick-dots li:before {
+    display: none;
+}
+.visual .slide .slick-dots li {
+    width: 2px;
+    height: 20px;
+    float: left;
+    margin: 0 10px;
+}
+.visual .slide .slick-dots li button {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    text-indent: -9999px;
+}
+.visual .slide .slick-dots:hover,
+.visual .slide .slick-dots button:hover {
+    cursor: pointer;
+}
+.visual .slide .slick-dots li.slick-active button {
+    background: #f8b922;
+    height: 23px;
+    margin-top: -12px;
+    transition: height 0.3s;
+}
+.visual .slick-active:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background: #f8b922;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation-name: bar;
+    animation-duration: 7s;
 }
 
 @keyframes bar {
-   0% { width: 0%; }
-   100% { width: 100%; }
-} 
+    0% { width: 0%; }
+    100% { width: 100%; }
+}

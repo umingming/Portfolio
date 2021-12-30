@@ -19,11 +19,11 @@ function fixHeader() {
 
 //메인 슬라이드
 $(function() {
-    $(".main .slide").slick({
+    $('.main .slide').slick({
         arrows: true,   
-        dots: true,    
+        dots: false,    
         fade: true,    
-        autoplay: false,  
+        autoplay: true,  
         autoplaySpeed: 7000, 
         pauseOnHover: false,
         pauseOnFocus: false
