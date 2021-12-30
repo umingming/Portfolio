@@ -17,6 +17,9 @@ function fixHeader() {
    }
 }
 
+//메뉴 이동
+
+
 //메인 슬라이드
 $(function() {
     $('.main .slide').slick({
