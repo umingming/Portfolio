@@ -18,6 +18,18 @@ function fixHeader() {
 }
 
 //메뉴 이동
+$(function(){
+    $('#btnProject').on('click', function(){
+        let scroll = $('#project').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
+});
+$(function(){
+    $('#btnHome').on('click', function(){
+        let scroll = $('.main').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
+});
 
 
 //메인 슬라이드
@@ -32,5 +44,4 @@ $(function() {
         pauseOnFocus: false
     })
     $('.slick-prev').text('prev');
-
 })
