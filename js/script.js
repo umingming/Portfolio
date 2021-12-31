@@ -32,4 +32,5 @@ $(function() {
         pauseOnFocus: false
     })
     $('.slick-prev').text('prev');
+
 })

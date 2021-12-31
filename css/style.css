@@ -154,22 +154,27 @@ header.on .menu ul.inner.on {
    height: 35vh;
    background: #ff9ed3;
 } */
+.main .slide li .txt p {
+   margin-bottom: 5px;
+}
 .main .slide li .txt h2 {
-   /* color: #000; */
    font-weight: 500;
-   font-size: 15vh;
-   margin: 5px 0;
+   font-size: 14vh;
    font-family: 'Nanum Pen Script', cursive;
+   /* font-weight: 700; */
+   /* font-size: 8vh; */
    letter-spacing: 5%;
 }
 .main .slide li .txt h2 span {
-   transition: all 0.3s;
+   font-size: 18vh;
+   /* font-size: 10vh; */
+   color: #ff5492;
+   /* color: #1abc9c; */
 }
-.main .slide li .txt h2 span:hover,
+/* .main .slide li .txt h2 span:hover,
 .main .slide li .txt h2 span:focus {
    transition: all 0.3s;
-   color: #1abc9c;
-}
+} */
 
 /* slick */
 .slick-arrow {
@@ -259,6 +264,15 @@ header.on .menu ul.inner.on {
    20% {transform:translateX(-50px);}
    100% {transform: translateX(0); }
 }
+.slick-active .txt h2 span {
+   animation-name: txt4;
+   animation-duration: 1s;
+}
+@keyframes txt4 {
+   0% {font-size: 14vh; }
+   20% {font-size: 14vh;}
+   100% {font-size: 18vh; }
+}
 .slick-active img {
    animation-name: img;
    animation-duration: 2s;
@@ -281,7 +295,7 @@ section .title {
 section .title h2 {
    /* font-family: 'Nanum Pen Script', cursive; */
    font-size: 50px;
-   margin: 5px auto;
+   margin: 30px auto;
    /* margin-bottom: 5px; */
    font-weight: 700;
 }
@@ -366,7 +380,7 @@ section.project {
 }
 .project ul li a .content p {
    font-size: 2.5vh;
-   font-weight: 700;
+   font-weight: 500;
 }
 .project ul li a .content p.color {
    color: #1abc9c;
