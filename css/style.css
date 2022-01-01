@@ -1,5 +1,6 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@400;500;700&family=Rubik&display=swap');
+
 
 /* reset */
 * { margin: 0; padding: 0; }
@@ -101,6 +102,9 @@ header.on .menu ul.inner.on {
    transition: all 0.3s;
    margin-right: 6%;
 }
+.menu >li:last-child {
+   margin-right: 10%;
+}
 .menu >li >a {
    display: block;
    width: 100%;
@@ -127,11 +131,29 @@ header.on .menu ul.inner.on {
    background: #ffc6e6;
 }
 .main .slide li img {
+   background: none;
    position: absolute;
    right: 7%;
    bottom: 3%;
    width: 50%;
    height: auto;
+}
+.main .slide li p#btnScroll:after {
+   content: '';
+   position: absolute;
+   right: 27%;
+   bottom: 3%;
+   width: 10%;
+   height: 30%;
+   cursor: pointer;
+}
+.main .slide li p#btnScroll img {
+   position: absolute;
+   right: 27%;
+   bottom: 3%;
+   width: 2.5%;
+   height: auto;
+   opacity: 0;
 }
 .main .slide li .txt {
    position: absolute;
@@ -190,16 +212,15 @@ header.on .menu ul.inner.on {
 }
 .slick-arrow:after {
    content: '<';
-   font-family: 'Bebas Neue', cursive;
+   font-family: 'Rubik', sans-serif;
    position: absolute;
    width: 100%;
    height: 100%;
    color: #fff;
-   font-size: 90px;
+   font-size: 80px;
    left: 0;
    top: 0;
    text-indent: 0px;
-   font-weight: 300;
    transition: all 0.3s;
 }
 .slick-next {
@@ -282,21 +303,23 @@ header.on .menu ul.inner.on {
    20% {opacity: 0; transform: translateX(-150px);}
    100% {opacity: 1; transform: translateX(0px);}
 }
-/* .slick-active img#scroll {
-   animation: scroll linear 0.8s 1.8s infinite;
+.slick-active p#btnScroll img {
+   animation: scroll linear 0.8s 1.9s infinite;
 }
 @keyframes scroll {
    0% { opacity: 1; transform: translateY(0px); }
    50% { opacity: 1; transform: translateY(-7px); }
    100% { opacity: 1; transform: translateY(0px); }
-} */
+}
 
 /* section */
 section >a {
    transition: all 3s;
 }
 section .title {
+   width: 1200px;
    padding-top: 80px;
+   margin: 0 auto;
    color: #000;
    text-align: center;
 }
@@ -321,14 +344,14 @@ section.project {
    margin: 5% auto;
 }
 .project ul {
-   width: 80%;
-   margin: 5% 10%;
+   width: 1200px;
+   margin: 5% auto;
    overflow: hidden;
 }
 .project ul li {
    float: left;
-   width: 31%;
-   margin-right: 3%;
+   width: 400px;
+   /* margin-right: 3%; */
 }
 .project ul li:last-child {
    margin-right: 0;
@@ -342,44 +365,59 @@ section.project {
    width: 100%;
    overflow: hidden;
    position: relative;
+   height: 251px;
 }
 .project ul li a p.img img {
-   height: 251px;
+   height: 100%;
    width: 100%;
+   transition: width 0s;
+   transition: all 0.6s;
 }
 .project ul li a p.img:before {
    content: '';
-   width: 0%;
-   background: #1abc9cd2;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.281);
    height: 251px;
    position: absolute;
    left: 0;
    top: 0;
-   transition: all 0.5s;
+   z-index: 1;
+   /* transition: all 0.5s; */
 }
 .project ul li a:hover p.img:before,
 .project ul li a:focus p.img:before {
-   width: 100%;
+   width: 0;
+   /* transition: all 0.6s; */
+}
+.project ul li a:hover p.img img,
+.project ul li a:focus p.img img {
+   transform: scale(1.1);
    transition: all 0.6s;
 }
 .project ul li a p.img:after {
-   content: 'MORE';
+   content: 'VIEW';
    position: absolute;
    left: 50%;
    top: 50%;
    transform: translate(-50%,-50%);
    font-size: 15px;
    color: #fff;
-   border: 1px solid #fff;
-   border-radius: 40px;
-   padding: 5px 30px;
+   border-radius: 50%;
+   text-align: center;
+   background: #1abc9c;
    opacity: 0;
-   transition: all 0.5s;
+   width: 0px;
+   line-height: 0px;
+   height: 0px;
+   transition: all 0.3s;
 }
 .project ul li a:hover p.img:after,
 .project ul li a:focus p.img:after {
+   width: 60px;
+   line-height: 60px;
+   height: 60px;
    opacity: 1;
-   transition: all 0.5s;
+   transition: all 0.3s;
 }
 .project ul li a .content {
    width: 100%;

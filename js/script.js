@@ -30,6 +30,18 @@ $(function(){
         $('html, body').animate({scrollTop: (scroll)}, 300);
     });
 });
+$(function(){
+    $('#btnScroll').on('click', function(){
+        let scroll = $('#about').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
+});
+$(function(){
+    $('#btnAbout').on('click', function(){
+        let scroll = $('#about').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
+});
 
 
 //메인 슬라이드
@@ -44,4 +56,15 @@ $(function() {
         pauseOnFocus: false
     })
     $('.slick-prev').text('prev');
+    // $('.projectSlide').slick({
+    //     arrows:true,  //화살표
+    //     dots:true,  //인디케이터
+    //     autoplay:true,    //자동 재생
+    //     infinite: true,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplaySpeed:6000,  //재생 시간
+    //     pauseOnHover:true,  //호버시 멈추도록 설정
+    //     pauseOnFocus:true
+    // });
 })
