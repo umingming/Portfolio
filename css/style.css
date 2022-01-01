@@ -14,7 +14,6 @@ a:hover { text-decoration: none; color: inherit; }
 body {
    font-family: 'Noto Sans KR', sans-serif;
    font-size: 14px;
-   height: 5000px;
 }
 .wrap {
    width: 100%;
@@ -308,18 +307,18 @@ header.on .menu ul.inner.on {
 }
 @keyframes scroll {
    0% { opacity: 1; transform: translateY(0px); }
-   50% { opacity: 1; transform: translateY(-7px); }
+   50% { opacity: 1; transform: translateY(7px); }
    100% { opacity: 1; transform: translateY(0px); }
 }
 
 /* section */
-section >a {
-   transition: all 3s;
+section {
+   /* height: 90vh; */
 }
 section .title {
    width: 1200px;
    padding-top: 80px;
-   margin: 0 auto;
+   margin: 3% auto;
    color: #000;
    text-align: center;
 }
@@ -376,7 +375,7 @@ section.project {
 .project ul li a p.img:before {
    content: '';
    width: 100%;
-   background: rgba(0, 0, 0, 0.281);
+   background: rgba(0, 0, 0, 0.541);
    height: 251px;
    position: absolute;
    left: 0;
@@ -416,7 +415,7 @@ section.project {
    width: 60px;
    line-height: 60px;
    height: 60px;
-   opacity: 1;
+   opacity: 0.9;
    transition: all 0.3s;
 }
 .project ul li a .content {
@@ -444,4 +443,15 @@ section.project {
 .project ul li a .content p.date span {
    font-size: 1.9vh;
    margin-right: 2%;
+}
+
+/* footer */
+footer {
+   width: 100%;
+}
+footer .innerFooter {
+   background: #dbdbdb;
+   height: 110px;
+   padding: 0 80px;
+   transition: all 0.5s;
 }
