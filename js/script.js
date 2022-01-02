@@ -10,7 +10,7 @@ $(window).on('scroll resize', function () {
 });
 
 function fixHeader() {
-   if(scrollTop > 650) {
+   if(scrollTop > 150) {
        $('header').addClass('on');
    } else {
        $('header').removeClass('on');
