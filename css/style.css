@@ -315,6 +315,9 @@ header.on .menu ul.inner.on {
 }
 
 /* section */
+section {
+   margin-bottom: 200px;
+}
 section .title {
    position: relative;
    width: 1200px;
@@ -359,10 +362,12 @@ section .title p {
 .skill ul:before {
    content: '';
    position: absolute;
-   left: 0;
+   /* left: 0; */
+   margin: 0 auto;
+   transform: translateX(50px);
    top: 130px;
-   width: 100%;
-   height: 1000px;
+   width: 1200px;
+   height: 1030px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
@@ -393,7 +398,7 @@ section .title p {
    background: #dbdbdb;
 }
 .skill li:after {
-   animation: levelLine linear 1s 0s;
+   animation: levelLine linear 1.2s 0s;
    position: absolute;
    content: '';
    height: 10px;
@@ -433,8 +438,11 @@ section .title p {
    background: #1abc9c;
    color: #fff;
    font-size: 13px;
+   font-weight: 700;
+   letter-spacing: -2px;
+   text-align: center;
    z-index: 1;
-   animation: levelNumber linear 1s 0s;
+   animation: levelNumber linear 1.2s 0s;
 }
 .skill li#java div:after {
    content: '80%';
@@ -461,13 +469,31 @@ section .title p {
    left: 49%;
 }
 @keyframes levelNumber {
-   0% { left: 1%;}
+   0% { left: -1%;}
 }
 /* project */
 section.project .title {
    left: 50px;
    /* margin-bottom: 150px; */
    /* margin: 5% auto; */
+}
+.project {
+   position: relative;
+}
+.project ul:before {
+   content: '';
+   position: absolute;
+   /* left: 0; */
+   /* margin: 0 auto; */
+   /* transform: translateX(50px); */
+   left: 0;
+   top: 120px;
+   width: 30%;
+   height: 30px;
+   z-index: -1;
+   background: #ffbbe0;
+   /* background: #1abc9c; */
+   /* opacity: 0.3; */
 }
 .project ul {
    width: 1200px;
@@ -502,7 +528,8 @@ section.project .title {
 .project ul li a p.img:before {
    content: '';
    width: 100%;
-   background: rgba(0, 0, 0, 0.541);
+   background: rgba(53, 41, 48, 0.459);
+   /* background: rgba(0, 0, 0, 0.541); */
    height: 251px;
    position: absolute;
    left: 0;
