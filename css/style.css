@@ -193,7 +193,7 @@ header.on .menu ul.inner.on {
    /* font-size: 18vh; */
    font-size: 9vh;
    color: #ff5492;
-   /* color: #1abc9c; */
+   /* color: #1abc9cb4; */
 }
 /* .main .slide li .txt h2 span:hover,
 .main .slide li .txt h2 span:focus {
@@ -316,7 +316,7 @@ header.on .menu ul.inner.on {
 
 /* section */
 section {
-   margin-bottom: 200px;
+   margin-bottom: 300px;
 }
 section .title {
    position: relative;
@@ -367,20 +367,21 @@ section .title p {
    transform: translateX(50px);
    top: 130px;
    width: 1200px;
-   height: 1030px;
+   height: 1150px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
    opacity: 0.3;
+   border-radius: 15px;
 }
 .skill ul {
    width: 1200px;
-   margin: 5% auto;
+   margin: 1% auto;
    overflow: hidden;
 }
 .skill li {
    width: 900px;
-   margin: 20px 200px;
+   margin: 50px 200px;
    font-size: 21px;
    position: relative;
 }
@@ -397,8 +398,10 @@ section .title p {
    border-radius: 62px;
    background: #dbdbdb;
 }
-.skill li:after {
+.skill.active li:after {
    animation: levelLine linear 1.2s 0s;
+}
+.skill li:after {
    position: absolute;
    content: '';
    height: 10px;
@@ -422,7 +425,7 @@ section .title p {
    width: 40%;
 }
 .skill li#github:after {
-   width: 50%;
+   width: 40%;
 }
 @keyframes levelLine {
    0% { width: 0%;}
@@ -442,6 +445,8 @@ section .title p {
    letter-spacing: -2px;
    text-align: center;
    z-index: 1;
+}
+.skill.active li div:after {
    animation: levelNumber linear 1.2s 0s;
 }
 .skill li#java div:after {
@@ -465,12 +470,13 @@ section .title p {
    left: 39%;
 }
 .skill li#github div:after {
-   content: '50%';
-   left: 49%;
+   content: '40%';
+   left: 39%;
 }
 @keyframes levelNumber {
    0% { left: -1%;}
 }
+
 /* project */
 section.project .title {
    left: 50px;
@@ -491,9 +497,9 @@ section.project .title {
    width: 30%;
    height: 30px;
    z-index: -1;
-   background: #ffbbe0;
+   background: #ff5493b6;
    /* background: #1abc9c; */
-   /* opacity: 0.3; */
+   opacity: 0.8;
 }
 .project ul {
    width: 1200px;
@@ -528,8 +534,8 @@ section.project .title {
 .project ul li a p.img:before {
    content: '';
    width: 100%;
-   background: rgba(53, 41, 48, 0.459);
-   /* background: rgba(0, 0, 0, 0.541); */
+   /* background: rgba(59, 52, 56, 0.459); */
+   background: rgba(0, 0, 0, 0.541);
    height: 251px;
    position: absolute;
    left: 0;
@@ -600,13 +606,94 @@ section.project .title {
    margin-right: 2%;
 }
 
+/* contact */
+section.contact .title {
+   left: 420px;
+   /* margin-top: 350px; */
+   /* margin: 5% auto; */
+}
+.contact {
+   position: relative;
+}
+.contact ul:before {
+   content: '';
+   position: absolute;
+   top: 0px;
+   width: 70px;
+   height: 70px;
+   z-index: -1;
+   background: #ffbbe0;
+   transform: translateX(460px) translateY(97px);
+   z-index: -1;
+   /* background: #1abc9c; */
+   opacity: 0.3;
+   border-radius: 50%;
+}
+.contact ul:after {
+   content: '';
+   position: absolute;
+   top: 0px;
+   width: 300px;
+   height: 300px;
+   z-index: -1;
+   background: #ffbbe0;
+   transform: translateX(470px) translateY(120px);
+   /* background: #1abc9c; */
+   opacity: 0.7;
+   border-radius: 50%;
+}
+.contact ul {
+   width: 1200px;
+   margin: 1% auto;
+   padding-top: 23px;
+   overflow: hidden;
+   cursor: pointer;
+}
+/* .contact ul li:first-child p {
+   padding-left: 20px;
+} */
+.contact ul li {
+   transform: translateX(462px);
+   /* margin: 4px auto; */
+   padding: 6px;
+   width: 1200px;
+   color: #fff;
+   font-size: 24px;
+   font-weight: 700;
+}
+.contact ul li span {
+   float: left;
+   margin-right: 25px;
+   width: 32px;
+   font-size: 38px;
+   font-weight: 700;
+   color: #fff;
+   transform: translateY(-2px);
+   transition: all 0.3s;
+}
+.contact ul li:hover span{
+   color: #1abc9c;
+   /* color: #ff5492; */
+   transition: all 0.3s;
+   animation: pitapat 0.5s infinite;
+}
+@keyframes pitapat {
+   0% { transform: translateY(0px); }
+   50% { transform: translateY(2.3px); }
+   100% { transform: translateY(0px); }
+}
+
 /* footer */
 footer {
    width: 100%;
 }
 footer .innerFooter {
    background: #dbdbdb;
-   height: 110px;
-   padding: 0 80px;
+   color: #fff;
+   padding: 30px 80px;
    transition: all 0.5s;
+}
+footer .innerFooter p {
+   font-size: 15px;
+   text-align: center;
 }

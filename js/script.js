@@ -1,12 +1,15 @@
 //fixheaer
 var scrollTop = 0;
+var scrollSkill = 0;
 scrollTop = $(document).scrollTop();
 fixHeader();
+activateSkillMotion();
 
 //윈도우 창 조절
 $(window).on('scroll resize', function () {
-   scrollTop = $(document).scrollTop();
-   fixHeader();
+    scrollTop = $(document).scrollTop();
+    fixHeader();
+    activateSkillMotion();
 });
 
 function fixHeader() {
@@ -42,6 +45,18 @@ $(function(){
         $('html, body').animate({scrollTop: (scroll)}, 300);
     });
 });
+$(function(){
+    $('#btnSkill').on('click', function(){
+        let scroll = $('#skill').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
+});
+$(function(){
+    $('#btnContact').on('click', function(){
+        let scroll = $('#contact').offset().top;
+        $('html, body').animate({scrollTop: (scroll)}, 300);
+    });
+});
 
 
 //메인 슬라이드
@@ -50,7 +65,7 @@ $(function() {
         arrows: true,   
         dots: false,    
         fade: true,    
-        autoplay: false,  
+        autoplay: true,  
         autoplaySpeed: 7000, 
         pauseOnHover: false,
         pauseOnFocus: false
@@ -68,3 +83,20 @@ $(function() {
     //     pauseOnFocus:true
     // });
 })
+
+
+function activateSkillMotion() {
+   if(scrollTop > 900) {
+       $('.skill').addClass('active');
+    } else {
+        $('.skill').removeClass('active');
+   }
+}
+
+//애니메이션 
+$(function() {
+    $('.animate').scrolla({
+        mobile: false,
+        once: false
+    });
+});
