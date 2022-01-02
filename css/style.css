@@ -151,7 +151,7 @@ header.on .menu ul.inner.on {
 }
 .main .slide li p#btnScroll img {
    position: absolute;
-   right: 27%;
+   right: 27.5%;
    bottom: 3%;
    width: 2.5%;
    height: auto;
@@ -352,6 +352,45 @@ section .title p {
    font-size: 18px;
 }
 
+/* about */ 
+.about .title {
+   left: 200px;
+}
+.about {
+   position: relative;
+}
+.about ul {
+   width: 1200px;
+   margin: 1% auto;
+   overflow: hidden;
+}
+.about ul li {
+   width: 900px;
+   margin: 50px 200px;
+   font-size: 21px;
+   position: relative;
+}
+.about ul li .img:before {
+   position: absolute;
+   width: 500px;
+   height: 300px;
+   background: rgba(0, 0, 0, 0.541);
+}
+.about ul li .txt {
+   position: absolute;
+   right: 50px;
+   top: 10px;
+   border: 1px solid black;
+   width: 310px;
+   height: 300px;
+   background: #fff;
+   padding: 10px;
+}
+.about ul li .img img{
+   border: 1px solid black;
+   width: 600px;
+   height: auto;
+}
 /* skills */ 
 .skill .title {
    left: 700px;
