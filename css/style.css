@@ -70,7 +70,7 @@ header .innerHeader {
 header.on .innerHeader {
    height: 80px;
    transition: all 0.3s;
-   background: #dbdbdb;
+   background: #dbdbdbef;
 }
 header.on .innerHeader .menu > li {
    height: 80px;
@@ -613,6 +613,7 @@ section.contact .title {
    /* margin: 5% auto; */
 }
 .contact {
+   margin-bottom: 430px;
    position: relative;
 }
 .contact ul:before {
@@ -685,6 +686,7 @@ section.contact .title {
 
 /* footer */
 footer {
+   /* margin-top: 250px; */
    width: 100%;
 }
 footer .innerFooter {
