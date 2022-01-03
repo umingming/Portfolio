@@ -112,6 +112,7 @@ header.on .menu ul.inner.on {
    height: 100%;
    text-align: center;
    color: #fff;
+   /* color: #000; */
    font-size: 27px;
    font-weight: 700;
    transition: all 0.3s;
@@ -161,9 +162,10 @@ header.on .menu ul.inner.on {
    left: 11%;
    top: 65%;
    color: #fff;
+   /* color: #000; */
    font-size: 3vh;
    transform: translateY(-50%);
-   font-weight: 700;
+   font-weight: 500;
    text-transform: uppercase;
    transition: all 0.3s;
 }
@@ -184,11 +186,12 @@ header.on .menu ul.inner.on {
    /* font-weight: 500;
    font-size: 14vh;
    font-family: 'Nanum Pen Script', cursive; */
-   font-weight: 700;
+   font-weight: 500;
    font-size: 8vh;
    letter-spacing: 5%;
 }
 .main .slide li .txt h2 span {
+   font-weight: 700;
    /* font-size: 18vh; */
    font-size: 9vh;
    /* color: #ff5492; */
@@ -601,19 +604,22 @@ section.project .title {
 .project ul li a p.img:before {
    content: '';
    width: 100%;
-   /* background: rgba(59, 52, 56, 0.459); */
-   background: rgba(0, 0, 0, 0.541);
+   /* background: #ffeaf55e; */
+   background: rgba(255, 255, 255, 0.234);
+   /* background: #dbdbdb56; */
    height: 251px;
    position: absolute;
-   left: 0;
+   right: 0;
    top: 0;
    z-index: 1;
+   opacity: 1;
    /* transition: all 0.5s; */
 }
 .project ul li a:hover p.img:before,
 .project ul li a:focus p.img:before {
-   width: 0;
-   /* transition: all 0.6s; */
+   opacity: 0;
+   /* width: 0; */
+   transition: all 0.4s;
 }
 .project ul li a:hover p.img img,
 .project ul li a:focus p.img img {
@@ -637,6 +643,7 @@ section.project .title {
    line-height: 0px;
    height: 0px;
    transition: all 0.3s;
+   z-index: 2;
 }
 .project ul li a:hover p.img:after,
 .project ul li a:focus p.img:after {
@@ -720,16 +727,16 @@ section.contact .title {
    margin: 1% auto;
    padding-top: 23px;
    overflow: hidden;
-   cursor: pointer;
 }
 /* .contact ul li:first-child p {
    padding-left: 20px;
 } */
 .contact ul li {
+   cursor: pointer;
    transform: translateX(462px);
    /* margin: 4px auto; */
    padding: 6px;
-   width: 1200px;
+   width: 300px;
    color: #fff;
    font-size: 24px;
    font-weight: 700;
