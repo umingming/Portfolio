@@ -91,9 +91,9 @@ header.on .menu ul.inner.on {
 /* menu */
 .menu {
    position: absolute;
-   left: 55%;
+   left: 50%;
    /* transform: translateX(-50%); */
-   width: 900px;
+   width: 1000px;
    overflow: visible;
 }
 .menu >li {
@@ -102,11 +102,11 @@ header.on .menu ul.inner.on {
    line-height: 90px;
    position: relative;
    transition: all 0.3s;
-   margin-right: 6%;
+   margin-right: 7.2%;
 }
-.menu >li:last-child {
+/* .menu >li:last-child {
    margin-right: 10%;
-}
+} */
 .menu >li >a {
    display: block;
    width: 100%;
@@ -192,7 +192,7 @@ header.on .menu ul.inner.on {
 .main .slide li .txt h2 span {
    /* font-size: 18vh; */
    font-size: 9vh;
-   color: #ff5492;
+   /* color: #ff5492; */
    /* color: #1abc9cb4; */
 }
 /* .main .slide li .txt h2 span:hover,
