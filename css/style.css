@@ -249,8 +249,7 @@ header.on .menu ul.inner.on {
    position: absolute;
    left: 0;
    bottom: 0;
-   animation-name: bar;
-   animation-duration: 7s;
+   animation: bar linear 7s;
 }
 
 @keyframes bar {
