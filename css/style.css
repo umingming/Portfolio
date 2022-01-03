@@ -91,10 +91,9 @@ header.on .menu ul.inner.on {
 /* menu */
 .menu {
    position: absolute;
-   left: 50%;
+   left: 55%;
    /* transform: translateX(-50%); */
-   width: 1000px;
-   overflow: visible;
+   width: 950px;
 }
 .menu >li {
    float: left;
@@ -102,18 +101,18 @@ header.on .menu ul.inner.on {
    line-height: 90px;
    position: relative;
    transition: all 0.3s;
-   margin-right: 7.2%;
+   margin-right: 7%;
 }
-/* .menu >li:last-child {
-   margin-right: 10%;
-} */
+.menu >li:last-child {
+   margin-right: 0%;
+}
 .menu >li >a {
    display: block;
    width: 100%;
    height: 100%;
    text-align: center;
    color: #fff;
-   font-size: 30px;
+   font-size: 27px;
    font-weight: 700;
    transition: all 0.3s;
 }
@@ -402,10 +401,9 @@ section .title p {
    position: absolute;
    /* left: 0; */
    margin: 0 auto;
-   transform: translateX(140px);
    top: 130px;
    width: 1000px;
-   height: 1200px;
+   height: 870px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
@@ -413,16 +411,39 @@ section .title p {
    border-radius: 15px;
 }
 .skill ul {
-   width: 1200px;
+   width: 1000px;
    margin: 1% auto;
    overflow: hidden;
 }
 .skill li {
-   transform: translateX(60px);
-   width: 600px;
-   margin: 50px 200px;
+   float: left;
+   transform: translateX(50px);
+   width: 400px;
+   height: 200px;
+   margin: 3% 3%;
    font-size: 21px;
    position: relative;
+}
+.skill li img {
+   position: absolute;
+   left: -30px;
+   top: -15px;
+   width: 50px;
+   height: 50px;
+   float: left;
+   z-index: -1;
+   opacity: 0.9;
+   animation: skillImg 1s infinite;
+}
+@keyframes skillImg {
+   0% { transform: translateX(-5px) rotate(-10deg);}
+   50% { transform: translateX(0px) rotate(0deg);}
+   100% { transform: translateX(-5px) rotate(-10deg);}
+}
+.skill li:first-child img {
+   top: -22px;
+   width: 60px;
+   height: 60px;
 }
 .skill li h3 {
    margin-bottom: 21px;
@@ -447,14 +468,17 @@ section .title p {
    top: 38px;
    border-radius: 62px;
    background: #1abc9c;
+   opacity: 0.9;
 }
 .skill li#java:after {
    width: 80%;
 }
 .skill li#sql:after {
+   background: #ff5493;
    width: 60%;
 }
 .skill li#html:after {
+   background: #ff5493;
    width: 70%;
 }
 .skill li#css:after {
@@ -464,6 +488,7 @@ section .title p {
    width: 40%;
 }
 .skill li#github:after {
+   background: #ff5493;
    width: 40%;
 }
 @keyframes levelLine {
@@ -493,10 +518,12 @@ section .title p {
    left: 79%;
 }
 .skill li#sql div:after {
+   background: #ff5493;
    content: '60%';
    left: 59%;
 }
 .skill li#html div:after {
+   background: #ff5493;
    content: '70%';
    left: 69%;
 }
@@ -509,6 +536,7 @@ section .title p {
    left: 39%;
 }
 .skill li#github div:after {
+   background: #ff5493;
    content: '40%';
    left: 39%;
 }
@@ -676,10 +704,10 @@ section.contact .title {
    width: 300px;
    height: 300px;
    z-index: -1;
-   background: #ffbbe0;
+   background: #ff5493;
    transform: translateX(470px) translateY(120px);
    /* background: #1abc9c; */
-   opacity: 0.7;
+   opacity: 0.5;
    border-radius: 50%;
 }
 .contact ul {
