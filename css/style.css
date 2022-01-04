@@ -54,22 +54,19 @@ header .innerHeader {
    position: relative;
 }
 .innerHeader .logo a img {
-   width: 100%;
+   width: 70%;
    position: absolute;
    top: 0;
    left: 0;
    transition: all 0.3s;
 }
-.innerHeader .logo a img:nth-child(2) {
-   transition: all 0.3s;
-   width: 60%;
-   top: 13%;
-   left: 20%;
+.innerHeader .logo a img:nth-child(1) {
+   opacity: 0;
 }
 
 /* fixHeader */
 header.on .innerHeader {
-   height: 80px;
+   height: 70px;
    transition: all 0.3s;
    background: #dbdbdbef;
 }
@@ -80,7 +77,10 @@ header.on .innerHeader .menu > li {
 }
 header.on .innerHeader .logo {
    transition: all 0.3s;
-   margin-top: 10px;
+   margin-top: 12px;
+}
+header.on .innerHeader .logo a img:nth-child(1){
+   opacity: 1;
 }
 header.on .innerHeader .logo a img:nth-child(2){
    opacity: 0;
@@ -763,19 +763,33 @@ section.contact .title {
 .contact ul li:first-child {
    letter-spacing: 2px;
 }
-.contact ul li:hover{
-   /* color: #1abc9c; */
+.contact ul li p {
+   position: relative;
+}
+.contact ul li p:after{
+   content: '';
+   position: absolute;
+   top: -3px;
+   left: 48px;
+   width: 0px;
+   height: 35px;
+   border-bottom: #fff 3px solid;
    transition: all 0.3s;
-   /* animation: pitapat 0.5s infinite; */
+}
+.contact ul li p:hover:after{
+   width: 235px;
+}
+.contact ul li:first-child p:hover:after{
+   width: 198px;
 }
 @keyframes pitapat {
    0% { transform: translateX(30px) translateY(30px) rotate(0deg); }
-   50% { transform: translateX(30px) translateY(30px) scale(1.05) rotate(0deg); }
+   50% { transform: translateX(30px) translateY(30px) scale(1.02) rotate(0deg); }
    100% { transform: translateX(30px) translateY(30px) rotate(0deg); }
 }
 @keyframes call {
    0% { transform: translateX(240px) translateY(-90px) rotate(13deg); }
-   50% { transform: translateX(240px) translateY(-96px) rotate(11deg); }
+   50% { transform: translateX(240px) translateY(-94px) rotate(12deg); }
    100% { transform: translateX(240px) translateY(-90px) rotate(13deg); }
 }
 
