@@ -324,7 +324,7 @@ section .title {
    position: relative;
    width: 1200px;
    padding-top: 80px;
-   margin: 2% auto;
+   margin: 0% auto;
    color: #181818;
    font-family: 'Josefin Sans', sans-serif;
    font-weight: 700;
@@ -683,10 +683,15 @@ section.project .title {
 
 /* contact */
 section.contact .title {
-   color: #fff;
-   left: 420px;
+   color: #FFF;
+   /* left: 420px; */
+   width: 400px;
    margin-top: 500px;
    /* margin: 5% auto; */
+}
+.contact h2 {
+   transform: translateX(20px);
+   margin: 0 auto;
 }
 .contact {
    margin-bottom: 350px;
@@ -770,7 +775,7 @@ section.contact .title {
 }
 @keyframes call {
    0% { transform: translateX(240px) translateY(-90px) rotate(13deg); }
-   50% { transform: translateX(240px) translateY(-96px) rotate(8deg); }
+   50% { transform: translateX(240px) translateY(-96px) rotate(11deg); }
    100% { transform: translateX(240px) translateY(-90px) rotate(13deg); }
 }
 
