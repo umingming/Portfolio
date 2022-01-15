@@ -127,8 +127,11 @@ header.on .menu ul.inner.on {
 .main {
    margin-bottom: 200px;
 }
+.main .slide ul {
+   width: 1200px;
+}
 .main .slide li {
-   width: 100%;
+   width: 1200px;
    height: 98vh;
    position: relative;
    background: #ffbbe0;
@@ -655,13 +658,13 @@ section.project .title {
    opacity: 0.8;
 }
 .project ul {
-   width: 1500px;
+   width: 1200px;
    margin: 5% auto;
    overflow: hidden;
 }
 .project ul li {
    float: left;
-   width: 500px;
+   width: 400px;
    /* margin-right: 3%; */
 }
 .project ul li:last-child {
@@ -676,7 +679,7 @@ section.project .title {
    width: 100%;
    overflow: hidden;
    position: relative;
-   height: 300px;
+   height: 250px;
 }
 .project ul li a p.img img {
    height: 100%;
@@ -690,7 +693,7 @@ section.project .title {
    /* background: #ffeaf55e; */
    background: rgba(255, 255, 255, 0.534);
    /* background: #dbdbdb56; */
-   height: 300px;
+   height: 250px;
    position: absolute;
    right: 0;
    top: 0;
@@ -776,7 +779,7 @@ section.contact .title {
    margin: 0 auto;
 }
 .contact {
-   margin-bottom: 350px;
+   margin-bottom: 30vh;
    position: relative;
 }
 .contact ul:before {
