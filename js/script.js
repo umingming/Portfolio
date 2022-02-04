@@ -101,3 +101,30 @@ $(function() {
         once: false
     });
 });
+
+
+// 타이틀 버블
+jQuery(document).ready(function($) {
+    var bArray = [];
+    var sArray = [4,6,8,10];
+
+    for (var i = 0; i < $('.bubbles').width()/5; i++) {
+        bArray.push(i);
+    }
+
+    function randomValue(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+    }
+
+    setInterval(function(){
+        var size = randomValue(sArray);
+        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+        $('.individual-bubble').animate({
+            'bottom': '50%',
+            'opacity' : '-=0.8'
+        }, 3000, function(){
+            $(this).remove()
+        }
+        );
+    }, 350);
+});
