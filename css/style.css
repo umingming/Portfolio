@@ -389,6 +389,7 @@ section .title p {
    font-size: 23px;
    padding: 20px;
    background: #FFF;
+   line-height: 35px;
 }
 .about ul li:nth-child(1) .txt{
    border: 2px solid #ffbbe0;
@@ -429,7 +430,7 @@ section .title p {
 } */
 .about ul li:nth-child(2) .txt{
    position: absolute;
-   border: 2px solid #A4E4D8;
+   border: 2px solid #7adfca;
    right: 150px;
    top: 740px;
    width: 300px;
@@ -454,6 +455,76 @@ section .title p {
    height: 110px;
    background: url(../img/text_smile.png) center/cover;
    transform: rotate(30deg);
+}
+.about ul li .txt .github {
+   display: inline-block;
+   color: #FF92CE;
+   font-size: 18px;
+   font-weight: 700;
+   width: 80px;
+   height: 20px;
+   line-height: 20px;
+   text-align: center;
+   position: relative;
+   padding: 3px;
+   left: 200px;
+   top: 10px;
+   letter-spacing: 1px;
+   border: 2px solid #FFD8ED;
+   border-radius: 20px;
+   overflow: hidden;
+}
+.about ul li .txt .github:after {
+   content: '';
+   width: 0%;
+   height: 103%;
+   background: #a4e4d844;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   transition: all 0.3s;
+   z-index: -1;
+}
+.about ul li .txt .github:hover:after {
+   transition: all 0.3s;
+   width: 102%;
+}
+.about ul li .txt .btn {
+   display: inline-block;
+   color: rgb(16, 190, 156);
+   font-size: 18px;
+   font-weight: 700;
+   width: 80px;
+   height: 20px;
+   line-height: 20px;
+   text-align: center;
+   position: relative;
+   right: -70px;
+   top: 8px;
+   padding: 3px;
+   letter-spacing: 1px;
+   border: 2px solid #A4E4D8;
+   border-radius: 20px;
+   overflow: hidden;
+   cursor: pointer;
+}
+.about ul li:first-child .txt .btn {
+   transform: translateX(100px);
+}
+.about ul li .txt .btn:after {
+   content: '';
+   width: 0%;
+   height: 103%;
+   background: #ffd8ed71;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   transition: all 0.3s;
+   z-index: -1;
+}
+.about ul li .txt .btn:hover:after {
+   transition: all 0.3s;
+   width: 102%;
 }
 /* .about ul li:nth-child(2) .txt:before {
    content: '';
