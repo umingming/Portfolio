@@ -632,7 +632,7 @@ section .title p {
    margin: 0 auto;
    top: 130px;
    width: 1000px;
-   height: 870px;
+   height: 1250px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
@@ -643,6 +643,7 @@ section .title p {
    width: 1000px;
    margin: 1% auto;
    overflow: hidden;
+   height: 1200px;
 }
 .skill li {
    cursor: pointer;
@@ -653,6 +654,9 @@ section .title p {
    margin: 3% 3%;
    font-size: 21px;
    position: relative;
+}
+.skill li:nth-child(even) {
+   transform: translateX(50px) translateY(120px);
 }
 .skill li img {
    position: absolute;
@@ -711,7 +715,7 @@ section .title p {
    opacity: 0.9;
 }
 .skill li#java:after {
-   width: 80%;
+   width: 70%;
 }
 .skill li#sql:after {
    background: #ff5493;
@@ -754,8 +758,8 @@ section .title p {
    animation: levelNumber linear 1.2s 0s;
 }
 .skill li#java div:after {
-   content: '80%';
-   left: 79%;
+   content: '70%';
+   left: 69%;
 }
 .skill li#sql div:after {
    background: #ff5493;
