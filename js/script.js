@@ -128,3 +128,49 @@ jQuery(document).ready(function($) {
         );
     }, 550);
 });
+
+
+// 어바웃미 사이트 이동
+$().ready(function () { 
+    $(".github").click(function () { 
+        Swal.fire({ 
+            title: 'Github으로 이동하시겠어요?', 
+            icon: 'question', 
+            showCancelButton: true, 
+            confirmButtonColor: '#1abc9c', 
+            cancelButtonColor: '#ff5492', 
+            confirmButtonText: '확인', 
+            cancelButtonText: '취소' 
+        }).then((result) => { 
+            if (result.isConfirmed) { 
+                Swal.fire( 
+                    '확인이 완료되었습니다.', 
+                    'Github으로 이동합니다.', 
+                    'success',
+                ) 
+                location.href='https://github.com/umingming';
+            } 
+        }) 
+    }); 
+
+    $(".notion").click(function () { 
+        Swal.fire({ 
+            title: 'Notion으로 이동하시겠어요?', 
+            icon: 'question', 
+            showCancelButton: true, 
+            confirmButtonColor: '#1abc9c', 
+            cancelButtonColor: '#ff5492', 
+            confirmButtonText: '확인', 
+            cancelButtonText: '취소' 
+        }).then((result) => { 
+            if (result.isConfirmed) { 
+                Swal.fire( 
+                    '확인이 완료되었습니다.', 
+                    'Notion으로 이동합니다.', 
+                    'success',
+                ) 
+                location.href='https://yumding.notion.site/YOU-ME-0159c1005eab4abd8d05c06b62f3418e';
+            } 
+        }) 
+    });
+});
