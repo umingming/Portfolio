@@ -634,7 +634,7 @@ section .title p {
    margin: 0 auto;
    top: 150px;
    width: 1000px;
-   height: 1175px;
+   height: 1215px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
@@ -738,10 +738,10 @@ section .title p {
    width: 40%;
 }
 .skill li#jsp:after {
-   background: #ff5493;
    width: 50%;
 }
 .skill li#servlet:after {
+   background: #ff5493;
    width: 40%;
 }
 @keyframes levelLine {
@@ -794,11 +794,11 @@ section .title p {
    left: 39%;
 }
 .skill li#jsp div:after {
-   background: #ff5493;
    content: '50%';
    left: 49%;
 }
 .skill li#servlet div:after {
+   background: #ff5493;
    content: '40%';
    left: 39%;
 }
@@ -943,9 +943,10 @@ section.project .title {
 section.contact .title {
    color: #FFF;
    /* left: 420px; */
-   width: 400px;
+   width: 460px;
    margin-top: 500px;
    /* margin: 5% auto; */
+   cursor: pointer;
 }
 .contact h2 {
    transform: translateX(20px);
