@@ -348,7 +348,7 @@ section .title {
 } */
 section .title h2 {
    /* font-family: 'Nanum Pen Script', cursive; */
-   font-size: 40px;
+   font-size: 50px;
    margin: 30px 55px;
    /* margin-bottom: 5px; */
    font-weight: 700;
@@ -612,19 +612,20 @@ section .title p {
    position: absolute;
    border-radius: 100%;
    bottom: 10px;
-   background-color: #ff5492;
+   background-color: #ff5493d7;
    z-index: -1;
    transform: translateX(60px) translateY(-10px);
 }
 
 
 /* skills */ 
-.skill .title {
-   left: 700px;
-   top: 60px;
-}
 .skill {
    position: relative;
+}
+.skill .title {
+   width: 1000px;
+   left: 550px;
+   top: 90px;
 }
 .skill ul:before {
    content: '';
@@ -633,7 +634,7 @@ section .title p {
    margin: 0 auto;
    top: 150px;
    width: 1000px;
-   height: 1155px;
+   height: 1175px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
