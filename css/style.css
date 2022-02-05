@@ -621,6 +621,7 @@ section .title p {
 /* skills */ 
 .skill .title {
    left: 700px;
+   top: 60px;
 }
 .skill {
    position: relative;
@@ -630,9 +631,9 @@ section .title p {
    position: absolute;
    /* left: 0; */
    margin: 0 auto;
-   top: 130px;
+   top: 150px;
    width: 1000px;
-   height: 1250px;
+   height: 1155px;
    z-index: -1;
    background: #ffbbe0;
    /* background: #1abc9c; */
@@ -735,6 +736,13 @@ section .title p {
    background: #ff5493;
    width: 40%;
 }
+.skill li#jsp:after {
+   background: #ff5493;
+   width: 50%;
+}
+.skill li#servlet:after {
+   width: 40%;
+}
 @keyframes levelLine {
    0% { width: 0%;}
 }
@@ -781,6 +789,15 @@ section .title p {
 }
 .skill li#github div:after {
    background: #ff5493;
+   content: '40%';
+   left: 39%;
+}
+.skill li#jsp div:after {
+   background: #ff5493;
+   content: '50%';
+   left: 49%;
+}
+.skill li#servlet div:after {
    content: '40%';
    left: 39%;
 }
