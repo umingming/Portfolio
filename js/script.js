@@ -174,3 +174,16 @@ $().ready(function () {
         }) 
     });
 });
+
+
+// 어바웃미 마우스 이동
+$(function(){
+    $('.btn').on('mouseover', function(){
+        $('.cursor').addClass('click');
+        $('.btn').addClass('click');
+    });
+    $('.btn').on('mouseout', function(){
+        $('.cursor').removeClass('click');
+        $('.btn').removeClass('click');
+    });
+});

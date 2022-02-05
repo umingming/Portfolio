@@ -391,6 +391,7 @@ section .title p {
    padding: 22px;
    background: #FFF;
    line-height: 40px;
+   cursor: pointer;
 }
 .about ul li:nth-child(1) .txt{
    border: 2px solid #ffbbe0;
@@ -409,6 +410,14 @@ section .title p {
    height: 100px;
    background: url(../img/text_half.png) center/cover;
 }
+.about ul li:nth-child(1) .txt:hover:before {
+   animation: half linear 1s;
+}
+@keyframes half {
+   0% { transform: translateY(0px); }
+   50% { transform: translateY(120px); }
+   100% { transform: translateY(0px); }
+}
 .about ul li:nth-child(1) .txt:after {
    content: '';
    position: absolute;
@@ -418,6 +427,14 @@ section .title p {
    height: 90px;
    background: url(../img/text_good.png) center/cover;
    transform: rotate(68deg);
+}
+.about ul li:nth-child(1) .txt:hover:after {
+   animation: good linear 0.5s 2;
+}
+@keyframes good {
+   0% { transform: rotate(68deg); }
+   50% { transform: rotate(40deg); }
+   100% { transform: rotate(68deg); }
 }
 /* .about ul li:nth-child(1) .txt:before {
    content: '';
@@ -446,6 +463,15 @@ section .title p {
    height: 85px;
    background: url(../img/text_heart.png) center/cover;
    transform: rotate(-20deg);
+   cursor: pointer;
+}
+.about ul li:nth-child(2) .txt:hover:before {
+   animation: heart linear 0.7s 2;
+}
+@keyframes heart {
+   0% { transform: translateY(0px) rotate(-20deg); }
+   50% { transform: translateY(-10px) rotate(-17deg); }
+   100% { transform: translateY(0px) rotate(-20deg); }
 }
 .about ul li:nth-child(2) .txt:after {
    content: '';
@@ -456,6 +482,13 @@ section .title p {
    height: 110px;
    background: url(../img/text_smile.png) center/cover;
    transform: rotate(30deg);
+}
+.about ul li:nth-child(2) .txt:hover:after {
+   animation: smile linear 0.8s 1;
+}
+@keyframes smile {
+   0% { transform: rotate(30deg); }
+   100% { transform: rotate(-330deg); }
 }
 .about ul li .txt .btn {
    display: inline-block;
@@ -490,9 +523,41 @@ section .title p {
    transition: all 0.3s;
    z-index: -1;
 }
-.about ul li .txt .btn:hover:after {
+.about ul li .txt .btn.click:hover:after {
    transition: all 0.3s;
    width: 102%;
+}
+.about ul li .txt .notion_cursor {
+   position: absolute;
+   right: 68px;
+   bottom: 5px;
+   color: #ff5492;
+   transform: rotate(-80deg);
+   z-index: 2;
+   transition: all 0.3s;
+}
+.about ul li .txt .cursor.click {
+   animation: click linear 0.3s 1;
+   transform: translateX(-20px) translateY(-4px) rotate(-80deg);
+   transition: all 0.3s;
+}
+.about ul li .txt .cursor {
+   position: absolute;
+   right: 68px;
+   bottom: 5px;
+   color: #ff5492;
+   transform: rotate(-80deg);
+   z-index: 2;
+   transition: all 0.3s;
+}
+.about ul li .txt .cursor.click {
+   animation: click linear 0.3s 1;
+   transform: translateX(-20px) translateY(-4px) rotate(-80deg);
+   transition: all 0.3s;
+}
+@keyframes click {
+   0% { transform: translateX(0px) rotate(-80deg); }
+   100% { transform: translateX(-20px) translateY(-4px) rotate(-80deg); }
 }
 /* .about ul li:nth-child(2) .txt:before {
    content: '';
