@@ -511,6 +511,15 @@ section .title p {
    right: 3%;
    top: -50px;
 }
+.about ul li:nth-child(1) .img::after {
+   content: '✨';
+   position: absolute;
+   right: -52%;
+   top: 280px;
+   font-size: 32px;
+   width: 400px;
+   height: 600px;
+}
 .about ul li:nth-child(1) .img img{
    width: 400px;
    height: auto;
@@ -549,6 +558,14 @@ section .title p {
    height: 600px;
    left: 4%;
    top: 600px;
+}
+.about ul li:nth-child(2) .img::after {
+   content: '🙌';
+   position: absolute;
+   left: 59%;
+   top: 254px;
+   font-size: 49px;
+   transform: rotate(10deg);
 }
 .about ul li:nth-child(2) .img img{
    position: absolute;
