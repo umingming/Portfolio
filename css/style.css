@@ -420,7 +420,7 @@ section .title p {
    height: 533px;
    right: 8.5%;
    top: -30px;
-   background-color: #ffbbe088;
+   background-color: #1abc9c65;
    transition: all 0.3s;
 }
 .about ul li:nth-child(1) .img:after {
@@ -431,7 +431,7 @@ section .title p {
    height: 533px;
    right: 10%;
    top: -50px;
-   background: rgba(0, 0, 0, 0.418);
+   background: rgba(255, 255, 255, 0.418);
    transition: all 0.3s;
 }
 .about ul li:nth-child(2) .img img{
@@ -473,25 +473,14 @@ section .title p {
 
 
 /* 타이틀 버블 효과 */
-.bubbles {
-   width: 200px;
-   /* display: inline-block;
-   font-family: arial;
-   position: relative; */
-}
-/* .bubbles h2 {
-   position: relative;
-   margin: 1em 0 0;
-   color: #181818;
-   z-index: 2;
-} */
 .individual-bubble {
    width: 200px;
    position: absolute;
    border-radius: 100%;
    bottom: 10px;
-   background-color: #FF5492;
-   z-index: -1;
+   background-color: #1abc9c;
+   z-index: 1;
+   transform: translateX(400px) translateY(10px);
 }
 
 
