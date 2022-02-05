@@ -108,7 +108,7 @@ jQuery(document).ready(function($) {
     var bArray = [];
     var sArray = [4,6,8,10];
 
-    for (var i = 0; i < $('.bubbles').width()/3; i++) {
+    for (var i = 0; i < $('.bubbles').width()/5; i++) {
         bArray.push(i);
     }
 
@@ -120,11 +120,11 @@ jQuery(document).ready(function($) {
         var size = randomValue(sArray);
         $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
         $('.individual-bubble').animate({
-            'bottom': '100%',
+            'bottom': '70%',
             'opacity' : '-=0.8'
         }, 3000, function(){
             $(this).remove()
         }
         );
-    }, 350);
+    }, 550);
 });

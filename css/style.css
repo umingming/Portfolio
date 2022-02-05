@@ -556,9 +556,9 @@ section .title p {
    position: absolute;
    border-radius: 100%;
    bottom: 10px;
-   background-color: #1abc9c;
-   z-index: 1;
-   transform: translateX(400px) translateY(10px);
+   background-color: #ff5492;
+   z-index: -1;
+   transform: translateX(60px) translateY(-10px);
 }
 
 
