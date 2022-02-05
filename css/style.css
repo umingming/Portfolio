@@ -454,20 +454,20 @@ section .title p {
    width: 350px;
    box-shadow: 10px 10px 0px #A4E4D8;
 }
-.about ul li:nth-child(2) .txt:before {
+/* .about ul li:nth-child(2) .txt:before {
    content: '';
    position: absolute;
-   left: -15px;
-   top: -65px;
-   width: 85px;
-   height: 85px;
+   left: -240px;
+   top: 125px;
+   width: 75px;
+   height: 75px;
    background: url(../img/text_heart.png) center/cover;
-   transform: rotate(-20deg);
+   transform: rotate(0deg);
    cursor: pointer;
-}
-.about ul li:nth-child(2) .txt:hover:before {
+} */
+/* .about ul li:nth-child(2) .txt:hover:before {
    animation: heart linear 0.7s 2;
-}
+} */
 @keyframes heart {
    0% { transform: translateY(0px) rotate(-20deg); }
    50% { transform: translateY(-10px) rotate(-17deg); }
@@ -523,7 +523,7 @@ section .title p {
    transition: all 0.3s;
    z-index: -1;
 }
-.about ul li .txt .btn.click:hover:after {
+.about ul li .txt .btn.click:after {
    transition: all 0.3s;
    width: 102%;
 }
@@ -625,12 +625,12 @@ section .title p {
    top: 600px;
 }
 .about ul li:nth-child(2) .img::after {
-   content: '🙌';
+   content: '💕';
    position: absolute;
-   left: 59%;
-   top: 254px;
+   left: 58%;
+   top: 261px;
    font-size: 49px;
-   transform: rotate(10deg);
+   transform: rotate(0deg);
 }
 .about ul li:nth-child(2) .img img{
    position: absolute;

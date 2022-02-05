@@ -178,12 +178,21 @@ $().ready(function () {
 
 // 어바웃미 마우스 이동
 $(function(){
-    $('.btn').on('mouseover', function(){
-        $('.cursor').addClass('click');
-        $('.btn').addClass('click');
+    $('.btn.notion').on('mouseover', function(){
+        $('.cursor.notion').addClass('click');
+        $('.btn.notion').addClass('click');
     });
-    $('.btn').on('mouseout', function(){
-        $('.cursor').removeClass('click');
-        $('.btn').removeClass('click');
+    $('.btn.notion').on('mouseout', function(){
+        $('.cursor.notion').removeClass('click');
+        $('.btn.notion').removeClass('click');
+    });
+
+    $('.btn.github').on('mouseover', function(){
+        $('.cursor.github').addClass('click');
+        $('.btn.github').addClass('click');
+    });
+    $('.btn.github').on('mouseout', function(){
+        $('.cursor.github').removeClass('click');
+        $('.btn.github').removeClass('click');
     });
 });
