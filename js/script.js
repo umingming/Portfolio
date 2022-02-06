@@ -65,7 +65,7 @@ $(function() {
         arrows: true,   
         dots: false,    
         fade: true,    
-        autoplay: false,  
+        autoplay: true,  
         autoplaySpeed: 7000, 
         pauseOnHover: false,
         pauseOnFocus: false
