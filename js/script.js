@@ -23,38 +23,38 @@ function fixHeader() {
 //메뉴 이동
 $(function(){
     $('#btnProject').on('click', function(){
-        let scroll = $('#project').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+        let scroll = $('#project').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
     });
 });
 $(function(){
     $('#btnHome').on('click', function(){
-        let scroll = $('.main').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+        let scroll = $('.main').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
     });
 });
 $(function(){
     $('#btnScroll').on('click', function(){
-        let scroll = $('#about').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+        let scroll = $('#about').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
     });
 });
 $(function(){
     $('#btnAbout').on('click', function(){
-        let scroll = $('#about').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+        let scroll = $('#about').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
     });
 });
 $(function(){
     $('#btnSkill').on('click', function(){
-        let scroll = $('#skill').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+        let scroll = $('#skill').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
     });
 });
 $(function(){
     $('#btnContact').on('click', function(){
-        let scroll = $('#contact').offset().top;
-        $('html, body').animate({scrollTop: (scroll)}, 300);
+        let scroll = $('#contact').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
     });
 });
 
