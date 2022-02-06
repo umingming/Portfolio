@@ -1123,13 +1123,14 @@ footer {
    width: 100%;
 }
 footer .innerFooter {
-   background: #dbdbdb;
+   background: #fff;
    /* background: #ffbbe071; */
-   color: #fff;
+   color: #dbdbdb;
    padding: 30px 80px;
    transition: all 0.5s;
 }
 footer .innerFooter p {
    font-size: 15px;
    text-align: center;
+   transform: translateX(12px);
 }
