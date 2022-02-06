@@ -87,7 +87,7 @@ $(function() {
 
 function activateSkillMotion() {
     // console.log(scrollTop)
-   if(scrollTop > 1800) {
+   if(scrollTop > 2000) {
        $('.skill').addClass('active');
     } else {
         $('.skill').removeClass('active');
