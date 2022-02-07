@@ -484,11 +484,11 @@ section .title p {
    transform: rotate(30deg);
 }
 .about ul li:nth-child(2) .txt:hover:after {
-   animation: smile linear 0.8s 1;
+   animation: smile 1s 1;
 }
 @keyframes smile {
    0% { transform: rotate(30deg); }
-   100% { transform: rotate(-330deg); }
+   100% { transform: rotate(-690deg); }
 }
 .about ul li .txt .btn {
    display: inline-block;
