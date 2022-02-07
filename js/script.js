@@ -122,11 +122,11 @@ jQuery(document).ready(function($) {
         $('.individual-bubble').animate({
             'bottom': '100%',
             'opacity' : '-=1'
-        }, 2000, function(){
+        }, 2500, function(){
             $(this).remove()
         }
         );
-    }, 220);
+    }, 260);
 });
 
 
