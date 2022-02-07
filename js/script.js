@@ -196,3 +196,36 @@ $(function(){
         $('.btn.github').removeClass('click');
     });
 });
+
+
+// 프로젝트 링크
+let popupWidth = 1200;
+let popupHeight = 800;
+let popupX = (window.screen.width / 2) - (popupWidth / 2);
+let popupY= (window.screen.height / 2) - (popupHeight / 2);
+
+$(function(){
+    $('#goguma').on('click', function(){
+        window.open('https://github.com/umingming/Goguma/blob/master/README.md', 'goguma', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+    });
+
+    $('#portfolio').on('click', function(){
+        window.open('https://github.com/umingming/Portfolio/blob/master/README.md', 'portfolid', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+    });
+
+    $('#dragonland').on('click', function(){
+        window.open('https://github.com/umingming/DragonLand/blob/master/README.md', 'dragonland', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+    });
+
+    $('#dragoncenter').on('click', function(){
+        window.open('https://github.com/umingming/DragonCenter/blob/master/README.md', 'dragoncenter', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+    });
+
+    $('#deeproot').on('click', function(){
+        window.open('https://github.com/umingming/DeepRoot/blob/master/README.md', 'deeproot', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+    });
+
+    $('#clonecoding').on('click', function(){
+        window.open('https://github.com/umingming/CloneCoding/blob/master/README.md', 'clonecoding', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+    });
+});
