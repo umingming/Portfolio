@@ -121,12 +121,12 @@ jQuery(document).ready(function($) {
         $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
         $('.individual-bubble').animate({
             'bottom': '100%',
-            'opacity' : '-=0.8'
-        }, 3000, function(){
+            'opacity' : '-=1'
+        }, 2000, function(){
             $(this).remove()
         }
         );
-    }, 320);
+    }, 220);
 });
 
 
