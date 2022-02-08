@@ -361,6 +361,13 @@ section .title p {
    font-size: 18px;
 }
 
+/* hit */
+.main .hits {
+   position: absolute;
+   right: 20px;
+   bottom: 30px;
+}
+
 /* about */ 
 .about {
    position: relative;
