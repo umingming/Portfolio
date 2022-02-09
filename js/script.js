@@ -5,6 +5,7 @@ scrollTop = $(document).scrollTop();
 fixHeader();
 activateSkillMotion();
 
+
 //윈도우 창 조절
 $(window).on('scroll resize', function () {
     scrollTop = $(document).scrollTop();
@@ -130,11 +131,18 @@ jQuery(document).ready(function($) {
 });
 
 
+//화면 조정
+let popupWidth = 1200;
+let popupHeight = 800;
+let popupX = (window.screen.width / 2) - (popupWidth / 2);
+let popupY= (window.screen.height / 2) - (popupHeight / 2);
+
+
 // 어바웃미 사이트 이동
 $().ready(function () { 
     $(".github").click(function () { 
         Swal.fire({ 
-            title: 'Github으로 이동하시겠어요?', 
+            title: 'Github을 구경하시겠어요?', 
             icon: 'question', 
             showCancelButton: true, 
             confirmButtonColor: '#1abc9c', 
@@ -143,19 +151,20 @@ $().ready(function () {
             cancelButtonText: '취소' 
         }).then((result) => { 
             if (result.isConfirmed) { 
-                Swal.fire( 
-                    '확인이 완료되었습니다.', 
-                    'Github으로 이동합니다.', 
-                    'success',
-                ) 
-                location.href='https://github.com/umingming';
+                window.open('https://github.com/umingming', 'clonecoding', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY); 
+            //     Swal.fire( 
+            //         '확인이 완료되었습니다.', 
+            //         'Github으로 이동합니다.', 
+            //         'success',
+            //     ) 
+            //     location.href='https://github.com/umingming';
             } 
         }) 
     }); 
 
     $(".notion").click(function () { 
         Swal.fire({ 
-            title: 'Notion으로 이동하시겠어요?', 
+            title: 'Notion을 구경하시겠어요?', 
             icon: 'question', 
             showCancelButton: true, 
             confirmButtonColor: '#1abc9c', 
@@ -164,12 +173,8 @@ $().ready(function () {
             cancelButtonText: '취소' 
         }).then((result) => { 
             if (result.isConfirmed) { 
-                Swal.fire( 
-                    '확인이 완료되었습니다.', 
-                    'Notion으로 이동합니다.', 
-                    'success',
-                ) 
-                location.href='https://yumding.notion.site/YOU-ME-0159c1005eab4abd8d05c06b62f3418e';
+                window.open('https://yumding.notion.site/YOU-ME-0159c1005eab4abd8d05c06b62f3418e', 'clonecoding', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY); 
+                // location.href='https://yumding.notion.site/YOU-ME-0159c1005eab4abd8d05c06b62f3418e';
             } 
         }) 
     });
@@ -199,11 +204,6 @@ $(function(){
 
 
 // 프로젝트 링크
-let popupWidth = 1200;
-let popupHeight = 800;
-let popupX = (window.screen.width / 2) - (popupWidth / 2);
-let popupY= (window.screen.height / 2) - (popupHeight / 2);
-
 $(function(){
     $('#goguma').on('click', function(){
         window.open('https://github.com/umingming/Goguma/blob/master/README.md', 'goguma', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
