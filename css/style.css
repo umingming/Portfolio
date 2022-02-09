@@ -903,14 +903,17 @@ section.project .title {
    opacity: 0.8;
 }
 .project ul {
-   width: 1200px;
+   width: 1240px;
    margin: 5% auto;
    overflow: hidden;
 }
 .project ul li {
    float: left;
    width: 400px;
-   /* margin-right: 3%; */
+   margin-right: 20px;
+}
+.project ul li:nth-child(3) {
+   margin-right: 0px;
 }
 .project ul li:last-child {
    margin-right: 0;
@@ -925,6 +928,7 @@ section.project .title {
    overflow: hidden;
    position: relative;
    height: 250px;
+   border-radius: 5px;
 }
 .project ul li a p.img img {
    height: 100%;
@@ -986,10 +990,19 @@ section.project .title {
 }
 .project ul li a .content {
    width: 100%;
-   padding: 20px 0 20px 10px;
-   box-sizing: border-box;
+   padding: 10px 0px 0px 10px;
+   color: #555;
+   font-size: 18px;
 }
-.project ul li a .content p {
+.project ul li a .title {
+   width: 100%;
+   padding: 5px 0 25px 10px;
+   font-style: normal;
+   font-weight: 900;
+   font-size: 22px;
+   left: 0;
+}
+/* .project ul li a .content p {
    font-size: 2.5vh;
    font-weight: 500;
 }
@@ -1009,7 +1022,7 @@ section.project .title {
 .project ul li a .content p.date span {
    font-size: 1.9vh;
    margin-right: 2%;
-}
+} */
 
 /* contact */
 section.contact .title {
