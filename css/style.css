@@ -398,7 +398,7 @@ section .title p {
    padding: 22px;
    background: #FFF;
    line-height: 40px;
-   cursor: pointer;
+   cursor: default;
 }
 .about ul li:nth-child(1) .txt{
    border: 2px solid #ffbbe0;
@@ -724,7 +724,7 @@ section .title p {
    height: 1200px;
 }
 .skill li {
-   cursor: pointer;
+   cursor: default;
    float: left;
    transform: translateX(50px);
    width: 400px;
@@ -1070,7 +1070,7 @@ section.project > .title {
    transition: all 0.3s;
 }
 @keyframes project_click {
-   0% { opacity: 1; transform: translateX(0px) translateY(0px) rotate(-80deg); }
+   0% { opacity: 0; transform: translateX(0px) translateY(0px) rotate(-80deg); }
    100% { transform: translateX(-50px) translateY(-48px) rotate(-80deg); }
 }
 .project .btn:after {
