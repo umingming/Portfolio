@@ -229,3 +229,14 @@ $(function(){
         window.open('https://github.com/umingming/CloneCoding/blob/master/README.md', 'clonecoding', 'height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
     });
 });
+
+
+// 프로젝트 마우스 이동
+// $(function(){
+//     $('.site').on('mouseover', function(){
+//         $('.cursor.site').addClass('click');
+//     });
+//     $('.site').on('mouseout', function(){
+//         $('.cursor.site').removeClass('click');
+//     });
+// });
