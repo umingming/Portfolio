@@ -696,6 +696,7 @@ section .title p {
 /* skills */ 
 .skill {
    position: relative;
+   margin-bottom: 0;
 }
 .skill .title {
    width: 1000px;
@@ -882,41 +883,41 @@ section .title p {
 }
 
 /* project */
-section.project .title {
+section.project > .title {
+   top: 200px;
    left: 50px;
    /* margin-bottom: 150px; */
    /* margin: 5% auto; */
 }
 .project {
+   margin-top: 0;
    position: relative;
 }
-.project ul:before {
+/* .project ul:before {
    content: '';
    position: absolute;
-   /* left: 0; */
-   /* margin: 0 auto; */
-   /* transform: translateX(50px); */
    left: 0;
    top: 120px;
    width: 30%;
    height: 30px;
    z-index: -1;
-   background: #ff5493b6;
-   /* background: #1abc9c; */
    opacity: 0.8;
-}
+} */
 .project ul {
-   width: 1252px;
+   width: 1352px;
    margin: 5% auto;
    overflow: hidden;
+   height: 800px;
+   padding-top: 190px;
+   padding-left: 110px;
 }
 .project ul li {
    float: left;
    width: 380px;
-   margin: 0px 16px 50px 16px;
+   margin: 0px 16px 70px 16px;
    border: 2px solid #7adfca;
-   border-radius: 8px;
-   height: 320px;
+   /* border-radius: 8px; */
+   height: 310px;
    padding-top: 20px;
    box-shadow: 7px 7px 0px #1abc9c65;
 }
@@ -1003,13 +1004,13 @@ section.project .title {
 }
 .project ul li a .content {
    width: 100%;
-   padding: 10px 0px 0px 10px;
+   padding: 0px 0px 0px 23px;
    color: #555;
    font-size: 18px;
 }
 .project ul li a .title {
    width: 100%;
-   padding: 5px 0 25px 10px;
+   padding: 13px 0 2px 25px;
    font-style: normal;
    font-weight: 900;
    font-size: 22px;
