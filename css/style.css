@@ -1060,12 +1060,12 @@ section.project > .title {
    transform: rotate(-80deg);
    font-size: 19px;
    z-index: 2;
-   transition: all 0.3s;
+   transition: all 0.4s;
    opacity: 0;
 }
 .project li:hover .cursor {
    opacity: 1;
-   animation: project_click 0.4s 1;
+   animation: project_click 0.5s 1;
    transform: translateX(-50px) translateY(-48px) rotate(-80deg);
    transition: all 0.3s;
 }
@@ -1081,7 +1081,7 @@ section.project > .title {
    position: absolute;
    left: 0px;
    top: 0px;
-   transition: all 0.3s;
+   transition: all 0.4s;
    z-index: -1;
 }
 .project li:hover .btn:after {
