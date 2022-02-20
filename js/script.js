@@ -231,12 +231,12 @@ $(function(){
 });
 
 
-// 프로젝트 마우스 이동
-// $(function(){
-//     $('.site').on('mouseover', function(){
-//         $('.cursor.site').addClass('click');
-//     });
-//     $('.site').on('mouseout', function(){
-//         $('.cursor.site').removeClass('click');
-//     });
-// });
+//스킬 마우스 이동
+$(function(){
+    $('.java').on('mouseover', function(){
+        $('.java').addClass('active');
+    });
+    $('.java').on('mouseout', function(){
+        $('.java').removeClass('active');
+    });
+});

@@ -783,6 +783,9 @@ section .title p {
 .skill.active li:after {
    animation: levelLine linear 1.2s 0s;
 }
+.skill li.active:after {
+   animation: levelLine linear 1.2s 0s;
+}
 .skill li:after {
    position: absolute;
    content: '';
@@ -1054,24 +1057,24 @@ section.project > .title {
 }
 .project .cursor {
    position: absolute;
-   right: 13px;
-   bottom: -37px;
+   right: 40px;
+   bottom: 4px;
    color: #ff5492;
    transform: rotate(-80deg);
-   font-size: 19px;
+   font-size: 20px;
    z-index: 2;
    transition: all 0.4s;
-   opacity: 0;
+   opacity: 1;
 }
 .project li:hover .cursor {
    opacity: 1;
    animation: project_click 0.5s 1;
-   transform: translateX(-50px) translateY(-48px) rotate(-80deg);
+   transform: translateX(-20px) translateY(-5px) rotate(-80deg);
    transition: all 0.3s;
 }
 @keyframes project_click {
-   0% { opacity: 0; transform: translateX(0px) translateY(0px) rotate(-80deg); }
-   100% { transform: translateX(-50px) translateY(-48px) rotate(-80deg); }
+   0% { transform: translateX(0px) translateY(0px) rotate(-80deg); }
+   100% { transform: translateX(-20px) translateY(-5px) rotate(-80deg); }
 }
 .project .btn:after {
    content: '';
