@@ -50,7 +50,13 @@
     .menu {
         position: absolute; 
         right: 0px;
-        width: 360px;
+        width: 80%;
+    }
+    .menu > li {
+        width: 20%;
+    }
+    .menu >li:first-child {
+        width: 10%;
     }
     .menu >li >span {
         opacity: 1;
@@ -61,8 +67,6 @@
     .menu >li >a {
         opacity: 0;
         font-size: 1px;
-    }
-    .menu >li:last-child {
-        margin-right: 0;
+        margin-right: 0px;
     }
 }
