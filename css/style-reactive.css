@@ -13,12 +13,13 @@
     .menu {
         position: absolute;
         right: 0px;
-        width: 650px;
+        width: 670px;
     }
     .menu >li >a {
         font-size: 22px;
     }
-}@media ( max-width: 768px ) {
+}
+@media ( max-width: 950px ) {
     header .innerHeader {
         height: 110px;
         padding: 0 30px;
@@ -33,15 +34,35 @@
     .menu {
         position: absolute; 
         right: 0px;
-        width: 440px;
+        width: 590px;
     }
     .menu >li {
-        margin-right: 5%;
+        margin-right: 2%;
     }
     .menu >li >a {
-       font-size: 17px;
+       font-size: 21px;
     }
     .menu >li:last-child {
-        margin-right: 2%;
+        margin-right: 1%;
+    }
+}
+@media ( max-width: 650px ) {
+    .menu {
+        position: absolute; 
+        right: 0px;
+        width: 360px;
+    }
+    .menu >li >span {
+        opacity: 1;
+        position: relative;
+        top: 6px;
+        font-size: 33px;
+    }
+    .menu >li >a {
+        opacity: 0;
+        font-size: 1px;
+    }
+    .menu >li:last-child {
+        margin-right: 0;
     }
 }
