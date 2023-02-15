@@ -29,6 +29,12 @@ $(function(){
     });
 });
 $(function(){
+    $('.logo').on('click', function(){
+        let scroll = $('.main').offset().top - 100;
+        $('html, body').animate({scrollTop: (scroll)}, 700);
+    });
+});
+$(function(){
     $('#btnHome').on('click', function(){
         let scroll = $('.main').offset().top - 100;
         $('html, body').animate({scrollTop: (scroll)}, 700);
