@@ -69,4 +69,59 @@
         font-size: 1px;
         margin-right: 0px;
     }
+    
+    .main .slide li img {
+        position: absolute;
+        z-index: 10;
+        right: 10px;
+        top: 150px;
+        width: 400px;
+    }
+    .main .slide li p#btnScroll {
+        position: absolute;
+        top: 0;
+        right: 175px;
+        height: 355px;
+    }
+    .main .slide li p#btnScroll:after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 393px;
+        width: 20px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    } 
+    .main .slide li p#btnScroll img {
+        z-index: 1000;
+        height: 100%;
+        width: auto;
+        opacity: 0;
+    }
+    .main .slide li .txt {
+        top: 600px;
+    }
+    .main .slide li .txt p {
+        font-size: 23px;
+    }
+    .main .slide li .txt h2 {
+        font-size: 33px;
+    }
+    .main .slide li .txt h2 span {
+        font-size: 33px;
+    }
+    
+    .slick-arrow:after {
+        font-size: 40px;
+    }
+    .slick-active .txt h2 span {
+        animation-name: txt4;
+        animation-duration: 1s;
+    }
+    @keyframes txt4 {
+        0% { font-size: 31px; }
+        20% { font-size: 31px; }
+        100% { font-size: 33px; }
+    }
 }
