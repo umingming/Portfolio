@@ -245,4 +245,102 @@
        font-size: 49px;
        transform: rotate(0deg);
     }
+
+    
+    .skill .title {
+        width: 100%;
+        left: 0px;
+        top: 20px;
+    }
+    .skill ul:before {
+        content: '';
+        position: absolute;
+        /* left: 0; */
+        margin: 0 auto;
+        top: 150px;
+        width: 90%;
+        height: 2015px;
+        z-index: -1;
+        background: #ffbbe0;
+        /* background: #1abc9c; */
+        opacity: 0.3;
+        border-radius: 15px;
+    }
+    .skill ul {
+        width: 90%;
+        margin: 1% auto;
+        overflow: hidden;
+        margin-top: 80px;
+        height: 2000px;
+    }
+    .skill li:nth-child(even) {
+       transform: translateX(50px);
+    }
+    .skill li:nth-child(even):after {
+        background: #ff5493 !important;
+    }
+    .skill li:nth-child(odd):after {
+        background: #1abc9c !important;
+    }
+    .skill li:nth-child(even) div:after {
+        background: #ff5493 !important;  
+    }
+    .skill li:nth-child(odd) div:after {
+        background: #1abc9c !important;  
+    }
+
+    .project ul {
+        width: 100%;
+        margin: 5% auto;
+        overflow: hidden;
+        height: 2200px;
+        padding-top: 190px;
+        padding-left: 0;
+    }
+    .project ul li {
+       float: none;
+       width: 90%;
+       margin: 5% auto;
+       border: 2px solid #7adfca;
+       border-radius: 5px;
+       height: 310px;
+       padding-top: 20px;
+       box-shadow: 7px 7px 0px #1abc9c65;
+       /* background: #dbdbdb2d; */
+    }
+    .project ul li a p.img {
+       margin: 0 auto;
+       width: 90%;
+       overflow: hidden;
+       position: relative;
+       height: 220px;
+       border-radius: 5px;
+    }
+    .project ul li a .content {
+       width: 100%;
+       padding: 11px 0px 0px 10%;
+       color: #555;
+       font-size: 18px;
+    }
+    .project ul li a .title {
+       width: 100%;
+       padding: 5px 0 2px 12%;
+       font-style: normal;
+       font-weight: 1000;
+       font-size: 23px;
+       left: 0;
+    }
+    .project ul li a .btn.site {
+        position: relative;
+        left: 75%;
+        bottom: 30px;
+    }
+    .project ul li a .cursor {
+        position: relative;
+        left: 92%;
+        bottom: 30px;
+    }
+    .project ul li a .cursor::before {
+        transform: rotate(270deg) !important;
+    }
 }
