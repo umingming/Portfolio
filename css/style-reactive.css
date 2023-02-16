@@ -344,3 +344,110 @@
         transform: rotate(270deg) !important;
     }
 }
+@media ( max-width: 450px ) {
+    .main .slide li img {
+        right: 0;
+        top: 25%;
+    }
+    .main .slide li p#btnScroll {
+        top: 25%;
+        height: 265px;
+        right: 170px;
+    }
+    .main .slide li .txt {
+        position: absolute;
+        top: auto;
+        bottom: 10%;
+    }
+    .main .slide li .txt p {
+        font-size: 17px;
+    }
+    
+    .about ul {
+        width: 100%;
+        height: 1200px;
+        margin: 1% auto;
+     }
+    .about ul li:nth-child(1) .txt{
+        left: 7%;
+        width: 300px;
+    }
+    .about ul li:nth-child(1) .txt:before {
+       left: -48px;
+       width: 60px;
+       height: 60px;
+    }
+    .about ul li:nth-child(1) .txt:after {
+       right: -10px;
+       top: -40px;
+       width: 60px;
+       height: 60px;
+       transform: rotate(68deg);
+    }
+    .about ul li:nth-child(2) .txt{
+        position: absolute;
+        border: 2px solid #7adfca;
+        left: 8%;
+        top: 900px;
+        width: 300px;
+        box-shadow: 5px 5px 0px #A4E4D8;
+    }
+    .about ul li:nth-child(2) .txt:after {
+       content: '';
+       position: absolute;
+       right: -20px;
+       bottom: -40px;
+       width: 70px;
+       height: 70px;
+       background: url(../img/text_smile.png) center/cover;
+       transform: rotate(30deg);
+    }
+    .about ul li .txt .btn {
+        right: 80px;
+    }
+    .about ul li .txt .cursor {
+        right: 37px;
+     }
+     .about ul li:nth-child(2) .txt .cursor {
+        right: 58px;
+     }
+     
+    .about ul li:nth-child(1) .img {
+        width: 300px;
+        height: 450px;
+        right: 15px;
+        top: 420px;
+    }
+    .about ul li:nth-child(1) .img img{
+        width: 250px;
+        height: auto;
+        position: absolute;
+        right: 0;
+        z-index: -4;
+        box-shadow: 5px 5px 0px #1abc9c65;
+    }
+    .about ul li:nth-child(2) .img {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        left: 10%;
+        top: 700px;
+    }
+    .about ul li:nth-child(2) .img img{
+        position: absolute;
+        left: 5%;
+        top: 20px;
+        width: 280px;
+        height: 200px;
+        z-index: -15;
+        box-shadow: 5px 5px 0px #ffbbe091;
+     }
+     .about ul li:nth-child(2) .img::after {
+        content: '💕';
+        position: absolute;
+        left: 70%;
+        top: 80px;
+        font-size: 49px;
+        transform: rotate(0deg);
+     }
+}
