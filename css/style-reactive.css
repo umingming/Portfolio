@@ -345,13 +345,44 @@
     }
 }
 @media ( max-width: 450px ) {
+    header .innerHeader {
+        height: 100px;
+        padding: 0 15px;
+        transition: all 0.5s;
+    }
+    .menu {
+        position: absolute; 
+        right: 0px;
+        width: 96%;
+    }
+    .menu > li {
+        width: auto;
+    }
+    .menu >li >span {
+        opacity: 0;
+        position: relative;
+        top: 6px;
+        font-size: 2px;
+    }
+    .menu >li >a {
+        opacity: 1;
+        font-size: 16px !important;
+        margin-right: 0px;
+    }
+    .menu >li:first-child >a {
+        font-size: 1px !important;
+        opacity: 0;
+    }
+    .main .slide li {
+       height: 90vh;
+    }
     .main .slide li img {
         right: 0;
-        top: 25%;
+        top: 15%;
     }
     .main .slide li p#btnScroll {
-        top: 25%;
-        height: 265px;
+        top: 15%;
+        height: 295px;
         right: 170px;
     }
     .main .slide li .txt {
@@ -362,15 +393,33 @@
     .main .slide li .txt p {
         font-size: 17px;
     }
+    .main .hits {
+       bottom: 12vh;
+    }
     
+    section .title h2 {
+        font-size: 40px;
+    }
+    .about {
+        margin-bottom: 50px;
+    }
+    .about .title {
+        top: 40px;
+    }
     .about ul {
         width: 100%;
-        height: 1200px;
+        height: 1300px;
         margin: 1% auto;
+     }
+     .about ul li .txt {
+         font-size: 18px;
+         padding: 10 10 20 10;
+         line-height: 32px;
      }
     .about ul li:nth-child(1) .txt{
         left: 7%;
         width: 300px;
+        height: auto !important;
     }
     .about ul li:nth-child(1) .txt:before {
        left: -48px;
@@ -388,8 +437,8 @@
         position: absolute;
         border: 2px solid #7adfca;
         left: 8%;
-        top: 900px;
-        width: 300px;
+        top: 820px;
+        width: 280px;
         box-shadow: 5px 5px 0px #A4E4D8;
     }
     .about ul li:nth-child(2) .txt:after {
@@ -403,10 +452,16 @@
        transform: rotate(30deg);
     }
     .about ul li .txt .btn {
-        right: 80px;
+        right: 150px;
+        height: 15px;
+        line-height: 15px;
+    }
+    .about ul li:nth-child(2) .txt .btn {
+        right: -45px;
     }
     .about ul li .txt .cursor {
-        right: 37px;
+        bottom: 7px;
+        right: 45px;
      }
      .about ul li:nth-child(2) .txt .cursor {
         right: 58px;
@@ -416,7 +471,7 @@
         width: 300px;
         height: 450px;
         right: 15px;
-        top: 420px;
+        top: 340px;
     }
     .about ul li:nth-child(1) .img img{
         width: 250px;
@@ -430,15 +485,15 @@
         position: absolute;
         width: 300px;
         height: 200px;
-        left: 10%;
-        top: 700px;
+        left: 5%;
+        top: 650px;
     }
     .about ul li:nth-child(2) .img img{
         position: absolute;
-        left: 5%;
+        left: 2%;
         top: 20px;
-        width: 280px;
-        height: 200px;
+        width: 350px;
+        height: 220px;
         z-index: -15;
         box-shadow: 5px 5px 0px #ffbbe091;
      }
@@ -450,4 +505,124 @@
         font-size: 49px;
         transform: rotate(0deg);
      }
+
+     .skill ul:before {
+        height: 1915px;
+    }
+    .skill ul {
+        height: 1900px;
+    }
+    .skill li {
+        font-size: 18px;
+        width: 80%;
+        margin-left: -10px;
+    }
+    
+    .project ul {
+        width: 100%;
+        margin: 5% auto;
+        overflow: hidden;
+        height: 2200px;
+        padding-top: 190px;
+        padding-left: 0;
+    }
+    .project ul li {
+       float: none;
+       width: 90%;
+       margin: 5% auto;
+       border: 2px solid #7adfca;
+       border-radius: 5px;
+       height: 290px;
+       padding-top: 20px;
+       box-shadow: 7px 7px 0px #1abc9c65;
+       /* background: #dbdbdb2d; */
+    }
+    .project ul li a p.img {
+       margin: 0 auto;
+       width: 90%;
+       overflow: hidden;
+       position: relative;
+       height: 200px;
+       border-radius: 5px;
+    }
+    .project ul li a .content {
+       width: 100%;
+       padding: 11px 0px 0px 5%;
+       color: #555;
+       font-size: 16px;
+    }
+    .project ul li a .title {
+       width: 100%;
+       padding: 5px 0 2px 6%;
+       font-style: normal;
+       font-weight: 1000;
+       font-size: 23px;
+       left: 0;
+    }
+    .project ul li a .btn.site {
+        position: relative;
+        left: 60%;
+        bottom: 30px;
+    }
+    .project ul li a .cursor {
+        position: relative;
+        left: 85%;
+        bottom: 30px;
+    }
+    .project ul li a .cursor::before {
+        transform: rotate(270deg) !important;
+    }
+
+    .contact .title {
+        margin-top: 0 !important;
+    }
+    .contact .title h2 {
+        margin: 6% 6% 3% 6% !important;
+    }
+    .contact ul:before {
+       content: '';
+       position: absolute;
+       top: 0px;
+       width: 150px;
+       height: 150px;
+       z-index: -1;
+       /* opacity: 0.9; */
+       background: url(../img/contactMe.png)no-repeat center/cover;
+       /* background: #ffbbe0; */
+       transform: translateX(220px) translateY(-80px) rotate(13deg);
+       border-radius: 50%;
+    }
+    .contact ul:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        width: 320px;
+        height: 320px;
+        z-index: -1;
+        background: url(../img/contactImg.png)no-repeat center/cover;
+        transform: translateX(30px) translateY(20px);
+        transition: all 3s;
+    }
+    @keyframes call {
+       0% { transform: translateX(220px) translateY(-80px) rotate(13deg); }
+       50% { transform: translateX(220px) translateY(-84) rotate(12deg); }
+       100% { transform: translateX(220px) translateY(-80px) rotate(13deg); }
+    }
+
+    .contact ul {
+        top: 40px;
+    }
+    .contact ul li {
+        position: relative;
+        left: -5px;
+    }
+    .contact ul li p {
+        width: 100%;
+    }
+    .contact ul li p span {
+        font-size: 22px;
+    }
+    .contact ul li p a {
+        font-size: 18px;
+    }
 }
