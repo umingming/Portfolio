@@ -1158,10 +1158,10 @@ section.contact .title {
 } */
 .contact ul li {
    cursor: pointer;
-   transform: translateX(70px) translateY(-3px);
+   transform: translateX(60px) translateY(-3px);
    /* margin: 4px auto; */
    padding: 6px;
-   width: 300px;
+   width: 350px;
    color: #fff;
    font-size: 24px;
    font-weight: 700;

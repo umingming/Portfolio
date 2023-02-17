@@ -1,4 +1,4 @@
-@media ( max-width: 1350px ) {
+@media ( max-width: 1380px ) {
     header .innerHeader {
         height: 110px;
         padding: 0 20px;
@@ -18,6 +18,74 @@
     .menu >li >a {
         font-size: 22px;
     }
+    
+    .main .slide li img {
+        position: absolute;
+        z-index: 10;
+        right: 10px;
+        top: 10%;
+        width: 700px;
+    }
+    .main .slide li p#btnScroll {
+        position: absolute;
+        top: 10%;
+        right: 305px;
+        height: 540px;
+    }
+    .main .slide li p#btnScroll:after {
+        content: '';
+        position: inherit;
+        right: 0px;
+        top: 413px;
+        z-index: 1001;
+        width: 50px;
+        height: 70px;
+    } 
+    .main .slide li p#btnScroll img {
+        z-index: 1000;
+        height: 100%;
+        width: auto;
+        opacity: 0;
+    }
+    .main .slide li .txt {
+        z-index: 1010;
+        bottom: 30%;
+    }
+    .main .slide li .txt h2 {
+        font-size: 90px;
+    }
+    .main .slide li .txt h2 span {
+        font-size: 90px;
+    }
+    .slick-active .txt h2 span {
+        animation-name: txt4;
+        animation-duration: 1s;
+    }
+    @keyframes txt4 {
+        0% { font-size: 88px; }
+        20% { font-size: 88px; }
+        100% { font-size: 90px; }
+    }
+    
+    .project ul {
+        width: 100%;
+        margin: 5% auto;
+        overflow: hidden;
+        height: 1300px;
+        padding-top: 190px;
+        padding-left: 0;
+    }
+    .project ul li {
+       width: 45%;
+       margin: 2% !important;
+    }
+    .project ul li a p.img {
+        margin: 0 auto;
+        width: 90%;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+     }
 }
 @media ( max-width: 950px ) {
     header .innerHeader {
@@ -136,13 +204,50 @@
     
     .skill .title {
         top: 20px;
+        left: 50%;
     }
+    .skill ul:before {
+        width: 90%;
+        height: 1745px;
+    }
+    .skill ul {
+        width: 90%;
+        height: 1700px;
+    }
+    .skill li {
+        width: 50%;
+        height: 160px;
+    }
+    .skill li:nth-child(even) {
+        transform: translateX(80%);
+    }
+
+    .project ul {
+        width: 100%;
+        margin: 5% auto;
+        overflow: hidden;
+        height: 1300px;
+        padding-top: 190px;
+        padding-left: 0;
+    }
+    .project ul li {
+       width: 45%;
+       margin: 2% !important;
+    }
+    .project ul li a p.img {
+        margin: 0 auto;
+        width: 90%;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+     }
+     .project ul li a .content {
+        font-size: 15px;
+     }
 }
-@media ( max-width: 650px ) {
+@media ( max-width: 730px ) {
     .menu {
-        position: absolute; 
-        right: 0px;
-        width: 86%;
+        left: 20%;
     }
     .menu > li {
         width: auto;
@@ -155,12 +260,8 @@
     }
     .menu >li >a {
         opacity: 1;
-        font-size: 17px !important;
         margin-right: 0px;
-    }
-    .menu >li:first-child >a {
-        font-size: 1px !important;
-        opacity: 0;
+        font-size: 18px;
     }
     
     .main {
@@ -200,13 +301,13 @@
         bottom: 30%;
     }
     .main .slide li .txt p {
-        font-size: 23px;
+        font-size: 35px;
     }
     .main .slide li .txt h2 {
-        font-size: 35px;
+        font-size: 60px;
     }
     .main .slide li .txt h2 span {
-        font-size: 35px;
+        font-size: 60px;
     }
     
     .slick-arrow:after {
@@ -217,9 +318,9 @@
         animation-duration: 1s;
     }
     @keyframes txt4 {
-        0% { font-size: 31px; }
-        20% { font-size: 31px; }
-        100% { font-size: 33px; }
+        0% { font-size: 58px; }
+        20% { font-size: 58px; }
+        100% { font-size: 60px; }
     }
     
     
@@ -352,7 +453,7 @@
         margin: 0 auto;
         top: 150px;
         width: 90%;
-        height: 2015px;
+        height: 1815px;
         z-index: -1;
         background: #ffbbe0;
         /* background: #1abc9c; */
@@ -364,11 +465,12 @@
         margin: 1% auto;
         overflow: hidden;
         margin-top: 80px;
-        height: 2000px;
+        height: 1800px;
     }
     .skill li {
         width: 80%;
         margin-left: -10px;
+        margin-bottom: 30px;
     }
     .skill li:nth-child(even) {
        transform: translateX(50px);
@@ -448,19 +550,14 @@
         font-size: 22px;
     }
 }
-@media ( max-width: 450px ) {
+@media ( max-width: 520px ) {
     header .innerHeader {
         height: 100px;
         padding: 0 10px;
         transition: all 0.5s;
     }
     .menu {
-        position: absolute; 
-        right: 0px;
-        width: 96%;
-    }
-    .menu > li {
-        width: auto;
+        left: 17%;
     }
     .menu >li >span {
         opacity: 0;
@@ -470,13 +567,13 @@
     }
     .menu >li >a {
         opacity: 1;
-        font-size: 15px !important;
+        font-size: 14px !important;
         margin-right: 0px;
     }
-    .menu >li:first-child >a {
+    /* .menu >li:first-child >a {
         font-size: 1px !important;
         opacity: 0;
-    }
+    } */
     .main .slide li {
        height: 90vh;
     }
@@ -620,15 +717,176 @@
      }
 
      .skill ul:before {
-        height: 1915px;
+        height: 1715px;
     }
     .skill ul {
-        height: 1900px;
+        height: 1700px;
     }
     .skill li {
         font-size: 18px;
         width: 80%;
         margin-left: -10px;
+        margin-bottom: 30px;
+    }
+    
+    .project ul {
+        width: 100%;
+        margin: 5% auto;
+        overflow: hidden;
+        height: 2200px;
+        padding-top: 190px;
+        padding-left: 0;
+    }
+    .project ul li {
+       float: none;
+       width: 90%;
+       margin: 5% auto;
+       border: 2px solid #7adfca;
+       border-radius: 5px;
+       height: 290px;
+       padding-top: 20px;
+       box-shadow: 7px 7px 0px #1abc9c65;
+       /* background: #dbdbdb2d; */
+    }
+    .project ul li a p.img {
+       margin: 0 auto;
+       width: 90%;
+       overflow: hidden;
+       position: relative;
+       height: 200px;
+       border-radius: 5px;
+    }
+    .project ul li a .content {
+       width: 100%;
+       padding: 11px 0px 0px 5%;
+       color: #555;
+       font-size: 16px;
+    }
+    .project ul li a .title {
+       width: 100%;
+       padding: 5px 0 2px 6%;
+       font-style: normal;
+       font-weight: 1000;
+       font-size: 23px;
+       left: 0;
+    }
+    .project ul li a .btn.site {
+        position: relative;
+        left: 60%;
+        bottom: 30px;
+    }
+    .project ul li a .cursor {
+        position: relative;
+        left: 85%;
+        bottom: 30px;
+    }
+    .project ul li a .cursor::before {
+        transform: rotate(270deg) !important;
+    }
+
+    .contact .title {
+        margin-top: 0 !important;
+    }
+    .contact .title h2 {
+        margin: 6% 6% 3% 6% !important;
+    }
+    .contact ul:before {
+       content: '';
+       position: absolute;
+       top: 0px;
+       width: 150px;
+       height: 150px;
+       z-index: -1;
+       /* opacity: 0.9; */
+       background: url(../img/contactMe.png)no-repeat center/cover;
+       /* background: #ffbbe0; */
+       transform: translateX(220px) translateY(-80px) rotate(13deg);
+       border-radius: 50%;
+    }
+    .contact ul:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        width: 320px;
+        height: 320px;
+        z-index: -1;
+        background: url(../img/contactImg.png)no-repeat center/cover;
+        transform: translateX(30px) translateY(20px);
+        transition: all 3s;
+    }
+    @keyframes call {
+       0% { transform: translateX(220px) translateY(-80px) rotate(13deg); }
+       50% { transform: translateX(220px) translateY(-84) rotate(12deg); }
+       100% { transform: translateX(220px) translateY(-80px) rotate(13deg); }
+    }
+
+    .contact ul {
+        top: 40px;
+    }
+    .contact ul li {
+        position: relative;
+        left: -5px;
+    }
+    .contact ul li p {
+        width: 100%;
+    }
+    .contact ul li p span {
+        font-size: 22px;
+    }
+    .contact ul li p a {
+        font-size: 18px;
+    }
+}
+@media ( max-width: 400px ) {
+    .menu {
+        left: 10%;
+    }
+    .menu >li >span {
+        opacity: 0;
+        position: relative;
+        top: 6px;
+        font-size: 2px;
+    }
+    .menu >li >a {
+        opacity: 1;
+        font-size: 12px !important;
+        margin-right: 0px;
+    }
+    .main .slide li .txt p {
+        font-size: 20px;
+    }
+    .main .slide li .txt h2 {
+        font-size: 40px;
+    }
+    .main .slide li .txt h2 span {
+        font-size: 40px;
+    }
+    
+    .slick-active .txt h2 span {
+        animation-name: txt4;
+        animation-duration: 1s;
+    }
+    @keyframes txt4 {
+        0% { font-size: 38px; }
+        20% { font-size: 38px; }
+        100% { font-size: 40px; }
+    }
+    .main .hits {
+       bottom: 11vh;
+    }
+    
+     .skill ul:before {
+        height: 1665px;
+    }
+    .skill ul {
+        height: 1600px;
+    }
+    .skill li {
+        font-size: 18px;
+        width: 80%;
+        margin-left: -10px;
+        margin-bottom: 25px;
+        overflow: hidden;
     }
     
     .project ul {
