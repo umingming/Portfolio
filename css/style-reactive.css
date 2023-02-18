@@ -758,9 +758,10 @@
         100% { transform: translateX(-10px) translateY(-2px) rotate(-80deg); }
      }
      .about ul li.experience {
-        font-size: 18px;
-        padding: 10 10 20 10;
-        line-height: 32px;
+        font-size: 16px;
+        padding: 15px 0 10px 15px !important;
+        line-height: 28px;
+        box-shadow: 5px 5px 0px #ffbbe091;
     }
     .about ul li.experience h3 {
         transform: translateY(-5px);
@@ -772,6 +773,7 @@
         left: 20px;
         transform: translateY(50px);
         width: 380px;
+        box-shadow: 5px 5px 0px #1abc9c65;
      }
     .about ul li.career:before {
        left: -30px;
@@ -782,8 +784,8 @@
     .about ul li.education {
         position: relative;
         left: 10%;
-        width: 430px;
-        transform: translateY(-40px);
+        width: 410px;
+        transform: translateY(-10px);
      }
      .about ul li.education:before {
          right: 25px;
@@ -792,8 +794,8 @@
      .about ul li.certificate {
          position: relative;
          left: 40%;
-         width: 230px;
-         transform: translateY(170px);
+         width: 220px;
+         transform: translateY(200px);
       }
 
      .skill ul:before {
@@ -959,10 +961,10 @@
         font-size: 20px;
     }
     .main .slide li .txt h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .main .slide li .txt h2 span {
-        font-size: 40px;
+        font-size: 30px;
     }
     
     .slick-active .txt h2 span {
@@ -970,26 +972,45 @@
         animation-duration: 1s;
     }
     @keyframes txt4 {
-        0% { font-size: 38px; }
-        20% { font-size: 38px; }
-        100% { font-size: 40px; }
+        0% { font-size: 28px; }
+        20% { font-size: 28px; }
+        100% { font-size: 30px; }
     }
     .main .hits {
        bottom: 11vh;
     }
-    
+    .about ul li.experience span {
+        font-size: 14px;
+    }
+    .about ul li.education {
+        position: relative;
+        left: 60px;
+        width: 280px;
+        transform: translateY(-10px);
+        padding-bottom: 15px !important;
+     }
+     .about ul li.education span {
+        line-height: 13px;
+        display: block;
+        transform: translateX(110px);
+     }
+     .about ul li.education:before {
+         right: 0px;
+         top: -55px;
+     }
+
      .skill ul:before {
-        height: 1565px;
+        height: 1505px;
     }
     .skill ul {
-        height: 1500px;
+        height: 1400px;
+        margin-top: 40px;
     }
     .skill li {
         font-size: 18px;
         width: 80%;
         margin-left: -10px;
         margin-bottom: 35px;
-        overflow: hidden;
     }
     
     .project ul {
