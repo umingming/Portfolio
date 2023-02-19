@@ -536,6 +536,8 @@
         height: 2300px;
         padding-top: 190px;
         padding-left: 0;
+        padding-right: 0;
+        transform: translateX(15px);
     }
     .project ul li {
        float: none;
@@ -590,6 +592,12 @@
     }
     .contact ul li p a {
         font-size: 22px;
+    }
+    .contact ul li p:hover:after{
+        width: 45%;
+    }
+    .contact ul li:first-child p:hover:after{
+        width: 70%;
     }
 }
 @media ( max-width: 520px ) {
@@ -902,6 +910,14 @@
        100% { transform: translateX(220px) translateY(-80px) rotate(13deg); }
     }
 
+    .contact .title {
+        width: 400px !important;
+    }
+    .contact .title h2 {
+        margin: 6% 0% !important;
+        transform: translateX(-10px);
+        text-align: center;
+    }
     .contact ul {
         top: 40px;
     }
@@ -1119,5 +1135,11 @@
     }
     .contact ul li p a {
         font-size: 18px;
+    }
+}
+@media ( max-width: 350px ) {
+    .project ul li, 
+    .skill ul li {
+        overflow: hidden !important;
     }
 }

@@ -1287,10 +1287,10 @@ section.contact .title {
    transition: all 0.3s;
 }
 .contact ul li p:hover:after{
-   width: 40%;
+   width: 50%;
 }
 .contact ul li:first-child p:hover:after{
-   width: 60%;
+   width: 75%;
 }
 .contact ul li:nth-child(2) {
     transform: translateX(80px);
