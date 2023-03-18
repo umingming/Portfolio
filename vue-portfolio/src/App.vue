@@ -1,28 +1,35 @@
 <template>
-    <div id="app">
-        <img alt="Vue logo" src="./assets/logo.png" />
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div id="app wrap">
+        <app-header></app-header>
+        <main-view></main-view>
+        <about-view></about-view>
+        <skill-view></skill-view>
+        <project-view></project-view>
+        <contact-view></contact-view>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
+import MainView from "@/views/MainView.vue";
+import AboutView from "@/views/AboutView.vue";
+import SkillView from "@/views/SkillView.vue";
+import ProjectView from "@/views/ProjectView.vue";
+import ContactView from "@/views/ContactView.vue";
 export default {
     name: "App",
     components: {
-        HelloWorld,
+        AppHeader,
+        AppFooter,
+        MainView,
+        AboutView,
+        SkillView,
+        ProjectView,
+        ContactView,
     },
 };
 </script>
 
-<style>
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-</style>
+<style></style>
