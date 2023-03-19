@@ -1,55 +1,32 @@
 <template>
     <section class="main">
-        <ul class="slide">
-            <li v-if="isSlideIndex(1)">
-                <img src="../../public/img/main0_scroll.jpg" alt="메인1" />
-                <p id="btnScroll">
-                    <img src="../../public/img/scroll.png" alt="메인1" />
-                </p>
-                <div class="txt">
-                    <p class="en">Developer</p>
-                    <h2>
-                        안녕하세요,<br />
-                        <span>이유미</span>입니다!
-                    </h2>
-                </div>
-            </li>
-            <li v-if="isSlideIndex(2)" id="light-background">
-                <img src="../../public/img/main2.jpg" alt="메인2" />
-                <div class="txt">
-                    <p class="en">untiring effort</p>
-                    <h2><span>꾸준함</span>으로 탁월함을<br />앞서겠습니다.</h2>
-                </div>
-            </li>
-            <li v-if="isSlideIndex(3)">
-                <img src="../../public/img/main3.jpg" alt="메인3" />
-                <div class="txt">
-                    <p class="en">With a reason</p>
-                    <h2>
-                        <span>이유</span>가 있는
-                        <span>코드</span>를<br />작성하겠습니다.
-                    </h2>
-                </div>
-            </li>
-        </ul>
-        <button class="arrow" @click="changeSlide('left')">
-            <i class="bi bi-chevron-right"></i>
-        </button>
-        <button class="arrow" @click="changeSlide('right')">
-            <i class="bi bi-chevron-left"></i>
-        </button>
-        <a class="hits" href="#!"
-            ><img
-                src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fumingming.github.io%2FPortfolio%2F&count_bg=%23FF5492&title_bg=%23FF5492&icon=&icon_color=%23E7E7E7&title=%E2%9D%A4&edge_flat=false"
-        /></a>
+        <div class="slide">
+            <main-slide
+                :class="{ 'light-background': slideIndex === 1 }"
+                :index="slideIndex"
+            ></main-slide>
+            <button class="arrow" @click="changeSlide('left')">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <button class="arrow" @click="changeSlide('right')">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <a class="hits" href="#!"
+                ><img
+                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fumingming.github.io%2FPortfolio%2F&count_bg=%23FF5492&title_bg=%23FF5492&icon=&icon_color=%23E7E7E7&title=%E2%9D%A4&edge_flat=false"
+            /></a>
+        </div>
     </section>
 </template>
 
 <script>
+import MainSlide from "@/components/main/MainSlide.vue";
 export default {
+    components: { MainSlide },
     data() {
         return {
-            slideIndex: 1,
+            slideIndexes: [0, 1, 2],
+            index: 0,
             slideChangedTime: null,
             slideDuration: 10000,
             slideInterval: null,
@@ -58,8 +35,11 @@ export default {
     computed: {
         isSlideIndex() {
             return (index) => {
-                return this.slideIndex === index;
+                return this.index === index;
             };
+        },
+        slideIndex() {
+            return this.index;
         },
     },
     created() {
@@ -77,9 +57,9 @@ export default {
             this.initSlide();
 
             if (direction === "left") {
-                this.slideIndex = this.slideIndex > 1 ? --this.slideIndex : 3;
+                this.index = this.index > 0 ? --this.index : 2;
             } else {
-                this.slideIndex = this.slideIndex < 3 ? ++this.slideIndex : 1;
+                this.index = this.index < 2 ? ++this.index : 0;
             }
         },
     },
