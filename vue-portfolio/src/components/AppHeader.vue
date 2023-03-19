@@ -8,19 +8,17 @@
                 </a>
             </h1>
             <ul class="menu en">
-                <li id="btnHome"><a href="#">HOME</a></li>
                 <li id="btnAbout">
-                    <span class="lnr lnr-user"></span><a href="#">ABOUT</a>
+                    <router-link to="/main">ABOUT</router-link>
                 </li>
                 <li id="btnSkill">
-                    <span class="lnr lnr-code"></span><a href="#">SKILLS</a>
+                    <router-link to="/skill">SKILLS</router-link>
                 </li>
                 <li id="btnProject">
-                    <span class="lnr lnr-screen"></span><a href="#">PROJECT</a>
+                    <router-link to="/project">PROJECT</router-link>
                 </li>
                 <li id="btnContact">
-                    <span class="lnr lnr-phone-handset"></span
-                    ><a href="#">CONTACT</a>
+                    <router-link to="/contact">CONTACT</router-link>
                 </li>
             </ul>
         </div>
