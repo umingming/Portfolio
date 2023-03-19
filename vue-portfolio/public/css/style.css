@@ -320,13 +320,13 @@ header.on .menu ul.inner.on {
 /* 게이지 */
 .main .slide li:after {
   content: "";
-  width: 100%;
+  width: 0%;
   height: 5px;
   background: #1abc9c;
   position: absolute;
   left: 0;
   bottom: 0;
-  animation: bar linear 7s;
+  animation: bar linear 10s infinite;
 }
 
 @keyframes bar {

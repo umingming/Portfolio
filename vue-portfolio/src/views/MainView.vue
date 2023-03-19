@@ -1,11 +1,5 @@
 <template>
     <section class="main">
-        <button class="arrow" @click="changeSlide('left')">
-            <i class="bi bi-chevron-right"></i>
-        </button>
-        <button class="arrow" @click="changeSlide('right')">
-            <i class="bi bi-chevron-left"></i>
-        </button>
         <ul class="slide">
             <li v-if="isSlideIndex(1)">
                 <img src="../../public/img/main0_scroll.jpg" alt="메인1" />
@@ -38,7 +32,12 @@
                 </div>
             </li>
         </ul>
-        <div class="slide-bar"></div>
+        <button class="arrow" @click="changeSlide('left')">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+        <button class="arrow" @click="changeSlide('right')">
+            <i class="bi bi-chevron-left"></i>
+        </button>
         <a class="hits" href="#!"
             ><img
                 src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fumingming.github.io%2FPortfolio%2F&count_bg=%23FF5492&title_bg=%23FF5492&icon=&icon_color=%23E7E7E7&title=%E2%9D%A4&edge_flat=false"
@@ -52,7 +51,7 @@ export default {
         return {
             slideIndex: 1,
             slideChangedTime: null,
-            slideDuration: 7000,
+            slideDuration: 10000,
             slideInterval: null,
         };
     },
@@ -75,6 +74,8 @@ export default {
             }, this.slideDuration);
         },
         changeSlide(direction) {
+            this.initSlide();
+
             if (direction === "left") {
                 this.slideIndex = this.slideIndex > 1 ? --this.slideIndex : 3;
             } else {
