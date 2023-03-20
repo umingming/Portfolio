@@ -1,44 +1,25 @@
 <template>
     <section class="main">
         <div class="slide">
-            <main-slide
-                :class="{ 'light-background': slideIndex === 1 }"
-                :key="slideIndex"
-                :index="slideIndex"
-            ></main-slide>
-            <button class="arrow" @click="changeSlide('right')">
-                <i class="bi bi-chevron-right"></i>
-            </button>
-            <button class="arrow" @click="changeSlide('left')">
-                <i class="bi bi-chevron-left"></i>
-            </button>
-            <a class="hits" href="#!"
-                ><img
-                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fumingming.github.io%2FPortfolio%2F&count_bg=%23FF5492&title_bg=%23FF5492&icon=&icon_color=%23E7E7E7&title=%E2%9D%A4&edge_flat=false"
-            /></a>
+            <main-slide></main-slide>
+            <main-hits></main-hits>
         </div>
     </section>
 </template>
 
 <script>
 import MainSlide from "@/components/main/MainSlide.vue";
+import MainHits from "@/components/main/MainHits.vue";
 export default {
-    components: { MainSlide },
+    components: { MainSlide, MainHits },
     data() {
         return {
-            slideIndexes: [0, 1, 2],
             index: 0,
-            slideChangedTime: null,
             slideDuration: 10000,
             slideInterval: null,
         };
     },
     computed: {
-        isSlideIndex() {
-            return (index) => {
-                return this.index === index;
-            };
-        },
         slideIndex() {
             return this.index;
         },

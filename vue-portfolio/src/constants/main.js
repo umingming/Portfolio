@@ -1,6 +1,7 @@
 export const SLIDE = [
     {
         img: "/img/main0_scroll.jpg",
+        scroll: "/img/scroll.png",
         p: "Developer",
         h2: "안녕하세요,<br /><span>이유미</span>입니다!",
     },

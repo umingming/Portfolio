@@ -223,21 +223,25 @@ header.on .menu ul.inner.on {
   background-color: #ffbbe0;
   transition: background-color 0.2s ease-in-out;
 }
-.main .slide .main-slide.light-background {
+.main .slide .main-slide.light {
   background-color: #ffc6e6;
 }
-.main .slide .main-slide img {
-  background: none;
+.main .slide .main-slide .image img {
   position: absolute;
   right: 7%;
   bottom: 3%;
   width: 50%;
   height: auto;
-  z-index: 100;
   animation-name: img;
   animation-duration: 2s;
 }
-.main .slide .main-slide p#btnScroll:after {
+.main .slide .main-slide .image button {
+  position: absolute;
+  right: 7%;
+  bottom: 3%;
+  width: 50%;
+}
+.main .slide .main-slide #button-scroll:after {
   content: "";
   position: absolute;
   right: 27%;
@@ -246,7 +250,7 @@ header.on .menu ul.inner.on {
   height: 30%;
   cursor: pointer;
 }
-.main .slide .main-slide p#btnScroll img {
+.main .slide .main-slide #button-scroll img {
   position: absolute;
   right: 27.5%;
   bottom: 3%;
