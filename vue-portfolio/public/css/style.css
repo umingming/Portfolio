@@ -217,14 +217,19 @@ header.on .menu ul.inner.on {
   margin-bottom: 300px;
 }
 .main .slide .main-slide {
+  position: relative;
   width: 100%;
   height: 98vh;
-  position: relative;
   background-color: #ffbbe0;
   transition: background-color 0.2s ease-in-out;
 }
 .main .slide .main-slide.light {
   background-color: #ffc6e6;
+}
+.main .slide .main-slide .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .main .slide .main-slide .image img {
   position: absolute;
@@ -238,7 +243,7 @@ header.on .menu ul.inner.on {
 .main .slide .main-slide .image button {
   position: absolute;
   right: 7%;
-  bottom: 3%;
+  bottom: 20%;
   width: 50%;
 }
 .main .slide .main-slide #button-scroll:after {

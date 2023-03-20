@@ -1,12 +1,10 @@
 <template>
     <div class="main-slide" :class="{ light: slideIndex === 1 }">
-        <div :key="slideIndex">
-            <div class="image">
-                <img :src="slide.img" />
-                <button>
-                    <i class="bi bi-arrow-down"></i>
-                </button>
-            </div>
+        <div class="image" :key="slideIndex">
+            <img :src="slide.img" />
+            <button>
+                <i class="bi bi-arrow-down"></i>
+            </button>
             <div class="txt">
                 <p class="en">{{ slide.p }}</p>
                 <h2 v-html="slide.h2"></h2>
@@ -37,7 +35,7 @@ export default {
         },
     },
     created() {
-        this.initSlide();
+        // this.initSlide();
     },
     methods: {
         initSlide() {
