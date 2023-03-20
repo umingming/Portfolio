@@ -2,7 +2,7 @@
     <div class="main-slide">
         <img :src="slide.img" />
         <div class="txt">
-            <p class="en" v-html="slide.p"></p>
+            <p class="en">{{ slide.p }}</p>
             <h2 v-html="slide.h2"></h2>
         </div>
     </div>
@@ -22,4 +22,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped></style>

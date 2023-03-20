@@ -3,12 +3,13 @@
         <div class="slide">
             <main-slide
                 :class="{ 'light-background': slideIndex === 1 }"
+                :key="slideIndex"
                 :index="slideIndex"
             ></main-slide>
-            <button class="arrow" @click="changeSlide('left')">
+            <button class="arrow" @click="changeSlide('right')">
                 <i class="bi bi-chevron-right"></i>
             </button>
-            <button class="arrow" @click="changeSlide('right')">
+            <button class="arrow" @click="changeSlide('left')">
                 <i class="bi bi-chevron-left"></i>
             </button>
             <a class="hits" href="#!"
