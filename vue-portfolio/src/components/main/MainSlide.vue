@@ -2,7 +2,7 @@
     <div class="main-slide" :class="{ light: slideIndex === 1 }">
         <div class="image" :key="slideIndex">
             <img :src="slide.img" />
-            <button>
+            <button v-if="slideIndex === 0">
                 <i class="bi bi-arrow-down"></i>
             </button>
             <div class="txt">
@@ -35,7 +35,7 @@ export default {
         },
     },
     created() {
-        // this.initSlide();
+        this.initSlide();
     },
     methods: {
         initSlide() {
