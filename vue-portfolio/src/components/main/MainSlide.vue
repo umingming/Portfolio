@@ -60,6 +60,9 @@ export default {
                 this.slideIndex = this.slideIndex < 2 ? ++this.slideIndex : 0;
             }
         },
+        scrollDown() {
+            console.log("scrollDown");
+        },
     },
 };
 </script>

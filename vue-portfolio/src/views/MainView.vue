@@ -4,14 +4,18 @@
             <main-slide></main-slide>
             <main-hits></main-hits>
         </div>
+        <div class="intro">
+            <main-introduction></main-introduction>
+        </div>
     </section>
 </template>
 
 <script>
 import MainSlide from "@/components/main/MainSlide.vue";
 import MainHits from "@/components/main/MainHits.vue";
+import MainIntroduction from "@/components/main/MainIntroduction.vue";
 export default {
-    components: { MainSlide, MainHits },
+    components: { MainSlide, MainHits, MainIntroduction },
     data() {
         return {
             index: 0,

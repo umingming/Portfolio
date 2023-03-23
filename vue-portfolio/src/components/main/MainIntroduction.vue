@@ -1,6 +1,5 @@
 <template>
-    <section class="about">
-        <a id="about"></a>
+    <div class="main-introduction">
         <div
             class="title animate"
             data-animate="fadeInUp"
@@ -17,7 +16,7 @@
                     data-duration="1.5s"
                     data-delay="-0.5s"
                 >
-                    <img src="../../public/img/about1.jpg" alt="유미" />
+                    <img src="" alt="유미" />
                 </div>
                 <div
                     class="txt animate"
@@ -42,7 +41,7 @@
                     data-duration="1.5s"
                     data-delay="-0.5s"
                 >
-                    <img src="../../public/img/about2.jpg" alt="" />
+                    <img src="" alt="" />
                 </div>
                 <div
                     class="txt animate"
@@ -117,7 +116,7 @@
                 <p>정보처리기사(필기) <span>2022.03</span></p>
             </li>
         </ul>
-    </section>
+    </div>
 </template>
 
 <script>

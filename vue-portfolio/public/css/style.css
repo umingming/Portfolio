@@ -242,7 +242,7 @@ header.on .menu ul.inner.on {
 }
 .main .slide .main-slide .image button {
   position: absolute;
-  right: 27%;
+  right: 27.5%;
   bottom: 3%;
   height: 50vw;
   background: none;
@@ -250,7 +250,7 @@ header.on .menu ul.inner.on {
   font-size: 3vw;
   cursor: pointer;
   opacity: 0;
-  animation: scroll linear 0.6s 1.9s infinite;
+  animation: scroll linear 0.7s 1.9s infinite;
 }
 .main .slide .main-slide .image button i {
   position: relative;
