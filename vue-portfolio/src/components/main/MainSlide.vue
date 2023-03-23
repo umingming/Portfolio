@@ -1,9 +1,9 @@
 <template>
-    <div class="main-slide" :class="{ light: slideIndex === 1 }">
+    <div class="main-slide" :class="{ bright: isBackgroundBright }">
         <div class="image" :key="slideIndex">
             <img :src="slide.img" />
-            <button v-if="slideIndex === 0">
-                <i class="bi bi-arrow-down"></i>
+            <button v-if="hasScroll">
+                <i class="bi bi-arrow-down" @click="scrollDown"></i>
             </button>
             <div class="txt">
                 <p class="en">{{ slide.p }}</p>
@@ -32,6 +32,12 @@ export default {
     computed: {
         slide() {
             return SLIDE[this.slideIndex];
+        },
+        isBackgroundBright() {
+            return this.slideIndex === 1;
+        },
+        hasScroll() {
+            return this.slideIndex === 0;
         },
     },
     created() {
