@@ -26,7 +26,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+    mounted() {
+        this.initHeader();
+    },
+    methods: {
+        initHeader() {
+            window.addEventListener("scroll", () => {
+                const $header = document.getElementsByTagName("header")[0];
+                if (this.isScrolledDown()) {
+                    $header.classList.add("on");
+                } else {
+                    $header.classList.remove("on");
+                }
+            });
+        },
+        isScrolledDown() {
+            return window.pageYOffset > 200;
+        },
+    },
+};
 </script>
 
 <style></style>
