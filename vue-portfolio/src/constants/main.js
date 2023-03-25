@@ -13,6 +13,6 @@ export const SLIDE = [
     {
         img: "/img/main3.jpg",
         p: "With a reason",
-        h2: "<span>이유</span>가 있는<br /><span>코드</span>를<br />작성하겠습니다.",
+        h2: "<span>이유</span>가 있는<span>코드</span>를<br />작성하겠습니다.",
     },
 ];
