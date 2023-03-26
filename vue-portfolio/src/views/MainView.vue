@@ -15,6 +15,7 @@ import MainSlide from "@/components/main/MainSlide.vue";
 import MainHits from "@/components/main/MainHits.vue";
 import MainIntroduction from "@/components/main/MainIntroduction.vue";
 export default {
+    name: "MainView",
     components: { MainSlide, MainHits, MainIntroduction },
     data() {
         return {

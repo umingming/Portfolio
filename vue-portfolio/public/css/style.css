@@ -216,7 +216,7 @@ header.on .menu ul.inner.on {
 .base-slide {
   position: absolute;
   width: 100%;
-  height: 98vh;
+  height: 70vh;
   background-color: #ffbbe0;
   transition: background-color 0.2s ease-in-out;
 }
@@ -283,10 +283,13 @@ header.on .menu ul.inner.on {
   font-size: 47px;
   color: #ff5492;
 }
-.main .slide {
+.slide {
   position: relative;
   width: 100%;
   height: 98vh;
+}
+.main .base-slide {
+  height: 98vh !important;
 }
 .main .arrow {
   position: absolute;

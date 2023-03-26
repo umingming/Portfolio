@@ -9,7 +9,7 @@
             </h1>
             <ul class="menu en">
                 <li id="btnAbout">
-                    <router-link to="/main">ABOUT</router-link>
+                    <router-link to="/about">ABOUT</router-link>
                 </li>
                 <li id="btnSkill">
                     <router-link to="/skill">SKILLS</router-link>
