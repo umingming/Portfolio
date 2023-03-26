@@ -213,25 +213,23 @@ header.on .menu ul.inner.on {
   transition: all 0.3s;
 }
 /* main */
-.main {
-  margin-bottom: 300px;
-}
-.main .slide .main-slide {
-  position: relative;
+.base-slide {
+  position: absolute;
   width: 100%;
   height: 98vh;
   background-color: #ffbbe0;
   transition: background-color 0.2s ease-in-out;
 }
-.main .slide .main-slide.bright {
+.base-slide.bright {
   background-color: #ffc6e6;
 }
-.main .slide .main-slide .image {
+
+.base-slide .image {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.main .slide .main-slide .image img {
+.base-slide img {
   position: absolute;
   right: 7%;
   bottom: 3%;
@@ -240,7 +238,7 @@ header.on .menu ul.inner.on {
   animation-name: img;
   animation-duration: 2s;
 }
-.main .slide .main-slide .image button {
+.base-slide .image button {
   position: absolute;
   right: 28.2%;
   bottom: 3%;
@@ -252,12 +250,12 @@ header.on .menu ul.inner.on {
   opacity: 0;
   animation: scroll linear 0.7s 1.9s infinite;
 }
-.main .slide .main-slide .image button i {
+.base-slide .image button i {
   position: relative;
   top: 27.6%;
   color: white;
 }
-.main .slide .main-slide .txt {
+.base-slide .txt {
   position: absolute;
   left: 13%;
   top: 65%;
@@ -268,24 +266,28 @@ header.on .menu ul.inner.on {
   text-transform: uppercase;
   transition: all 0.3s;
 }
-.main .slide .main-slide .txt p {
+.base-slide .txt p {
   font-size: 20px;
   margin-bottom: 5px;
   animation-name: txt1;
   animation-duration: 0.8s;
 }
-.main .slide .main-slide .txt h2 {
+.base-slide .txt h2 {
   font-size: 45px;
   letter-spacing: 5%;
   animation-name: txt3;
   animation-duration: 0.8s;
 }
-.main .slide .main-slide .txt h2 span {
+.base-slide .txt h2 span {
   font-weight: 700;
   font-size: 47px;
   color: #ff5492;
 }
-
+.main .slide {
+  position: relative;
+  width: 100%;
+  height: 98vh;
+}
 .main .arrow {
   position: absolute;
   top: 45%;
@@ -311,7 +313,7 @@ header.on .menu ul.inner.on {
 }
 
 /* 게이지 */
-.main .slide > div:after {
+.main .slide .base-slide:after {
   content: "";
   width: 0%;
   height: 5px;

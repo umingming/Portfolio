@@ -1,15 +1,6 @@
 <template>
-    <div class="main-slide" :class="{ bright: isBackgroundBright }">
-        <div class="image" :key="slideIndex">
-            <img :src="slide.img" />
-            <button v-if="hasScroll">
-                <i class="fa-solid fa-arrow-down" @click="scrollDown"></i>
-            </button>
-            <div class="txt">
-                <p class="en">{{ slide.p }}</p>
-                <h2 v-html="slide.h2"></h2>
-            </div>
-        </div>
+    <div class="main-slide">
+        <base-slide :key="slideIndex" :index="slideIndex"></base-slide>
         <button class="arrow" @click="changeSlide('right')">
             <i class="fa-solid fa-angle-right"></i>
         </button>
@@ -20,8 +11,12 @@
 </template>
 
 <script>
-import { SLIDE } from "@/constants/main.js";
+import BaseSlide from "@/components/base/BaseSlide.vue";
+
 export default {
+    components: {
+        BaseSlide,
+    },
     data() {
         return {
             slideIndex: 0,
@@ -29,19 +24,8 @@ export default {
             slideInterval: null,
         };
     },
-    computed: {
-        slide() {
-            return SLIDE[this.slideIndex];
-        },
-        isBackgroundBright() {
-            return this.slideIndex === 1;
-        },
-        hasScroll() {
-            return this.slideIndex === 0;
-        },
-    },
     created() {
-        // this.initSlide();
+        this.initSlide();
     },
     methods: {
         initSlide() {
@@ -59,9 +43,6 @@ export default {
             } else {
                 this.slideIndex = this.slideIndex < 2 ? ++this.slideIndex : 0;
             }
-        },
-        scrollDown() {
-            console.log("scrollDown");
         },
     },
 };
