@@ -242,19 +242,19 @@ header.on .menu ul.inner.on {
 }
 .main .slide .main-slide .image button {
   position: absolute;
-  right: 27.5%;
+  right: 28.2%;
   bottom: 3%;
   height: 50vw;
   background: none;
   border: none;
-  font-size: 3vw;
+  font-size: 2.5vw;
   cursor: pointer;
   opacity: 0;
   animation: scroll linear 0.7s 1.9s infinite;
 }
 .main .slide .main-slide .image button i {
   position: relative;
-  top: 28%;
+  top: 27.6%;
   color: white;
 }
 .main .slide .main-slide .txt {
@@ -290,6 +290,7 @@ header.on .menu ul.inner.on {
   position: absolute;
   top: 45%;
   background: none;
+  padding: 10px;
   border: none;
   cursor: pointer;
 }

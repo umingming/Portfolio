@@ -3,7 +3,7 @@
         <div class="image" :key="slideIndex">
             <img :src="slide.img" />
             <button v-if="hasScroll">
-                <i class="bi bi-arrow-down" @click="scrollDown"></i>
+                <i class="fa-solid fa-arrow-down" @click="scrollDown"></i>
             </button>
             <div class="txt">
                 <p class="en">{{ slide.p }}</p>
@@ -11,10 +11,10 @@
             </div>
         </div>
         <button class="arrow" @click="changeSlide('right')">
-            <i class="bi bi-chevron-right"></i>
+            <i class="fa-solid fa-angle-right"></i>
         </button>
         <button class="arrow" @click="changeSlide('left')">
-            <i class="bi bi-chevron-left"></i>
+            <i class="fa-solid fa-angle-left"></i>
         </button>
     </div>
 </template>
@@ -41,7 +41,7 @@ export default {
         },
     },
     created() {
-        this.initSlide();
+        // this.initSlide();
     },
     methods: {
         initSlide() {
