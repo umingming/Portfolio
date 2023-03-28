@@ -2,10 +2,10 @@
     <header>
         <div class="innerHeader">
             <h1 class="logo">
-                <a href="#!">
+                <router-link to="/main">
                     <img src="../../public/img/logo1.png" alt="로고1" />
                     <img src="../../public/img/logo2.png" alt="로고2" />
-                </a>
+                </router-link>
             </h1>
             <ul class="menu en">
                 <li id="btnAbout">
