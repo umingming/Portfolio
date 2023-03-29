@@ -1,6 +1,8 @@
 <template>
     <section class="about">
-        <base-slide :index="0"></base-slide>
+        <div class="slide">
+            <base-slide :index="0"></base-slide>
+        </div>
     </section>
 </template>
 
