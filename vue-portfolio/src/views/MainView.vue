@@ -5,7 +5,7 @@
             <main-hits></main-hits>
         </div>
         <div class="intro">
-            <main-introduction></main-introduction>
+            <main-intro></main-intro>
         </div>
     </section>
 </template>
@@ -13,10 +13,10 @@
 <script>
 import MainSlide from "@/components/main/MainSlide.vue";
 import MainHits from "@/components/main/MainHits.vue";
-import MainIntroduction from "@/components/main/MainIntroduction.vue";
+import MainIntro from "@/components/main/MainIntro.vue";
 export default {
     name: "MainView",
-    components: { MainSlide, MainHits, MainIntroduction },
+    components: { MainSlide, MainHits, MainIntro },
     data() {
         return {
             index: 0,

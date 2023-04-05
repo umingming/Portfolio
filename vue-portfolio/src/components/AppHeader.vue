@@ -3,8 +3,8 @@
         <div class="innerHeader">
             <h1 class="logo">
                 <router-link to="/main">
-                    <img src="../../public/img/logo1.png" alt="로고1" />
-                    <img src="../../public/img/logo2.png" alt="로고2" />
+                    <img src="../../public/img/logo1.png" />
+                    <img src="../../public/img/logo2.png" />
                 </router-link>
             </h1>
             <ul class="menu en">
