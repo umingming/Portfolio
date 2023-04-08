@@ -382,7 +382,7 @@ section .title p {
   position: relative;
   width: 1100px;
   height: 1800px;
-  margin: 1% auto;
+  margin: 20% auto 1% auto;
   font-size: 24px;
 }
 .main-intro .title {
@@ -390,58 +390,47 @@ section .title p {
   left: 80px;
   top: 0px;
 }
-.main-intro .intro .txt {
+.main-intro .txt {
   font-size: 23px;
   padding: 22px;
   background: #FFF;
   line-height: 40px;
   cursor: default;
 }
-.main-intro .txt:nth-child(2){
+.main-intro .intro0 .txt {
   border: 2px solid #ffbbe0;
   position: absolute;
-  right: 400px;
-  top: -100px;
-  transform: translateX(500px);
+  left: 100px;
+  top: 280px;
   width: 560px;
   height: auto;
   box-shadow: 10px 10px 0px #FFD8ED;
 }
-.main-intro > .intro:nth-child(3) .txt {
+.main-intro .intro1 .txt {
   position: absolute;
   border: 2px solid #7adfca;
   right: 80px;
-  top: 740px;
+  top: 940px;
   width: 350px;
   box-shadow: 10px 10px 0px #A4E4D8;
 }
-.main-intro .img {
+.main-intro .intro0 .img {
   position: absolute;
-  width: 400px;
-  height: 600px;
-  right: 3%;
-  top: -50px;
+  top: 100px;
+  right: 50px
 }
-.main-intro .img img{
+.main-intro .intro0 .img img{
   width: 400px;
   height: auto;
-  position: absolute;
-  right: 3%;
-  top: -50px;
   z-index: -4;
   box-shadow: 15px 15px 0px #1abc9c65;
 }
-.main-intro .img {
+.main-intro .intro1 .img {
   position: absolute;
-  width: 590px;
-  height: 600px;
-  left: 4%;
-  top: 600px;
+  left: 80px;
+  top: 820px;
 }
-.main-intro .img:nth-child(2) img{
-  position: absolute;
-  left: 4%;
-  top: 20px;
+.main-intro .intro1 .img img{
   width: 590px;
   height: 390px;
   box-shadow: 15px 15px 0px #ffbbe091;
