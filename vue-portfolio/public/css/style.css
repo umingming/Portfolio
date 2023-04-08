@@ -435,6 +435,51 @@ section .title p {
   height: 390px;
   box-shadow: 15px 15px 0px #ffbbe091;
 }
+.main-intro .txt button {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  background: none;
+  color: rgb(16, 190, 156);
+  font-size: 18px;
+  font-weight: 700;
+  width: 100px;
+  height: 30px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  border: 2px solid #A4E4D8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main-intro .txt button label {
+  position: relative;
+  z-index: 2;
+}
+.main-intro .txt button::after {
+  content: '';
+  width: 0%;
+  height: 103%;
+  background: #ffd8ed71;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.main-intro .txt button:hover::after {
+  transition: all 0.3s;
+  width: 102%;
+}
+.main-intro .txt i {
+  position: absolute;
+  right: 55px;
+  bottom: 0px;
+  color: #ff5492;
+  transform: rotate(-80deg);
+  z-index: 3;
+  transition: all 0.3s;
+}
 
 /* footer */
 footer {
