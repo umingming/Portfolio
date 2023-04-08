@@ -3,7 +3,7 @@
         <div class="title">
             <h2>ABOUT ME</h2>
         </div>
-        <div v-for="(intro, index) of introList" :key="index">
+        <div v-for="(intro, index) of introList" :key="index" class="intro">
             <div class="img">
                 <img :src="intro.img" />
             </div>
