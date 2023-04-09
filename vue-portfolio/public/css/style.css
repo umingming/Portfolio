@@ -635,7 +635,7 @@ section .title p {
 .main-skill {
   position: relative;
   width: 900px;
-  height: 1800px;
+  height: 1100px;
   margin: 20% auto 1% auto;
   font-size: 21px;
   background: #ffbbe04b;
@@ -734,6 +734,7 @@ section .title p {
   border-radius: 50%;
   top: -8px;
   left: 0;
+  transform: translateX(-5px);
   transition: left 1.2s linear;
 }
 .main-skill .skill:nth-child(3n-1) .score .bar,

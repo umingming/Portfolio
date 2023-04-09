@@ -31,23 +31,22 @@ export default {
     methods: {
         init() {
             window.addEventListener("scroll", () => {
-                if (this.isScrolledDown()) {
-                    this.updateScore();
-                }
+                const increase = this.isScrolledDown();
+                this.updateBar(increase);
             });
         },
         isScrolledDown() {
             const { offsetTop } = document.querySelector(".main-skill");
             return window.pageYOffset > offsetTop - 500;
         },
-        updateScore() {
+        updateBar(increase) {
             const scoreList = document.querySelectorAll(".score");
             scoreList.forEach((i) => {
                 const circle = i.querySelector(".circle");
                 const bar = i.querySelector(".bar");
-                const value = parseInt(circle.textContent);
-                circle.style.left = `${value - 2}%`;
-                bar.style.width = `${value}%`;
+                const value = increase ? circle.textContent : 0;
+                circle.style.left = value;
+                bar.style.width = value;
             });
         },
     },
