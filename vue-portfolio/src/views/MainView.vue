@@ -4,6 +4,7 @@
         <main-hits></main-hits>
         <main-intro></main-intro>
         <main-skill></main-skill>
+        <main-project></main-project>
     </section>
 </template>
 
@@ -12,9 +13,10 @@ import MainSlide from "@/components/main/MainSlide.vue";
 import MainHits from "@/components/main/MainHits.vue";
 import MainIntro from "@/components/main/MainIntro.vue";
 import MainSkill from "@/components/main/MainSkill.vue";
+import MainProject from "@/components/main/MainProject.vue";
 export default {
     name: "MainView",
-    components: { MainSlide, MainHits, MainIntro, MainSkill },
+    components: { MainSlide, MainHits, MainIntro, MainSkill, MainProject },
     data() {
         return {
             index: 0,

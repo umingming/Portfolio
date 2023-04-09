@@ -8,27 +8,39 @@
                 <img :src="intro.img" />
             </div>
             <div class="txt">
-                <div v-html="intro.txt"></div>
-                <button
-                    @mouseover="moveCursor(intro.id, true)"
-                    @mouseout="moveCursor(intro.id, false)"
-                    @click="openSite(intro.site.url)"
-                >
-                    <label>{{ intro.site.name }}</label>
-                </button>
-                <i class="bi bi-cursor-fill cursor"></i>
+                <p class="en">{{ txt(intro.id).en }}</p>
+                <p v-html="content(intro.id)"></p>
+                <base-button v-bind="intro"></base-button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { INTROS } from "@/constants/main.js";
+import { SLIDES, INTROS } from "@/constants/main.js";
+import BaseButton from "@/components/base/BaseButton.vue";
+
 export default {
+    components: { BaseButton },
     data() {
         return {
             INTROS,
+            SLIDES,
         };
+    },
+    computed: {
+        txt() {
+            return (id) => {
+                const index = +id.at(-1) + 1;
+                return this.SLIDES[index];
+            };
+        },
+        content() {
+            return (id) => {
+                const content = this.txt(id).title;
+                return content.replace("<br />", " ");
+            };
+        },
     },
     methods: {
         moveCursor(id, isOver) {

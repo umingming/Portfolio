@@ -108,9 +108,10 @@ body {
 }
 .en {
   font-family: "Josefin Sans", sans-serif;
-  /* font-family: 'Bebas Neue', cursive; */
+  /* font-family: "Bebas Neue", cursive; */
   /* letter-spacing: 4px; */
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* header */
@@ -213,7 +214,7 @@ header.on .menu ul.inner.on {
 }
 /* main */
 .base-slide {
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   height: 80vh;
@@ -409,7 +410,7 @@ section {
 }
 section .title {
   position: relative;
-  width: 400px;
+  width: 480px;
   padding-top: 80px;
   margin: 0% auto;
   color: #181818;
@@ -428,6 +429,63 @@ section .title h2 span {
 section .title p {
   color: #555;
   font-size: 18px;
+}
+
+/* base button */
+.base-button button {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  background: none;
+  color: rgb(16, 190, 156);
+  font-size: 18px;
+  font-weight: 700;
+  width: 80px;
+  height: 25px;
+  letter-spacing: 1px;
+  border: 2px solid #a4e4d8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.base-button label {
+  position: relative;
+  display: block;
+  width: 101%;
+  height: 101%;
+  padding-top: 2px;
+  z-index: 2;
+  cursor: pointer;
+}
+.base-button button::after {
+  content: "";
+  width: 0%;
+  height: 103%;
+  background: #ffd8ed71;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: all 0.3s;
+  z-index: 1;
+}
+.base-button button:hover::after {
+  transition: all 0.3s;
+  width: 102%;
+}
+.base-button .cursor {
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 85px;
+  bottom: 10px;
+  color: #ff5492;
+  transform: rotate(-80deg);
+  z-index: 3;
+  transition: all 0.3s;
+  font-size: 23px;
+}
+.base-button .cursor.on {
+  transform: translateX(-20px) translateY(-4px) rotate(-80deg);
+  transition: all 0.3s;
 }
 
 /* hit */
@@ -456,14 +514,14 @@ section .title p {
   background: #fff;
   line-height: 40px;
   cursor: default;
+  height: 200px;
 }
 .main-intro #intro0 .txt {
   border: 2px solid #ffbbe0;
   position: absolute;
   left: 100px;
-  top: 280px;
-  width: 560px;
-  height: auto;
+  top: 230px;
+  width: 350px;
   box-shadow: 10px 10px 0px #ffd8ed;
 }
 .main-intro #intro0 .txt:before {
@@ -473,20 +531,6 @@ section .title p {
   width: 100px;
   height: 100px;
   background: url(../img/text_half.png) center/cover;
-}
-.main-intro #intro0 .txt:hover:before {
-  animation: updown-smile linear 1s;
-}
-@keyframes updown-smile {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(120px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 .main-intro #intro0 .txt:after {
   content: "";
@@ -498,25 +542,11 @@ section .title p {
   background: url(../img/text_good.png) center/cover;
   transform: rotate(68deg);
 }
-.main-intro #intro0 .txt:hover:after {
-  animation: wiggle-like linear 0.5s 2;
-}
-@keyframes wiggle-like {
-  0% {
-    transform: rotate(68deg);
-  }
-  50% {
-    transform: rotate(40deg);
-  }
-  100% {
-    transform: rotate(68deg);
-  }
-}
 .main-intro #intro1 .txt {
   position: absolute;
   border: 2px solid #7adfca;
   right: 80px;
-  top: 940px;
+  top: 740px;
   width: 350px;
   box-shadow: 10px 10px 0px #a4e4d8;
 }
@@ -530,21 +560,10 @@ section .title p {
   background: url(../img/text_smile.png) center/cover;
   transform: rotate(30deg);
 }
-.main-intro #intro1 .txt:hover:after {
-  animation: spin-smile 1s 1;
-}
-@keyframes spin-smile {
-  0% {
-    transform: rotate(30deg);
-  }
-  100% {
-    transform: rotate(-690deg);
-  }
-}
 .main-intro #intro0 .img {
   position: absolute;
-  top: 100px;
-  right: 50px;
+  top: 150px;
+  left: 450px;
 }
 .main-intro #intro0 .img:after {
   content: "✨";
@@ -561,8 +580,8 @@ section .title p {
 }
 .main-intro #intro1 .img {
   position: absolute;
-  left: 80px;
-  top: 820px;
+  left: 110px;
+  top: 890px;
 }
 .main-intro #intro1 .img::after {
   content: "💕";
@@ -576,59 +595,8 @@ section .title p {
   height: 390px;
   box-shadow: 15px 15px 0px #ffbbe091;
 }
-.main-intro .txt button {
-  position: absolute;
-  bottom: 20px;
-  right: 60px;
-  background: none;
-  color: rgb(16, 190, 156);
-  font-size: 18px;
-  font-weight: 700;
+.main-intro .base-button button {
   width: 100px;
-  height: 30px;
-  letter-spacing: 1px;
-  border: 2px solid #a4e4d8;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.main-intro .txt button label {
-  position: relative;
-  display: block;
-  width: 101%;
-  height: 101%;
-  padding-top: 4px;
-  z-index: 2;
-  cursor: pointer;
-}
-.main-intro .txt button::after {
-  content: "";
-  width: 0%;
-  height: 103%;
-  background: #ffd8ed71;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  transition: all 0.3s;
-  z-index: 1;
-}
-.main-intro .txt button:hover::after {
-  transition: all 0.3s;
-  width: 102%;
-}
-.main-intro .txt .cursor {
-  position: absolute;
-  width: 0;
-  height: 0;
-  right: 85px;
-  bottom: 10px;
-  color: #ff5492;
-  transform: rotate(-80deg);
-  z-index: 3;
-  transition: all 0.3s;
-}
-.main-intro .txt .cursor.on {
-  transform: translateX(-20px) translateY(-4px) rotate(-80deg);
-  transition: all 0.3s;
 }
 
 /* skill */
@@ -691,7 +659,7 @@ section .title p {
     transform: translateX(5px) rotate(0deg);
   }
 }
-.main-skill .logo:hover img {
+.main-skill .skill:hover .logo img {
   animation: spin-logo 0.5s;
 }
 @keyframes spin-logo {
@@ -740,6 +708,222 @@ section .title p {
 .main-skill .skill:nth-child(3n-1) .score .bar,
 .main-skill .skill:nth-child(3n-1) .score .circle {
   background: #1abc9c;
+}
+
+/* project */
+.main-project {
+  position: relative;
+  width: 1100px;
+  height: 1100px;
+  margin: 20% auto 1% auto;
+}
+.main-project .title {
+  position: relative;
+  left: -300px;
+}
+.main-project .project {
+  position: relative;
+  float: left;
+  width: 340px;
+  border: 2px solid #7adfca;
+  border-radius: 5px;
+  height: 290px;
+  box-shadow: 7px 7px 0px #1abc9c65;
+  padding-top: 15px;
+  margin: 30px 0px;
+}
+.main-project .project:nth-child(3n + 3) {
+  margin: 30px;
+}
+.main-project .project:nth-child(odd) {
+  border: 2px solid #ffbbe0;
+  box-shadow: 7px 7px 0px #ffd8ed;
+}
+.main-project .project .img {
+  margin: 0 auto;
+  width: 310px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+.main-project .project .img img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.6s;
+}
+.main-project .project .img:hover img {
+  transform: scale(1.1);
+  transition: all 0.6s;
+}
+.main-project .project .txt {
+  padding: 11px 0px 0px 15px;
+  color: #555;
+  font-size: 17px;
+}
+.main-project .project .name {
+  padding: 2px 0px 0px 18px;
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 23px;
+  left: 0;
+}
+.main-project .base-button {
+  position: absolute;
+  bottom: 0px;
+  right: -30px;
+}
+.main-project .base-button .cursor {
+  font-size: 20px;
+  right: 78px;
+  bottom: 13px;
+}
+
+/* about */
+.about-intro {
+  position: relative;
+  width: 1100px;
+  height: 1500px;
+  margin: 20% auto 1% auto;
+  font-size: 24px;
+}
+.about-intro .title {
+  position: absolute;
+  left: 80px;
+  top: 0px;
+}
+.about-intro .txt {
+  font-size: 23px;
+  padding: 22px;
+  background: #fff;
+  line-height: 40px;
+  cursor: default;
+}
+.about-intro #intro0 .txt {
+  border: 2px solid #ffbbe0;
+  position: absolute;
+  left: 100px;
+  top: 280px;
+  width: 560px;
+  height: auto;
+  box-shadow: 10px 10px 0px #ffd8ed;
+}
+.about-intro #intro0 .txt:before {
+  content: "";
+  position: absolute;
+  left: -80px;
+  width: 100px;
+  height: 100px;
+  background: url(../img/text_half.png) center/cover;
+}
+.about-intro #intro0 .txt:hover:before {
+  animation: updown-smile linear 1s;
+}
+@keyframes updown-smile {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(120px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.about-intro #intro0 .txt:after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  width: 90px;
+  height: 90px;
+  background: url(../img/text_good.png) center/cover;
+  transform: rotate(68deg);
+}
+.about-intro #intro0 .txt:hover:after {
+  animation: wiggle-like linear 0.5s 2;
+}
+@keyframes wiggle-like {
+  0% {
+    transform: rotate(68deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(68deg);
+  }
+}
+.about-intro #intro1 .txt {
+  position: absolute;
+  border: 2px solid #7adfca;
+  right: 80px;
+  top: 940px;
+  width: 350px;
+  box-shadow: 10px 10px 0px #a4e4d8;
+}
+.about-intro #intro1 .txt:after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -50px;
+  width: 110px;
+  height: 110px;
+  background: url(../img/text_smile.png) center/cover;
+  transform: rotate(30deg);
+}
+.about-intro #intro1 .txt:hover:after {
+  animation: spin-smile 1s 1;
+}
+@keyframes spin-smile {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-690deg);
+  }
+}
+.about-intro #intro0 .img {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+.about-intro #intro0 .img:after {
+  content: "✨";
+  position: absolute;
+  top: 310px;
+  right: 130px;
+  font-size: 32px;
+}
+.about-intro #intro0 .img img {
+  width: 400px;
+  height: auto;
+  z-index: -4;
+  box-shadow: 15px 15px 0px #1abc9c65;
+}
+.about-intro #intro1 .img {
+  position: absolute;
+  left: 80px;
+  top: 820px;
+}
+.about-intro #intro1 .img::after {
+  content: "💕";
+  position: absolute;
+  left: 320px;
+  top: 255px;
+  font-size: 49px;
+}
+.about-intro #intro1 .img img {
+  width: 590px;
+  height: 390px;
+  box-shadow: 15px 15px 0px #ffbbe091;
+}
+.about-intro .base-button button {
+  width: 100px;
+  height: 30px;
+}
+.about-intro .base-button button label {
+  padding-top: 4px;
 }
 
 /* footer */

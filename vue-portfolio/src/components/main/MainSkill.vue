@@ -8,7 +8,7 @@
                 <img :src="skill.img" />
                 <label>{{ skill.name }}</label>
             </div>
-            <div class="score" :id="skill.name">
+            <div class="score">
                 <div class="bar"></div>
                 <div class="circle">{{ skill.score }}%</div>
             </div>
@@ -36,7 +36,7 @@ export default {
             });
         },
         isScrolledDown() {
-            const { offsetTop } = document.querySelector(".main-skill");
+            const { offsetTop } = document.querySelector(".main-skill") ?? {};
             return window.pageYOffset > offsetTop - 500;
         },
         updateBar(increase) {

@@ -2,18 +2,18 @@ export const SLIDES = [
     {
         img: "/img/main0_scroll.jpg",
         scroll: "/img/scroll.png",
-        p: "Developer",
-        h2: "안녕하세요,<br /><span>이유미</span>입니다!",
+        en: "Developer",
+        title: "안녕하세요,<br /><span>이유미</span>입니다!",
     },
     {
         img: "/img/main2.jpg",
-        p: "untiring effort",
-        h2: "<span>꾸준함</span>으로 탁월함을<br />앞서겠습니다.",
+        en: "untiring effort",
+        title: "<span>꾸준함</span>으로 탁월함을<br />앞서겠습니다.",
     },
     {
         img: "/img/main3.jpg",
-        p: "With a reason",
-        h2: "<span>이유</span>가 있는<span>코드</span>를<br />작성하겠습니다.",
+        en: "With a reason",
+        title: "<span>이유</span>가 있는<span> 코드</span>를<br />작성하겠습니다.",
     },
 ];
 
@@ -77,5 +77,62 @@ export const SKILLS = [
         name: "JIRA",
         txt: "&nbsp;Git, Confluence와 연동해 이슈를 관리합니다. Agile Process를 이해하며, Scrum 개발 경험이 있습니다.",
         score: 50,
+    },
+];
+
+export const PROJECTS = [
+    {
+        id: "project0",
+        img: "/img/project6.png",
+        name: "고구마켓",
+        txt: "중고거래 웹 사이트(Servlet, JSP)",
+        site: {
+            url: "https://github.com/umingming/Goguma/blob/master/README.md",
+        },
+    },
+    {
+        id: "project1",
+        img: "/img/project1.png",
+        name: "용용랜드",
+        txt: "JAVA 기반의 놀이공원 예매 및 관리 시스템",
+        site: {
+            url: "https://github.com/umingming/DragonLand/blob/master/README.md",
+        },
+    },
+    {
+        id: "project2",
+        img: "/img/project2.png",
+        name: "쌍용 교육 센터",
+        txt: "Oracle로 구현한 센터 운영 DB 구축",
+        site: {
+            url: "https://github.com/umingming/DragonCenter/blob/master/README.md",
+        },
+    },
+    {
+        id: "project3",
+        img: "/img/project4.png",
+        name: "포트폴리오",
+        txt: "Vue2로 제작한 Github page",
+        site: {
+            url: "https://github.com/umingming/Portfolio/blob/master/README.md",
+        },
+    },
+    {
+        id: "project4",
+        img: "/img/project3.png",
+        name: "뿌리 깊은 국사",
+        txt: "자바 콘솔로 구현한 한국사 학습 프로그램",
+        site: {
+            url: "https://github.com/umingming/DeepRoot/blob/master/README.md",
+        },
+    },
+    {
+        id: "project5",
+        img: "/img/project5.png",
+        name: "클론 코딩 모음",
+        txt: "실제 기업의 메인 페이지를 HTML5로 구현",
+        site: {
+            url: "https://github.com/umingming/CloneCoding/blob/main/README.md",
+        },
     },
 ];

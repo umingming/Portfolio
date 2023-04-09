@@ -7,8 +7,8 @@
             </button>
         </div>
         <div class="txt">
-            <p class="en">{{ slide.p }}</p>
-            <h2 v-html="slide.h2"></h2>
+            <p class="en">{{ slide.en }}</p>
+            <h2 v-html="slide.title"></h2>
         </div>
     </div>
 </template>
