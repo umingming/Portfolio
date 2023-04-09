@@ -6,7 +6,67 @@
   margin: 0;
   padding: 0;
 }
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   margin: 0;
   padding: 0;
 }
@@ -223,7 +283,7 @@ header.on .menu ul.inner.on {
   font-size: 47px;
   color: #ff5492;
 }
-.slide {
+.main .base-slide {
   position: relative;
   width: 100%;
   height: 98vh;
@@ -257,7 +317,7 @@ header.on .menu ul.inner.on {
 }
 
 /* 게이지 */
-.main .slide .base-slide:after {
+.main .base-slide:after {
   content: "";
   width: 0%;
   height: 5px;
@@ -349,7 +409,7 @@ section {
 }
 section .title {
   position: relative;
-  width: 1200px;
+  width: 400px;
   padding-top: 80px;
   margin: 0% auto;
   color: #181818;
@@ -377,60 +437,141 @@ section .title p {
   bottom: 3vh;
 }
 
-/* about */ 
+/* about */
 .main-intro {
   position: relative;
   width: 1100px;
-  height: 1800px;
+  height: 1500px;
   margin: 20% auto 1% auto;
   font-size: 24px;
 }
 .main-intro .title {
-  width: 1100px;
+  position: absolute;
   left: 80px;
   top: 0px;
 }
 .main-intro .txt {
   font-size: 23px;
   padding: 22px;
-  background: #FFF;
+  background: #fff;
   line-height: 40px;
   cursor: default;
 }
-.main-intro .intro0 .txt {
+.main-intro #intro0 .txt {
   border: 2px solid #ffbbe0;
   position: absolute;
   left: 100px;
   top: 280px;
   width: 560px;
   height: auto;
-  box-shadow: 10px 10px 0px #FFD8ED;
+  box-shadow: 10px 10px 0px #ffd8ed;
 }
-.main-intro .intro1 .txt {
+.main-intro #intro0 .txt:before {
+  content: "";
+  position: absolute;
+  left: -80px;
+  width: 100px;
+  height: 100px;
+  background: url(../img/text_half.png) center/cover;
+}
+.main-intro #intro0 .txt:hover:before {
+  animation: updown-smile linear 1s;
+}
+@keyframes updown-smile {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(120px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.main-intro #intro0 .txt:after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  width: 90px;
+  height: 90px;
+  background: url(../img/text_good.png) center/cover;
+  transform: rotate(68deg);
+}
+.main-intro #intro0 .txt:hover:after {
+  animation: wiggle-like linear 0.5s 2;
+}
+@keyframes wiggle-like {
+  0% {
+    transform: rotate(68deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(68deg);
+  }
+}
+.main-intro #intro1 .txt {
   position: absolute;
   border: 2px solid #7adfca;
   right: 80px;
   top: 940px;
   width: 350px;
-  box-shadow: 10px 10px 0px #A4E4D8;
+  box-shadow: 10px 10px 0px #a4e4d8;
 }
-.main-intro .intro0 .img {
+.main-intro #intro1 .txt:after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -50px;
+  width: 110px;
+  height: 110px;
+  background: url(../img/text_smile.png) center/cover;
+  transform: rotate(30deg);
+}
+.main-intro #intro1 .txt:hover:after {
+  animation: spin-smile 1s 1;
+}
+@keyframes spin-smile {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-690deg);
+  }
+}
+.main-intro #intro0 .img {
   position: absolute;
   top: 100px;
-  right: 50px
+  right: 50px;
 }
-.main-intro .intro0 .img img{
+.main-intro #intro0 .img:after {
+  content: "✨";
+  position: absolute;
+  top: 310px;
+  right: 130px;
+  font-size: 32px;
+}
+.main-intro #intro0 .img img {
   width: 400px;
   height: auto;
   z-index: -4;
   box-shadow: 15px 15px 0px #1abc9c65;
 }
-.main-intro .intro1 .img {
+.main-intro #intro1 .img {
   position: absolute;
   left: 80px;
   top: 820px;
 }
-.main-intro .intro1 .img img{
+.main-intro #intro1 .img::after {
+  content: "💕";
+  position: absolute;
+  left: 320px;
+  top: 255px;
+  font-size: 49px;
+}
+.main-intro #intro1 .img img {
   width: 590px;
   height: 390px;
   box-shadow: 15px 15px 0px #ffbbe091;
@@ -445,19 +586,22 @@ section .title p {
   font-weight: 700;
   width: 100px;
   height: 30px;
-  line-height: 15px;
-  text-align: center;
   letter-spacing: 1px;
-  border: 2px solid #A4E4D8;
+  border: 2px solid #a4e4d8;
   border-radius: 20px;
   overflow: hidden;
 }
 .main-intro .txt button label {
   position: relative;
+  display: block;
+  width: 101%;
+  height: 101%;
+  padding-top: 4px;
   z-index: 2;
+  cursor: pointer;
 }
 .main-intro .txt button::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 103%;
   background: #ffd8ed71;
@@ -471,14 +615,130 @@ section .title p {
   transition: all 0.3s;
   width: 102%;
 }
-.main-intro .txt i {
+.main-intro .txt .cursor {
   position: absolute;
-  right: 55px;
-  bottom: 0px;
+  width: 0;
+  height: 0;
+  right: 85px;
+  bottom: 10px;
   color: #ff5492;
   transform: rotate(-80deg);
   z-index: 3;
   transition: all 0.3s;
+}
+.main-intro .txt .cursor.on {
+  transform: translateX(-20px) translateY(-4px) rotate(-80deg);
+  transition: all 0.3s;
+}
+
+/* skill */
+.main-skill {
+  position: relative;
+  width: 900px;
+  height: 1800px;
+  margin: 20% auto 1% auto;
+  font-size: 21px;
+  background: #ffbbe04b;
+  border-radius: 15px;
+  padding: 40px;
+}
+.main-skill .skill {
+  position: relative;
+  cursor: default;
+  float: left;
+  width: 400px;
+  height: 200px;
+  font-size: 21px;
+  top: 50px;
+  left: 30px;
+  margin: 3% auto;
+}
+.main-skill .skill:nth-child(odd) {
+  transform: translateX(50px) translateY(120px);
+}
+.main-skill .title {
+  position: absolute;
+  left: 550px;
+  top: -50px;
+}
+.main-skill .logo {
+  position: relative;
+}
+.main-skill .logo label {
+  position: relative;
+  z-index: 2;
+  font-size: 24px;
+  font-weight: 700;
+}
+.main-skill .logo img {
+  position: absolute;
+  left: -30px;
+  top: -25px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.9;
+  transform: translateX(5px);
+  animation: shaky-logo 1s infinite;
+}
+@keyframes shaky-logo {
+  0% {
+    transform: translateX(5px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(0px) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(5px) rotate(0deg);
+  }
+}
+.main-skill .logo:hover img {
+  animation: spin-logo 0.5s;
+}
+@keyframes spin-logo {
+  0% {
+    transform: translateX(5px) rotate(0deg);
+  }
+  100% {
+    transform: translateX(5px) rotate(-360deg);
+  }
+}
+.main-skill .skill .score {
+  width: 100%;
+  height: 10px;
+  border-radius: 62px;
+  background: #dbdbdb;
+  margin: 5px auto;
+  transform: translateX(-2px);
+}
+.main-skill .skill .bar {
+  position: absolute;
+  width: 0%;
+  height: 10px;
+  border-radius: 62px;
+  background: #ff5493;
+  margin: 5px auto;
+  left: 0;
+  transform: translateY(-5.5px);
+  transition: width 1.2s linear;
+}
+.main-skill .skill .score .circle {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  background: #ff5493;
+  color: #fff;
+  letter-spacing: -2px;
+  text-align: center;
+  border-radius: 50%;
+  top: -8px;
+  left: 0;
+  transition: left 1.2s linear;
+}
+.main-skill .skill:nth-child(3n-1) .score .bar,
+.main-skill .skill:nth-child(3n-1) .score .circle {
+  background: #1abc9c;
 }
 
 /* footer */

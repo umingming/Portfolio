@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import { SLIDE } from "@/constants/main.js";
+import { SLIDES } from "@/constants/main.js";
 export default {
     props: {
         index: { type: Number, default: 0 },
     },
     computed: {
         slide() {
-            return SLIDE[this.index];
+            return SLIDES[this.index];
         },
         isBackgroundBright() {
             return this.index === 1;

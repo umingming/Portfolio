@@ -1,12 +1,9 @@
 <template>
     <section class="main">
-        <div class="slide">
-            <main-slide></main-slide>
-            <main-hits></main-hits>
-        </div>
-        <div class="intro">
-            <main-intro></main-intro>
-        </div>
+        <main-slide></main-slide>
+        <main-hits></main-hits>
+        <main-intro></main-intro>
+        <main-skill></main-skill>
     </section>
 </template>
 
@@ -14,9 +11,10 @@
 import MainSlide from "@/components/main/MainSlide.vue";
 import MainHits from "@/components/main/MainHits.vue";
 import MainIntro from "@/components/main/MainIntro.vue";
+import MainSkill from "@/components/main/MainSkill.vue";
 export default {
     name: "MainView",
-    components: { MainSlide, MainHits, MainIntro },
+    components: { MainSlide, MainHits, MainIntro, MainSkill },
     data() {
         return {
             index: 0,
