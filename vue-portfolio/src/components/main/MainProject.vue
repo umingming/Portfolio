@@ -1,9 +1,14 @@
 <template>
     <div class="main-project">
-        <div class="title">
+        <div class="title" :class="{ 'slide-right': inViewport }">
             <h2>MY PROJECTS</h2>
         </div>
-        <div v-for="project of PROJECTS" :key="project.name" class="project">
+        <div
+            v-for="(project, index) of PROJECTS"
+            :key="index"
+            class="project"
+            :class="applySlideEffect(index)"
+        >
             <div class="img">
                 <img :src="project.img" />
             </div>
@@ -25,7 +30,17 @@ export default {
     data() {
         return {
             PROJECTS,
+            inViewport: false,
         };
+    },
+    computed: {
+        applySlideEffect() {
+            const effects = ["up", "down", "left", "right"];
+            return (index) => {
+                const effect = `slide-${effects[index % effects.length]}`;
+                return this.inViewport ? effect : "";
+            };
+        },
     },
 };
 </script>

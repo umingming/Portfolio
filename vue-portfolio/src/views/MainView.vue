@@ -1,11 +1,15 @@
 <template>
     <section class="main">
-        <main-slide></main-slide>
-        <main-hits></main-hits>
-        <main-intro></main-intro>
-        <main-skill></main-skill>
-        <main-project></main-project>
-        <main-contact></main-contact>
+        <div class="slide">
+            <main-slide></main-slide>
+            <main-hits></main-hits>
+        </div>
+        <div class="content">
+            <main-intro ref="main-intro"></main-intro>
+            <main-skill ref="main-skill"></main-skill>
+            <main-project ref="main-project"></main-project>
+            <main-contact ref="main-contact"></main-contact>
+        </div>
     </section>
 </template>
 
@@ -26,37 +30,23 @@ export default {
         MainProject,
         MainContact,
     },
-    data() {
-        return {
-            index: 0,
-            slideDuration: 10000,
-            slideInterval: null,
-        };
+    mounted() {
+        window.addEventListener("scroll", this.updateViewport);
     },
-    computed: {
-        slideIndex() {
-            return this.index;
-        },
-    },
-    created() {
-        this.initSlide();
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.updateViewport);
     },
     methods: {
-        initSlide() {
-            clearInterval(this.slideInterval);
+        updateViewport() {
+            const contents = Object.values(this.$refs);
+            const pageTop = window.pageYOffset;
+            const pageBottom = pageTop + window.outerHeight;
 
-            this.slideInterval = setInterval(() => {
-                this.changeSlide("right");
-            }, this.slideDuration);
-        },
-        changeSlide(direction) {
-            this.initSlide();
-
-            if (direction === "left") {
-                this.index = this.index > 0 ? --this.index : 2;
-            } else {
-                this.index = this.index < 2 ? ++this.index : 0;
-            }
+            contents.forEach((i) => {
+                const top = i.$el.offsetTop;
+                const bottom = top + i.$el.offsetHeight;
+                i.inViewport = top < pageBottom && bottom > pageTop;
+            });
         },
     },
 };

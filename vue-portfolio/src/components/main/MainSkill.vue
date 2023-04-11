@@ -1,6 +1,6 @@
 <template>
     <div class="main-skill">
-        <div class="title">
+        <div class="title" :class="{ 'slide-left': inViewport }">
             <h2>MY SKILLS</h2>
         </div>
         <div v-for="skill of SKILLS" :key="skill.name" class="skill">
@@ -23,22 +23,15 @@ export default {
     data() {
         return {
             SKILLS,
+            inViewport: false,
         };
     },
-    mounted() {
-        this.init();
+    watch: {
+        inViewport() {
+            this.updateBar(this.inViewport);
+        },
     },
     methods: {
-        init() {
-            window.addEventListener("scroll", () => {
-                const increase = this.isScrolledDown();
-                this.updateBar(increase);
-            });
-        },
-        isScrolledDown() {
-            const { offsetTop } = document.querySelector(".main-skill") ?? {};
-            return window.pageYOffset > offsetTop - 500;
-        },
         updateBar(increase) {
             const scoreList = document.querySelectorAll(".score");
             scoreList.forEach((i) => {

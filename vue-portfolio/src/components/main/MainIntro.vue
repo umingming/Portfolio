@@ -1,13 +1,13 @@
 <template>
     <div class="main-intro">
-        <div class="title">
+        <div class="title" :class="{ 'slide-down': inViewport }">
             <h2>ABOUT ME</h2>
         </div>
         <div v-for="intro of INTROS" :key="intro.id" :id="intro.id">
-            <div class="img">
+            <div class="img" :class="{ 'slide-left': inViewport }">
                 <img :src="intro.img" />
             </div>
-            <div class="txt">
+            <div class="txt" :class="{ 'slide-right': inViewport }">
                 <div v-html="intro.txt"></div>
                 <base-button v-bind="intro"></base-button>
             </div>
@@ -25,40 +25,8 @@ export default {
         return {
             INTROS,
             SLIDES,
+            inViewport: false,
         };
-    },
-    computed: {
-        txt() {
-            return (id) => {
-                const index = +id.at(-1) + 1;
-                return this.SLIDES[index];
-            };
-        },
-        content() {
-            return (id) => {
-                const content = this.txt(id).title;
-                return content.replace("<br />", " ");
-            };
-        },
-    },
-    methods: {
-        moveCursor(id, isOver) {
-            const cursor = document.querySelector(`#${id} .cursor`);
-            cursor.classList.toggle("on", isOver);
-        },
-        openSite(url) {
-            const feature = {
-                width: 1200,
-                height: 800,
-                left: window.screen.width / 2 - 600,
-                top: window.screen.height / 2 - 400,
-            };
-            const featureString = Object.entries(feature)
-                .map(([key, value]) => `${key}=${value}`)
-                .join(", ");
-
-            window.open(url, "_blank", featureString);
-        },
     },
 };
 </script>
