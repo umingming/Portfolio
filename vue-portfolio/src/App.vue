@@ -1,9 +1,7 @@
 <template>
     <div id="app wrap">
         <app-header></app-header>
-        <transition name="fade" mode="out-in">
-            <router-view></router-view>
-        </transition>
+        <router-view></router-view>
         <app-footer></app-footer>
     </div>
 </template>
@@ -16,6 +14,16 @@ export default {
     components: {
         AppHeader,
         AppFooter,
+    },
+    watch: {
+        $route() {
+            this.updateView();
+        },
+    },
+    methods: {
+        updateView() {
+            window.scrollTo(0, 0);
+        },
     },
 };
 </script>

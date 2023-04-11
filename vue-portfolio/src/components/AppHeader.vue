@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header :class="{ on: isContactView() }">
         <div class="innerHeader">
             <h1 class="logo">
                 <router-link to="/main">
@@ -8,17 +8,14 @@
                 </router-link>
             </h1>
             <ul class="menu en">
-                <li id="btnAbout">
-                    <router-link to="/about">ABOUT</router-link>
-                </li>
-                <li id="btnSkill">
-                    <router-link to="/skill">SKILLS</router-link>
-                </li>
-                <li id="btnProject">
-                    <router-link to="/project">PROJECT</router-link>
-                </li>
-                <li id="btnContact">
-                    <router-link to="/contact">CONTACT</router-link>
+                <li
+                    v-for="menu of menus"
+                    :key="menu"
+                    :class="{ active: isMenuActive(menu) }"
+                >
+                    <router-link :to="getPathByMenuName(menu)">
+                        {{ menu }}
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -27,6 +24,11 @@
 
 <script>
 export default {
+    data() {
+        return {
+            menus: ["about", "skill", "project", "contact"],
+        };
+    },
     mounted() {
         this.initHeader();
     },
@@ -36,13 +38,22 @@ export default {
                 const $header = document.getElementsByTagName("header")[0];
                 if (this.isScrolledDown()) {
                     $header.classList.add("on");
-                } else {
+                } else if (!this.isContactView()) {
                     $header.classList.remove("on");
                 }
             });
         },
         isScrolledDown() {
             return window.pageYOffset > 200;
+        },
+        isContactView() {
+            return this.$route.name === "ContactView";
+        },
+        isMenuActive(menu) {
+            return this.$route.path === this.getPathByMenuName(menu);
+        },
+        getPathByMenuName(name) {
+            return `/${name}`;
         },
     },
 };

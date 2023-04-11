@@ -14,9 +14,6 @@ export default {
         BaseSlide,
         AboutIntro,
     },
-    data() {
-        return {};
-    },
 };
 </script>
 

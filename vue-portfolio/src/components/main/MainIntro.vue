@@ -8,8 +8,7 @@
                 <img :src="intro.img" />
             </div>
             <div class="txt">
-                <p class="en">{{ txt(intro.id).en }}</p>
-                <p v-html="content(intro.id)"></p>
+                <div v-html="intro.txt"></div>
                 <base-button v-bind="intro"></base-button>
             </div>
         </div>

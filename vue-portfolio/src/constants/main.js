@@ -82,6 +82,15 @@ export const SKILLS = [
 
 export const PROJECTS = [
     {
+        id: "project3",
+        img: "/img/project4.png",
+        name: "포트폴리오",
+        txt: "Vue2로 제작한 Github page",
+        site: {
+            url: "https://github.com/umingming/Portfolio/blob/master/README.md",
+        },
+    },
+    {
         id: "project0",
         img: "/img/project6.png",
         name: "고구마켓",
@@ -106,15 +115,6 @@ export const PROJECTS = [
         txt: "Oracle로 구현한 센터 운영 DB 구축",
         site: {
             url: "https://github.com/umingming/DragonCenter/blob/master/README.md",
-        },
-    },
-    {
-        id: "project3",
-        img: "/img/project4.png",
-        name: "포트폴리오",
-        txt: "Vue2로 제작한 Github page",
-        site: {
-            url: "https://github.com/umingming/Portfolio/blob/master/README.md",
         },
     },
     {
