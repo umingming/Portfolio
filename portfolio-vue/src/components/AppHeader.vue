@@ -44,7 +44,8 @@ export default {
             });
         },
         isScrolledDown() {
-            return window.pageYOffset > 200;
+            const $slide = document.querySelector(".base-slide");
+            return window.pageYOffset > $slide?.offsetHeight ?? -1;
         },
         isContactView() {
             return this.$route.name === "ContactView";
