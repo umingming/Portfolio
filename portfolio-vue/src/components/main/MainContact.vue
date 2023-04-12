@@ -3,7 +3,7 @@
         <div class="title">
             <h2>CONTACT ME</h2>
         </div>
-        <div class="content" :class="{ 'scale-up': inViewport }">
+        <div class="content" :class="{ 'slide-up': inViewport }">
             <div id="mail">
                 <i class="lnr lnr-envelope"></i>
                 <a href="mailto:u_0112@naver.com">u_0112@naver.com</a>

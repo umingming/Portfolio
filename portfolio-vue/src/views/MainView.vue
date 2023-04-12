@@ -45,9 +45,6 @@ export default {
             contents.forEach((i) => {
                 const top = i.$el.offsetTop;
                 const bottom = top + i.$el.offsetHeight;
-                if (i._uid === 23) {
-                    console.dir(i.inViewport);
-                }
                 i.inViewport = top < pageBottom && bottom > pageTop;
             });
         },
