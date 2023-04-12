@@ -884,20 +884,25 @@ section .title p {
 .main .main-contact {
   position: relative;
   bottom: 0;
-  height: 600px;
-  margin-top: 600px;
+  height: 1000px;
 }
 .main-contact .title {
   color: #fff;
   transform: translateX(15px);
 }
+.main .main-contact .title {
+  color: #fff;
+  transform: translateX(15px) translateY(454px);
+}
 .main-contact .content {
+  position: absolute;
+  top: 450px;
   cursor: pointer;
   padding: 0px;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
-  height: 500px;
+  height: 370px;
 }
 .main-contact .content:before {
   content: "";
@@ -970,11 +975,11 @@ section .title p {
   position: relative;
   width: 400px;
   text-align: center;
-  top: 6px;
+  top: 195px;
   left: 40px;
 }
 .main-contact .content > div:first-child {
-  top: -5px;
+  top: 185px;
 }
 .main-contact .content i {
   display: inline-block;
