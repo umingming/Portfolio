@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681546228737" clover="3.2.0">
-  <project timestamp="1681546228737" name="All files">
+<coverage generated="1681549977695" clover="3.2.0">
+  <project timestamp="1681549977695" name="All files">
     <metrics statements="156" coveredstatements="2" conditionals="331" coveredconditionals="0" methods="72" coveredmethods="1" elements="559" coveredelements="3" complexity="0" loc="156" ncloc="156" packages="10" files="27" classes="27"/>
     <package name="portfolio-vue">
       <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -176,8 +176,8 @@
       </file>
       <file name="AppHeader.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/AppHeader.vue">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="1" count="17" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
       </file>
     </package>
     <package name="portfolio-vue.src.components.about">

@@ -13,6 +13,7 @@ module.exports = {
         "**/?(*.)+(spec|test).[jt]s?(x)",
     ],
     testPathIgnorePatterns: ["/node_modules/"],
+    transformIgnorePatterns: ["/node_modules/(?!@babel|@vue)"],
     collectCoverage: true,
     collectCoverageFrom: ["**/*.{js,vue}", "!**/node_modules/**"],
 };

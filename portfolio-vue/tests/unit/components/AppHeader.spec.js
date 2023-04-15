@@ -5,7 +5,8 @@ import VueRouter from "vue-router";
 const localVue = createLocalVue();
 localVue.use(VueRouter);
 
-test("renders the correct route link", () => {
+test("renders active menu by route", async () => {
+    //Given
     const router = new VueRouter({
         routes: [
             {
@@ -18,5 +19,10 @@ test("renders the correct route link", () => {
         localVue,
         router,
     });
-    expect(wrapper.find('[data-test="title"]').text()).toBe("제목");
+
+    //When
+    await wrapper.find("[data-test='menu-contact']").trigger("click");
+
+    //Then
+    expect(wrapper.find(".active a").text()).toContain("contact");
 });

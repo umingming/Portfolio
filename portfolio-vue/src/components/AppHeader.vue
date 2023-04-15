@@ -12,8 +12,12 @@
                     v-for="menu of menus"
                     :key="menu"
                     :class="{ active: isMenuActive(menu) }"
+                    :data-test="`li-${menu}`"
                 >
-                    <router-link :to="getPathByMenuName(menu)">
+                    <router-link
+                        :to="getPathByMenuName(menu)"
+                        :data-test="`menu-${menu}`"
+                    >
                         {{ menu }}
                     </router-link>
                 </li>
@@ -53,7 +57,7 @@ export default {
         isMenuActive(menu) {
             return this.$route.path === this.getPathByMenuName(menu);
         },
-        getPathByMenuName(name) {
+        getPathByMenuName(name = "") {
             return `/${name}`;
         },
     },
