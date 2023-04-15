@@ -405,7 +405,7 @@ header.on .menu ul.inner.on {
   }
 }
 .slide-up {
-  animation: slideUp 1s ease-in;
+  animation: slideUp 0.7s ease-in;
 }
 @keyframes slideUp {
   0% {
@@ -418,7 +418,7 @@ header.on .menu ul.inner.on {
   }
 }
 .slide-down {
-  animation: slideDown 1s ease-in;
+  animation: slideDown 0.7s ease-in;
 }
 @keyframes slideDown {
   0% {
@@ -431,7 +431,7 @@ header.on .menu ul.inner.on {
   }
 }
 .slide-left {
-  animation: slideLeft 1s ease-in;
+  animation: slideLeft 0.7s ease-in;
 }
 @keyframes slideLeft {
   0% {
@@ -444,7 +444,7 @@ header.on .menu ul.inner.on {
   }
 }
 .slide-right {
-  animation: slideRight 1s ease-in;
+  animation: slideRight 0.7s ease-in;
 }
 @keyframes slideRight {
   0% {
@@ -980,6 +980,8 @@ section .title p {
   text-align: center;
   top: 195px;
   left: 40px;
+}
+.main .main-contact .content > div {
   opacity: 0;
 }
 .main-contact .content.slide-up > div {

@@ -12,11 +12,10 @@
                     v-for="menu of menus"
                     :key="menu"
                     :class="{ active: isMenuActive(menu) }"
-                    :data-test="`li-${menu}`"
                 >
                     <router-link
                         :to="getPathByMenuName(menu)"
-                        :data-test="`menu-${menu}`"
+                        :data-test="menu"
                     >
                         {{ menu }}
                     </router-link>

@@ -21,7 +21,7 @@ test("renders active menu by route", async () => {
     });
 
     //When
-    await wrapper.find("[data-test='menu-contact']").trigger("click");
+    await wrapper.find("[data-test='contact']").trigger("click");
 
     //Then
     expect(wrapper.find(".active a").text()).toContain("contact");
