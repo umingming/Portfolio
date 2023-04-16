@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681550288566" clover="3.2.0">
-  <project timestamp="1681550288566" name="All files">
-    <metrics statements="156" coveredstatements="2" conditionals="331" coveredconditionals="0" methods="72" coveredmethods="1" elements="559" coveredelements="3" complexity="0" loc="156" ncloc="156" packages="10" files="27" classes="27"/>
+<coverage generated="1681627835601" clover="3.2.0">
+  <project timestamp="1681627835602" name="All files">
+    <metrics statements="156" coveredstatements="18" conditionals="331" coveredconditionals="2" methods="72" coveredmethods="10" elements="559" coveredelements="30" complexity="0" loc="156" ncloc="156" packages="10" files="27" classes="27"/>
     <package name="portfolio-vue">
       <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name=".eslintrc.js" path="/Users/youme/git/Portfolio/portfolio-vue/.eslintrc.js">
@@ -188,54 +188,54 @@
       </file>
     </package>
     <package name="portfolio-vue.src.components.base">
-      <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="BaseButton.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/base/BaseButton.vue">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="94" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
       </file>
       <file name="BaseSlide.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/base/BaseSlide.vue">
-        <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="18" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="portfolio-vue.src.components.main">
-      <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="MainContact.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/main/MainContact.vue">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="15" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
       <file name="MainHits.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/main/MainHits.vue">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="15" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
       <file name="MainIntro.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/main/MainIntro.vue">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="18" type="stmt"/>
       </file>
       <file name="MainProject.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/main/MainProject.vue">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="39" type="stmt"/>
       </file>
       <file name="MainSkill.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/main/MainSkill.vue">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="43" type="stmt"/>
       </file>
       <file name="MainSlide.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/components/main/MainSlide.vue">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="19" type="stmt"/>
       </file>
     </package>
     <package name="portfolio-vue.src.constants">
-      <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="main.js" path="/Users/youme/git/Portfolio/portfolio-vue/src/constants/main.js">
-        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
       </file>
     </package>
     <package name="portfolio-vue.src.routes">
@@ -247,7 +247,7 @@
       </file>
     </package>
     <package name="portfolio-vue.src.views">
-      <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
       <file name="AboutView.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/views/AboutView.vue">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
@@ -257,8 +257,8 @@
         <line num="1" count="0" type="stmt"/>
       </file>
       <file name="MainView.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/views/MainView.vue">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="15" type="stmt"/>
       </file>
       <file name="ProjectView.vue" path="/Users/youme/git/Portfolio/portfolio-vue/src/views/ProjectView.vue">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
