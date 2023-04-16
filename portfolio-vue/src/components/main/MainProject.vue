@@ -1,6 +1,6 @@
 <template>
     <div class="main-project">
-        <div class="title" :class="{ 'slide-right': inViewport }">
+        <div class="title" :class="{ 'slide-right': $inViewport }">
             <h2>MY PROJECTS</h2>
         </div>
         <div
@@ -24,13 +24,14 @@
 <script>
 import { PROJECTS } from "@/constants/main.js";
 import BaseButton from "@/components/base/BaseButton.vue";
+import viewportMixin from "@/mixins/viewportMixin.js";
 
 export default {
     components: { BaseButton },
+    mixins: [viewportMixin],
     data() {
         return {
             PROJECTS,
-            inViewport: false,
         };
     },
     computed: {
@@ -38,7 +39,7 @@ export default {
             const effects = ["up", "down", "left", "right"];
             return (index) => {
                 const effect = `slide-${effects[index % effects.length]}`;
-                return this.inViewport ? effect : "";
+                return this.$inViewport ? effect : "";
             };
         },
     },

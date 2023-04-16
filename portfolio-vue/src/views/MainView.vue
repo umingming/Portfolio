@@ -30,25 +30,26 @@ export default {
         MainProject,
         MainContact,
     },
-    mounted() {
-        window.addEventListener("scroll", this.updateViewport);
-    },
-    beforeDestroy() {
-        window.removeEventListener("scroll", this.updateViewport);
-    },
-    methods: {
-        updateViewport() {
-            const contents = Object.values(this.$refs);
-            const pageTop = window.pageYOffset;
-            const pageBottom = pageTop + window.outerHeight;
+    // mounted() {
+    //     window.addEventListener("scroll", this.updateViewport);
+    // },
+    // beforeDestroy() {
+    //     window.removeEventListener("scroll", this.updateViewport);
+    // },
+    // methods: {
+    //     updateViewport() {
+    //         console.dir(window);
+    //         const contents = Object.values(this.$refs);
+    //         const pageTop = window.pageYOffset;
+    //         const pageBottom = pageTop + window.outerHeight;
 
-            contents.forEach((i) => {
-                const top = i.$el.offsetTop;
-                const bottom = top + i.$el.offsetHeight;
-                i.inViewport = top < pageBottom && bottom > pageTop;
-            });
-        },
-    },
+    //         contents.forEach((i) => {
+    //             const top = i.$el.offsetTop;
+    //             const bottom = top + i.$el.offsetHeight;
+    //             i.inViewport = top < pageBottom && bottom > pageTop;
+    //         });
+    //     },
+    // },
 };
 </script>
 

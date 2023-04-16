@@ -1,6 +1,6 @@
 <template>
     <div class="main-skill">
-        <div class="title" :class="{ 'slide-left': inViewport }">
+        <div class="title" :class="{ 'slide-left': $inViewport }">
             <h2>MY SKILLS</h2>
         </div>
         <div v-for="skill of SKILLS" :key="skill.name" class="skill">
@@ -19,16 +19,18 @@
 
 <script>
 import { SKILLS } from "@/constants/main.js";
+import viewportMixin from "@/mixins/viewportMixin.js";
+
 export default {
+    mixins: [viewportMixin],
     data() {
         return {
             SKILLS,
-            inViewport: false,
         };
     },
     watch: {
-        inViewport() {
-            this.updateBar(this.inViewport);
+        $inViewport() {
+            this.updateBar(this.$inViewport);
         },
     },
     methods: {

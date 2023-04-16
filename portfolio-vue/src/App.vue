@@ -9,6 +9,7 @@
 <script>
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
+import { mapActions } from "vuex";
 export default {
     name: "App",
     components: {
@@ -17,12 +18,23 @@ export default {
     },
     watch: {
         $route() {
-            this.updateView();
+            this.initView();
         },
     },
+    mounted() {
+        window.addEventListener("scroll", this.updateViewport);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.updateViewport);
+    },
     methods: {
-        updateView() {
+        ...mapActions(["SET_VIEWPORT"]),
+        initView() {
             window.scrollTo(0, 0);
+        },
+        updateViewport() {
+            const { pageYOffset, outerHeight } = window;
+            this.SET_VIEWPORT({ pageYOffset, outerHeight });
         },
     },
 };

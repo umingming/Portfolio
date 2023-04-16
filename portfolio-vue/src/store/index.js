@@ -5,21 +5,36 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        scrollY: 0,
+        viewport: { top: 0, bottom: 0 },
     },
     getters: {
-        getScrollY(state) {
-            return state.scrollY;
+        viewportTop(state) {
+            return state.viewport.top;
+        },
+        viewportBottom(state) {
+            return state.viewport.bottom;
+        },
+        inViewport(state) {
+            return ({ offsetTop, offsetHeight }) => {
+                const top = offsetTop;
+                const bottom = top + offsetHeight;
+                return (
+                    top < state.viewport.bottom && bottom > state.viewport.top
+                );
+            };
         },
     },
     actions: {
-        SET_SCROLL_Y({ commit }, y) {
-            commit("SET_SCROLL_Y", y);
+        SET_VIEWPORT({ commit }, { pageYOffset, outerHeight }) {
+            const top = pageYOffset;
+            const bottom = top + outerHeight;
+            commit("SET_VIEWPORT", { top, bottom });
         },
     },
     mutations: {
-        SET_SCROLL_Y(state, y) {
-            state.scrollY = y;
+        SET_VIEWPORT(state, { top, bottom }) {
+            state.viewport.top = top;
+            state.viewport.bottom = bottom;
         },
     },
 });
