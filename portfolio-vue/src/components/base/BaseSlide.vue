@@ -15,10 +15,13 @@
 
 <script>
 import { SLIDES } from "@/constants/main.js";
+import viewportMixin from "@/mixins/viewportMixin";
+
 export default {
     props: {
         index: { type: Number, default: 0 },
     },
+    mixins: [viewportMixin],
     computed: {
         slide() {
             return SLIDES[this.index];
@@ -32,7 +35,19 @@ export default {
     },
     methods: {
         scrollDown() {
-            console.log("scrollDown");
+            const target = this.$el.offsetHeight * 1.2;
+
+            const scrollDown = () => {
+                const diff = target - this.viewportTop;
+                const speed = 5;
+                const step = Math.max(diff / speed, 1);
+                window.scrollTo(0, this.viewportTop + step);
+
+                if (this.viewportTop < target) {
+                    requestAnimationFrame(scrollDown);
+                }
+            };
+            requestAnimationFrame(scrollDown);
         },
     },
 };
