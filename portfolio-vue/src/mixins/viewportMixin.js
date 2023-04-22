@@ -4,7 +4,9 @@ export default {
     computed: {
         ...mapGetters(["viewportTop", "inViewport"]),
         $inViewport() {
-            return this.inViewport(this.$el ?? {});
+            const { offsetTop = 0, offsetHeight = 0 } = this.$el || {};
+            const offsetBottom = offsetTop + offsetHeight;
+            return this.inViewport(offsetTop, offsetBottom);
         },
     },
 };

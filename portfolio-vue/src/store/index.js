@@ -15,13 +15,9 @@ export const store = new Vuex.Store({
             return state.viewport.bottom;
         },
         inViewport(state) {
-            return ({ offsetTop, offsetHeight }) => {
-                const top = offsetTop;
-                const bottom = top + offsetHeight;
-                return (
-                    top < state.viewport.bottom && bottom > state.viewport.top
-                );
-            };
+            return (offsetTop, offsetBottom) =>
+                offsetTop < state.viewport.bottom &&
+                offsetBottom > state.viewport.top;
         },
     },
     actions: {
