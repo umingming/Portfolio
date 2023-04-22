@@ -931,43 +931,6 @@ section .title p {
   transform: translateX(30px) translateY(20px);
   transition: all 3s;
 }
-/* .main-contact .content.scale-up:before {
-  animation: showMe 1.5s ease-in;
-}
-@keyframes scaleUp {
-  0% {
-    opacity: 0;
-    transform: scale(0.1) translateX(650px) translateY(-100px) rotate(33deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateX(30px) translateY(20px);
-  }
-}
-.main-contact .content.scale-up:after {
-  animation: scaleUp 1.2s ease-in;
-}
-@keyframes showMe {
-  0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-    transform: scale(1) translateX(240px) translateY(-70px) rotate(13deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateX(240px) translateY(-100px) rotate(13deg);
-  }
-}
-@keyframes scaleDown {
-  0% {
-    transform: scale(2) translateX(30px) translateY(20px);
-  }
-  100% {
-    transform: scale(1) translateX(30px) translateY(20px);
-  }
-} */
 .main-contact .content:hover:after {
   animation: pitapat 0.5s infinite;
 }
@@ -986,7 +949,7 @@ section .title p {
 }
 .main-contact .content.slide-up > div {
   opacity: 1;
-  transition: opacity 0.2s linear 1s;
+  transition: opacity 0.2s linear 0.7s;
 }
 .main-contact .content > div:first-child {
   top: 185px;
@@ -1182,6 +1145,11 @@ section .title p {
 }
 .about-intro .base-button button label {
   padding-top: 4px;
+}
+
+/* contact */
+.contact {
+  overflow: hidden;
 }
 
 /* footer */
