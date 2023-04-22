@@ -440,7 +440,7 @@ header.on .menu ul.inner.on {
   }
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 .slide-right {
@@ -453,7 +453,7 @@ header.on .menu ul.inner.on {
   }
   100% {
     opacity: 1;
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 
@@ -697,7 +697,7 @@ section .title p {
   position: relative;
   width: 900px;
   height: 1100px;
-  margin: 20% auto 1% auto;
+  margin: 20% auto 2% auto;
   font-size: 21px;
   background: #ffbbe04b;
   border-radius: 15px;
