@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681648121540" clover="3.2.0">
-  <project timestamp="1681648121540" name="All files">
+<coverage generated="1682141759392" clover="3.2.0">
+  <project timestamp="1682141759392" name="All files">
     <metrics statements="169" coveredstatements="20" conditionals="337" coveredconditionals="6" methods="79" coveredmethods="11" elements="585" coveredelements="37" complexity="0" loc="169" ncloc="169" packages="12" files="29" classes="29"/>
     <package name="portfolio-vue">
       <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

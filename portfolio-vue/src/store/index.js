@@ -16,8 +16,8 @@ export const store = new Vuex.Store({
         },
         inViewport(state) {
             return (offsetTop, offsetBottom) =>
-                offsetTop < state.viewport.bottom &&
-                offsetBottom > state.viewport.top;
+                offsetTop <= state.viewport.bottom &&
+                offsetBottom >= state.viewport.top;
         },
     },
     actions: {

@@ -7,12 +7,12 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 const store = new Vuex.Store({
     state: {
-        top: 700,
+        top: 0,
         bottom: 2000,
     },
     getters: {
         inViewport(state) {
-            return (top, bottom) => top < state.bottom && bottom > state.top;
+            return (top, bottom) => top <= state.bottom && bottom >= state.top;
         },
     },
 });
