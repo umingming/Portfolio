@@ -82,6 +82,15 @@ export const SKILLS = [
 
 export const PROJECTS = [
     {
+        id: "project7",
+        img: "/img/project7.png",
+        name: "해냄",
+        txt: "Node.js로 개발한 일정 관리 사이트",
+        site: {
+            url: "https://github.com/umingming/Haenam/blob/main/README.md",
+        },
+    },
+    {
         id: "project3",
         img: "/img/project4.png",
         name: "포트폴리오",
@@ -97,42 +106,6 @@ export const PROJECTS = [
         txt: "중고거래 웹 사이트(Servlet, JSP)",
         site: {
             url: "https://github.com/umingming/Goguma/blob/master/README.md",
-        },
-    },
-    {
-        id: "project1",
-        img: "/img/project1.png",
-        name: "용용랜드",
-        txt: "JAVA 기반의 놀이공원 예매 및 관리 시스템",
-        site: {
-            url: "https://github.com/umingming/DragonLand/blob/master/README.md",
-        },
-    },
-    {
-        id: "project2",
-        img: "/img/project2.png",
-        name: "쌍용 교육 센터",
-        txt: "Oracle로 구현한 센터 운영 DB 구축",
-        site: {
-            url: "https://github.com/umingming/DragonCenter/blob/master/README.md",
-        },
-    },
-    {
-        id: "project4",
-        img: "/img/project3.png",
-        name: "뿌리 깊은 국사",
-        txt: "자바 콘솔로 구현한 한국사 학습 프로그램",
-        site: {
-            url: "https://github.com/umingming/DeepRoot/blob/master/README.md",
-        },
-    },
-    {
-        id: "project5",
-        img: "/img/project5.png",
-        name: "클론 코딩 모음",
-        txt: "실제 기업의 메인 페이지를 HTML5로 구현",
-        site: {
-            url: "https://github.com/umingming/CloneCoding/blob/main/README.md",
         },
     },
 ];
