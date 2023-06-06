@@ -91,6 +91,15 @@ export const PROJECTS = [
         },
     },
     {
+        id: "project8",
+        img: "/img/project8.png",
+        name: "대박나라",
+        txt: "차트로 편리하게 관리하는 자영업 가계부",
+        site: {
+            url: "https://github.com/umingming/Daebak/blob/main/README.md",
+        },
+    },
+    {
         id: "project3",
         img: "/img/project4.png",
         name: "포트폴리오",
