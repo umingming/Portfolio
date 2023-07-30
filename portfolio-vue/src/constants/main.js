@@ -40,13 +40,19 @@ export const SKILLS = [
         img: "/img/logoJs.png",
         name: "JavaScript",
         txt: "&nbsp;프로토타입과 클로저를 이해하고 있습니다. 반응형 웹 페이지를 제작할 수 있으며, HTML5, CSS3, ES6+ 문법을 알맞게 사용합니다.",
-        score: 70,
+        score: 95,
     },
     {
         img: "/img/logoVue.png",
         name: "Vue.js",
-        txt: "&nbsp;Vue2로 컴포넌트 기반의 서비스 개발을 경험했습니다. Rest API, Vuex, Router 등을 활용한 프로그래밍이 가능합니다.",
-        score: 60,
+        txt: "&nbsp;Vue2와 Vue3로 컴포넌트 기반의 서비스 개발을 경험했습니다. Rest API, Vuex, Router 등을 활용한 프로그래밍이 가능합니다.",
+        score: 90,
+    },
+    {
+        img: "/img/logoReact.png",
+        name: "React",
+        txt: "&nbsp;React 컴포넌트의 라이프사이클을 체계적으로 이해하고, 활용할 수 있습니다. Redux로 컴포넌트의 상태를 관리합니다.",
+        score: 90,
     },
     {
         img: "/img/logoJava.png",
