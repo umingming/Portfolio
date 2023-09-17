@@ -1,0 +1,300 @@
+@media ( max-width: 1200px ) {
+    header .innerHeader {
+        height: 110px;
+        padding: 0 20px;
+        transition: all 0.5s;
+    }
+    .menu >li >a {
+        font-size: 22px;
+    }
+    
+    .main-intro {
+        width: 900px;
+    }
+
+    .main-skill {
+        width: 800px;
+    }
+    .main-skill .title {
+        width: 450px;
+        left: 450px;
+    }
+    .main-skill .skill {
+        width: 370px;
+        left: 20px;
+    }
+    .main-skill .skill:nth-child(odd) {
+      transform: translateX(40px) translateY(120px);
+    }
+
+    .main-project {
+        width: 860px;
+    }
+    .main-project .title{
+        left: -150px;
+    }
+    .main-project .project {
+        width: 360px;
+        margin: 30px;
+    }
+    .main-project .project:nth-child(3n + 3) {
+        margin: 30px;
+    }
+}
+@media ( max-width: 750px ) {
+    header .innerHeader {
+        height: 80px;
+        padding: 0 20px;
+        transition: all 0.5s;
+    }
+    .innerHeader .logo {
+        width: 300px;
+    }
+    .menu > li {
+        height: 80px;
+        line-height: 80px;
+    }
+    .menu >li >a {
+        font-size: 17px;
+    }
+    header.on .innerHeader {
+        height: 60px;
+    }
+    header.on .innerHeader .logo {
+        margin-top: 15px;
+    }
+    header.on .innerHeader .menu > li {
+        height: 70px;
+        line-height: 70px;
+    }
+
+    /* section */
+    section .title {
+        width: 400px;
+        padding-top: 80px;
+    }
+    section .title h2 {
+        font-size: 45px;
+        margin: 30px 55px;
+        font-weight: 700;
+    }
+
+    .main-intro {
+        width: 550px;
+        height: 1800px;
+        overflow: hidden;
+    }
+    .main-intro .txt {
+        font-size: 20px;
+        line-height: 35px;
+        padding-bottom: 60px;
+    }
+    .main-intro #intro0 .txt {
+        width: 400px;
+        left: 40px;
+    }
+    .main-intro #intro1 .txt {
+        right: 60px;
+    }
+    .main-intro #intro0 .img {
+        position: absolute;
+        top: 300px;
+        right: 30px;
+    }
+    .main-intro #intro0 .img:after {
+        top: 320px;
+    }
+    .main-intro #intro1 .img {
+      position: absolute;
+      left: 10px;
+      top: 1220px;
+    }
+    .main-intro #intro1 .img img {
+        width: 450px;
+        height: 300px;
+        box-shadow: 15px 15px 0px #ffbbe091;
+    }
+    .main-intro #intro1 .img::after {
+      left: 250px;
+      top: 165px;
+    }
+
+    .main-skill {
+        width: 500px;
+        padding: 60px 40px;
+        height: 1500px;
+    }
+    .main-skill .title {
+        width: 400px;
+        left: 200px;
+        top: -60px;
+    }
+    .main-skill .skill {
+        width: 450px;
+        left: 20px;
+        margin: 1% auto;
+    }
+    .main-skill .skill:nth-child(odd) {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    .main-project {
+        width: 560px;
+        height: 2000px;
+    }
+    .main-project .title{
+        left: -40px;
+        width: 500px;
+    }
+    .main-project .project {
+        width: 500px;
+        margin: 30px;
+    }
+    .main-project .project:nth-child(3n + 3) {
+        margin: 30px;
+    }
+    .main-project .project .img {
+        width: 470px;
+    }
+    .main-contact .title h2 {
+        transform: translateY(-70px);
+        font-size: 35px;
+    }
+}
+
+@media ( max-width: 600px ) {
+    header .innerHeader {
+        height: 80px;
+        padding: 0 20px;
+        transition: all 0.5s;
+    }
+    header .innerHeader .logo a img:nth-child(1) {
+        opacity: 1;
+    }
+    header .innerHeader .logo a img:nth-child(2) {
+        opacity: 0;
+    }
+    .innerHeader .logo {
+        width: 300px;
+    }
+    .menu {
+        width: 80%;
+    }
+    .menu > li {
+        height: 80px;
+        line-height: 80px;
+    }
+    .menu >li >a {
+        font-size: 17px;
+    }
+    header.on .innerHeader {
+        height: 60px;
+    }
+    header.on .innerHeader .logo {
+        margin-top: 15px;
+    }
+    header.on .innerHeader .menu > li {
+        height: 70px;
+        line-height: 70px;
+    }
+
+    /* section */
+    section .title {
+        width: 350px;
+        padding-top: 80px;
+    }
+    section .title h2 {
+        font-size: 40px;
+        margin: 30px 55px;
+        font-weight: 700;
+    }
+
+    .main-intro {
+        width: 400px;
+        height: 1800px;
+        overflow: hidden;
+    }
+    .main-intro .title {
+        left: -20px
+    }
+    .main-intro .txt {
+        font-size: 20px;
+        line-height: 35px;
+        padding-bottom: 60px;
+    }
+    .main-intro #intro0 .txt {
+        width: 250px;
+        left: 70px;
+        top: 180px;
+    }
+    .main-intro #intro1 .txt {
+        width: 250px;
+        right: 50px;
+    }
+    .main-intro #intro0 .img {
+        position: absolute;
+        top: 350px;
+        right: 50px;
+    }
+    .main-intro #intro0 .img:after {
+        top: 320px;
+    }
+    .main-intro #intro0 .img img {
+        width: 300px;
+    }
+    .main-intro #intro1 .img {
+      position: absolute;
+      left: 10px;
+      top: 1220px;
+    }
+    .main-intro #intro1 .img img {
+        width: 450px;
+        height: 300px;
+        box-shadow: 15px 15px 0px #ffbbe091;
+    }
+    .main-intro #intro1 .img::after {
+      left: 250px;
+      top: 165px;
+    }
+
+    .main-skill {
+        width: 350px;
+        padding: 60px 40px;
+        height: 1700px;
+    }
+    .main-skill .title {
+        left: 100px;
+        top: -60px;
+    }
+    .main-skill .skill {
+        width: 300px;
+        left: 20px;
+        margin: 5% auto;
+    }
+    .main-skill .skill:nth-child(odd) {
+      transform: translateX(0px) translateY(0px);
+    }
+
+    .main-project {
+        width: 360px;
+        height: 2000px;
+    }
+    .main-project .title{
+        left: -40px;
+    }
+    .main-project .project {
+        width: 360px;
+        margin: 20px 0px;
+    }
+    .main-project .project:nth-child(3n + 3) {
+        margin: 20px 0px;
+    }
+    .main-project .project .img {
+        width: 330px;
+    }
+
+    .main-contact .title h2{
+        font-size: 35px !important;
+        transform: translateY(15px);
+    }
+}
