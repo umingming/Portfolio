@@ -52,7 +52,13 @@ export const SKILLS = [
         img: "/img/logoReact.png",
         name: "React",
         txt: "&nbsp;React 컴포넌트의 라이프사이클을 체계적으로 이해하고, 활용할 수 있습니다. Redux로 컴포넌트의 상태를 관리합니다.",
-        score: 90,
+        score: 70,
+    },
+    {
+        img: "/img/logoTs.png",
+        name: "TypeScript",
+        txt: "&nbsp;React 컴포넌트의 라이프사이클을 체계적으로 이해하고, 활용할 수 있습니다. Redux로 컴포넌트의 상태를 관리합니다.",
+        score: 70,
     },
     {
         img: "/img/logoJava.png",

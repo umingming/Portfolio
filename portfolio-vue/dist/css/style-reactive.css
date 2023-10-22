@@ -1,13 +1,13 @@
-@media ( max-width: 1200px ) {
+@media (max-width: 1200px) {
     header .innerHeader {
         height: 110px;
         padding: 0 20px;
         transition: all 0.5s;
     }
-    .menu >li >a {
+    .menu > li > a {
         font-size: 22px;
     }
-    
+
     .main-intro {
         width: 900px;
     }
@@ -24,13 +24,13 @@
         left: 20px;
     }
     .main-skill .skill:nth-child(odd) {
-      transform: translateX(40px) translateY(120px);
+        transform: translateX(40px) translateY(120px);
     }
 
     .main-project {
         width: 860px;
     }
-    .main-project .title{
+    .main-project .title {
         left: -150px;
     }
     .main-project .project {
@@ -41,7 +41,7 @@
         margin: 30px;
     }
 }
-@media ( max-width: 750px ) {
+@media (max-width: 750px) {
     header .innerHeader {
         height: 80px;
         padding: 0 20px;
@@ -54,7 +54,7 @@
         height: 80px;
         line-height: 80px;
     }
-    .menu >li >a {
+    .menu > li > a {
         font-size: 17px;
     }
     header.on .innerHeader {
@@ -105,9 +105,9 @@
         top: 320px;
     }
     .main-intro #intro1 .img {
-      position: absolute;
-      left: 10px;
-      top: 1220px;
+        position: absolute;
+        left: 10px;
+        top: 1220px;
     }
     .main-intro #intro1 .img img {
         width: 450px;
@@ -115,14 +115,14 @@
         box-shadow: 15px 15px 0px #ffbbe091;
     }
     .main-intro #intro1 .img::after {
-      left: 250px;
-      top: 165px;
+        left: 250px;
+        top: 165px;
     }
 
     .main-skill {
         width: 500px;
         padding: 60px 40px;
-        height: 1500px;
+        height: 1900px;
     }
     .main-skill .title {
         width: 400px;
@@ -135,14 +135,14 @@
         margin: 1% auto;
     }
     .main-skill .skill:nth-child(odd) {
-      transform: translateX(0px) translateY(0px);
+        transform: translateX(0px) translateY(0px);
     }
 
     .main-project {
         width: 560px;
         height: 2000px;
     }
-    .main-project .title{
+    .main-project .title {
         left: -40px;
         width: 500px;
     }
@@ -162,7 +162,7 @@
     }
 }
 
-@media ( max-width: 600px ) {
+@media (max-width: 600px) {
     header .innerHeader {
         height: 80px;
         padding: 0 20px;
@@ -184,7 +184,7 @@
         height: 80px;
         line-height: 80px;
     }
-    .menu >li >a {
+    .menu > li > a {
         font-size: 17px;
     }
     header.on .innerHeader {
@@ -215,7 +215,7 @@
         overflow: hidden;
     }
     .main-intro .title {
-        left: -20px
+        left: -20px;
     }
     .main-intro .txt {
         font-size: 20px;
@@ -243,9 +243,9 @@
         width: 300px;
     }
     .main-intro #intro1 .img {
-      position: absolute;
-      left: 10px;
-      top: 1220px;
+        position: absolute;
+        left: 10px;
+        top: 1220px;
     }
     .main-intro #intro1 .img img {
         width: 450px;
@@ -253,14 +253,14 @@
         box-shadow: 15px 15px 0px #ffbbe091;
     }
     .main-intro #intro1 .img::after {
-      left: 250px;
-      top: 165px;
+        left: 250px;
+        top: 165px;
     }
 
     .main-skill {
         width: 350px;
         padding: 60px 40px;
-        height: 1700px;
+        height: 2150px;
     }
     .main-skill .title {
         left: 100px;
@@ -272,14 +272,14 @@
         margin: 5% auto;
     }
     .main-skill .skill:nth-child(odd) {
-      transform: translateX(0px) translateY(0px);
+        transform: translateX(0px) translateY(0px);
     }
 
     .main-project {
         width: 360px;
         height: 2000px;
     }
-    .main-project .title{
+    .main-project .title {
         left: -40px;
     }
     .main-project .project {
@@ -293,7 +293,7 @@
         width: 330px;
     }
 
-    .main-contact .title h2{
+    .main-contact .title h2 {
         font-size: 35px !important;
         transform: translateY(15px);
     }

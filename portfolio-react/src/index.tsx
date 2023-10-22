@@ -4,9 +4,22 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(
-    document.getElementById("root") as HTMLElement
-);
+const 학교: {
+    score: number[] | boolean[];
+    teacher: string;
+    friend: string | string[];
+} = {
+    score: [100, 97, 84],
+    teacher: "Phil",
+    friend: "John",
+};
+
+function test(text: string): string {
+    return `value: ${text}`;
+}
+function test() {}
+
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
     <React.StrictMode>
         <App />

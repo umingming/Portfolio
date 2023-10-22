@@ -4,7 +4,7 @@
             <h2>MY SKILLS</h2>
         </div>
         <div v-for="skill of SKILLS" :key="skill.name" class="skill">
-            <div class="logo">
+            <div class="logo" :id="skill.name">
                 <img :src="skill.img" />
                 <label>{{ skill.name }}</label>
             </div>
